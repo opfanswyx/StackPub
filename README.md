@@ -1,1 +1,2 @@
-# Stack-Pub
+# StackPub
+Atticus's Docs

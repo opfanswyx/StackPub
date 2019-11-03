@@ -1,0 +1,84 @@
+site_name: Stack Pub
+site_description: Atticus's Docs
+site_author: Atticus
+
+# Repository
+repo_name: 'Atticus/Stack Pub'
+repo_url: 'https://github.com/opfanswyx/StackPub'
+
+# Copyright
+copyright: 'Copyright &copy; 2018 - 2019 Atticus'
+
+nav:
+  - About: index.md
+  - 编程语言:
+    - c++: cplus/cpp_summary.md
+  - 算法:
+    - DP相关: algorithm/DP.md
+  - Linux:
+    - 计划: linux/plan.md
+  - 开源项目:
+    - 计划: source/plan.md
+  - 数学: 
+    - 计划: math/plan.md
+  - Unity:
+    - 规划: unity/List.md
+    - shader: unity/unity_shader.md
+  - 杂项: 
+    - 计划: tools/Note.md
+    - 工具: tools/tools.md
+    - tmux基本技巧: tools/tmux.md
+    - 基于mkdocs的blog搭建: tools/mkdocs.md
+
+theme:
+  name: material
+  language: 'zh'
+  palette:
+    accent: 'Pink'
+  include_search_page: false
+  search_index_only: true
+  feature:
+    tabs: true
+  font:
+    text: 'Fira Sans'
+    code: 'Fira Mono'
+  favicon: 'favicon.ico'
+
+extra:
+  social:
+    - type: github
+      link: https://github.com/opfanswyx
+  search:
+    language: 'jp'
+  manifest: 'manifest.webmanifest'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
