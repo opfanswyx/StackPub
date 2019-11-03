@@ -40,7 +40,7 @@
     
     
       
-        <title>Tool - Stack Pub</title>
+        <title>tmux基本技巧 - Stack Pub</title>
       
     
     
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#some-tools" tabindex="1" class="md-skip">
+      <a href="#tmux" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Tool
+                tmux基本技巧
               
             </span>
           
@@ -189,7 +189,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../tools/" class="md-tabs__link md-tabs__link--active">
           杂项
         </a>
       
@@ -293,6 +293,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../tools/" title="Tool" class="md-nav__link">
+      Tool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -303,22 +315,134 @@
       
     
     
-    <a href="./" title="Tool" class="md-nav__link md-nav__link--active">
-      Tool
-    </a>
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        tmux基本技巧
+      </label>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../tmux/" title="tmux基本技巧" class="md-nav__link">
+    <a href="./" title="tmux基本技巧" class="md-nav__link md-nav__link--active">
       tmux基本技巧
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    会话session
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmux_1" class="md-nav__link">
+    创建一个tmux的会话
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux_2" class="md-nav__link">
+    退出tmux会话
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux_3" class="md-nav__link">
+    列出所有的tmux会话
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    装载一个会话
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    销毁一个会话
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    窗口windows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    创建一个新窗口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    窗口间切换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    关闭窗口
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pane" class="md-nav__link">
+    面板pane
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ctrlb" class="md-nav__link">
+    （均在按下ctrl+b之后松开，然后按下相应的按键）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -356,6 +480,117 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    会话session
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmux_1" class="md-nav__link">
+    创建一个tmux的会话
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux_2" class="md-nav__link">
+    退出tmux会话
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux_3" class="md-nav__link">
+    列出所有的tmux会话
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    装载一个会话
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    销毁一个会话
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    窗口windows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    创建一个新窗口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    窗口间切换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    关闭窗口
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pane" class="md-nav__link">
+    面板pane
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ctrlb" class="md-nav__link">
+    （均在按下ctrl+b之后松开，然后按下相应的按键）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -367,13 +602,88 @@
               
                 
                 
-                <h1 id="some-tools">Some Tools<a class="headerlink" href="#some-tools" title="Permanent link">&para;</a></h1>
-<ol>
-<li>印象笔记</li>
-<li>幕布</li>
-<li>vs code</li>
-<li>番茄土豆</li>
-</ol>
+                <h1 id="tmux">tmux基本技巧<a class="headerlink" href="#tmux" title="Permanent link">&para;</a></h1>
+<h2 id="session">会话session<a class="headerlink" href="#session" title="Permanent link">&para;</a></h2>
+<h3 id="tmux_1">创建一个tmux的会话<a class="headerlink" href="#tmux_1" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>tmux
+tmux new -s name
+</pre></div>
+</td></tr></table>
+
+<h3 id="tmux_2">退出tmux会话<a class="headerlink" href="#tmux_2" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>#后台运行
+tmux attach
+ctrl+b d
+#退出不后台运行
+exit
+</pre></div>
+</td></tr></table>
+
+<h3 id="tmux_3">列出所有的tmux会话<a class="headerlink" href="#tmux_3" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>tmux ls
+tmux list-sessions
+</pre></div>
+</td></tr></table>
+
+<h3 id="_1">装载一个会话<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>tmux attach
+tmux attach -t name
+</pre></div>
+</td></tr></table>
+
+<h3 id="_2">销毁一个会话<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>tmux kill-session -t name
+</pre></div>
+</td></tr></table>
+
+<h2 id="windows">窗口windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
+<h3 id="_3">创建一个新窗口<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>crtl+b c
+</pre></div>
+</td></tr></table>
+
+<h3 id="_4">窗口间切换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ctrl+b n(next的意思)
+ctrl+b p(previous)
+ctrl+b 0/1/2...
+</pre></div>
+</td></tr></table>
+
+<h3 id="_5">关闭窗口<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>exit
+ctrl+b &amp;
+</pre></div>
+</td></tr></table>
+
+<h2 id="pane">面板pane<a class="headerlink" href="#pane" title="Permanent link">&para;</a></h2>
+<h4 id="ctrlb">（均在按下ctrl+b之后松开，然后按下相应的按键）<a class="headerlink" href="#ctrlb" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>?   显示快捷键帮助
+&quot;   纵向分割窗口（上下二分）
+% 横向分割窗口(左右二分)
+o 跳转到下一个分割窗口
+上下方向键  上一个及下一个分割窗口
+crtl+b X(大写)
+exit
+crtl+b :命令模式
+</pre></div>
+</td></tr></table>
                 
                   
                 
@@ -394,7 +704,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../cplus/cpp_summary/" title="c++" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../tools/" title="Tool" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -403,19 +713,19 @@
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                c++
+                Tool
               </span>
             </div>
           </a>
         
         
-          <a href="../tmux/" title="tmux基本技巧" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../mkdocs/" title="基于mkdocs的blog搭建" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                tmux基本技巧
+                基于mkdocs的blog搭建
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
