@@ -10,7 +10,7 @@ repo_url: 'https://github.com/opfanswyx/StackPub'
 copyright: 'Copyright &copy; 2018 - 2019 Atticus'
 
 nav:
-  - About: index.md
+  - Hello: index.md
   - 编程语言:
     - c++: cplus/cpp_summary.md
   - 算法:
@@ -45,9 +45,6 @@ theme:
   favicon: 'favicon.ico'
 
 extra:
-  social:
-    - type: github
-      link: https://github.com/opfanswyx
   search:
     language: 'jp'
   manifest: 'manifest.webmanifest'
