@@ -11,6 +11,7 @@
 4. Scene场景/Game游戏
 
 ### Unity脚本基础
+![unity_lifetime](../image/unity_lifetime.png "unity_lifetime")
 1. Game Object最基础的游戏单位，一个最基本的Game Object仅包含一个Transform组件，用于对其进行位移，旋转和缩放。
 2. MonoBehavior是所有Unity脚本的基类。
 #### 脚本序列化
