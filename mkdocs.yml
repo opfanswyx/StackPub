@@ -12,20 +12,26 @@ copyright: 'Copyright &copy; 2018 - 2019 Atticus'
 nav:
   - Hello World: index.md
   - 编程语言:
-    - C语言: cprogram/c_data.md
+    - C语言: 
+      - C语言基础: cprogram/c_base.md
+      - C语言与面向对象: cprogram/c_object.md
+      - C语言设计模式: cprogram/c_design.md
     - C Plus Plus: 
-      - C++基础: cplus/cpp_summary.md
-      - 类和对象: cplus/cpp_summary.md
-      - 引用: cplus/cpp_summary.md
-      - 继承与派生: cplus/cpp_summary.md
-      - 多态与虚函数: cplus/cpp_summary.md
-      - 运算符重载: cplus/cpp_summary.md
-      - 模板: cplus/cpp_summary.md
-      - 异常: cplus/cpp_summary.md
-      - STL: cplus/cpp_summary.md
+      - C++基础: cplus/cpp_base.md
+      - 类和对象: cplus/cpp_object.md
+      - 引用: cplus/cpp_quote.md
+      - 继承与派生: cplus/cpp_inher.md
+      - 多态与虚函数: cplus/cpp_polym.md
+      - 运算符重载: cplus/cpp_ysfcz.md
+      - 模板: cplus/cpp_muban.md
+      - 异常: cplus/cpp_catch.md
+      - STL: cplus/cpp_stl.md
       - 高级主题: cplus/cpp_summary.md
+    - Go语言:
+      - 规划: goprogram/plan.md
   - 算法:
     - 数据结构与算法规划: algorithm/plan.md
+    - 链表: algorithm/struct_linkedlist.md
   - Linux:
     - 规划: linux/plan.md
   - 网络:
@@ -46,6 +52,7 @@ nav:
     - 基于mkdocs的blog搭建: tools/mkdocs.md
     - VIM常用技巧: tools/vim.md
     - GDB调试的基本使用: tools/gdb.md
+    - 书籍📚推荐: tools/book.md
     - tmux基本技巧: tools/tmux.md
 
 theme:
