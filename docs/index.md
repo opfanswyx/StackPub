@@ -2,7 +2,7 @@
 
 ### Primary colors 主色
 
-> 默认为 `purple` 
+> 默认为 `Indigo` 
 
 点击色块可更换主题的主色
 
@@ -83,9 +83,9 @@
 >都是些老生常谈的问题，尝试总结表达。
 
 ### Contact 
-***[Email📮: opfanswyx@outlook.com](opfanswyx@outlook.com)***
+**[Email📮: opfanswyx@outlook.com](opfanswyx@outlook.com)**
 
-***[GitHub: https://github.com/opfanswyx](https://github.com/opfanswyx)*** 
+**[GitHub: https://github.com/opfanswyx](https://github.com/opfanswyx)**
 
 ---   
 ??? tip "blogroll"

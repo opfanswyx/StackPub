@@ -10,25 +10,43 @@ repo_url: 'https://github.com/opfanswyx/StackPub'
 copyright: 'Copyright &copy; 2018 - 2019 Atticus'
 
 nav:
-  - Hello: index.md
+  - Hello World: index.md
   - 编程语言:
-    - c++: cplus/cpp_summary.md
+    - C语言: cprogram/c_data.md
+    - C Plus Plus: 
+      - C++基础: cplus/cpp_summary.md
+      - 类和对象: cplus/cpp_summary.md
+      - 引用: cplus/cpp_summary.md
+      - 继承与派生: cplus/cpp_summary.md
+      - 多态与虚函数: cplus/cpp_summary.md
+      - 运算符重载: cplus/cpp_summary.md
+      - 模板: cplus/cpp_summary.md
+      - 异常: cplus/cpp_summary.md
+      - STL: cplus/cpp_summary.md
+      - 高级主题: cplus/cpp_summary.md
   - 算法:
-    - DP相关: algorithm/DP.md
+    - 数据结构与算法规划: algorithm/plan.md
   - Linux:
-    - 计划: linux/plan.md
+    - 规划: linux/plan.md
+  - 网络:
+    - 规划: network/plan.md
+  - 数据库:
+    - 规划: database/plan.md
   - 开源项目:
-    - 计划: source/plan.md
+    - 规划: source/plan.md
+    - TinyHttpd: source/tinyhttpd.md
   - 数学: 
-    - 计划: math/plan.md
-  - Unity:
+    - 规划: math/plan.md
+  - 图形学:
     - 规划: unity/List.md
-    - shader: unity/unity_shader.md
-  - 杂项: 
+    - Unity基础: unity/unity_base.md
+    - Shader: unity/unity_shader.md
+  - Kit: 
     - 计划: tools/Note.md
-    - 工具: tools/tools.md
-    - tmux基本技巧: tools/tmux.md
     - 基于mkdocs的blog搭建: tools/mkdocs.md
+    - VIM常用技巧: tools/vim.md
+    - GDB调试的基本使用: tools/gdb.md
+    - tmux基本技巧: tools/tmux.md
 
 theme:
   name: material
