@@ -25,11 +25,28 @@ nav:
       - 运算符重载: cplus/cpp_ysfcz.md
       - 模板: cplus/cpp_muban.md
       - 异常: cplus/cpp_catch.md
-      - STL: cplus/cpp_stl.md
+      - STL: 
+        - STL基础: cplus/cpp_stl.md
+        - vector: cplus/cpp_stl_vector.md
+        - list: cplus/cpp_stl_vector.md
+        - deque: cplus/cpp_stl_vector.md
+        - 函数对象: cplus/cpp_stl_vector.md
+        - 关联容器: cplus/cpp_stl_vector.md
+        - pair类模板: cplus/cpp_stl_vector.md
+        - multiset: cplus/cpp_stl_vector.md
+        - set: cplus/cpp_stl_vector.md
+        - multimap: cplus/cpp_stl_vector.md
+        - map: cplus/cpp_stl_vector.md
+        - 容器适配器: cplus/cpp_stl_vector.md
+        - stack: cplus/cpp_stl_vector.md
+        - queue和priority_queue: cplus/cpp_stl_vector.md
+        - STL算法分类: cplus/cpp_stl_vector.md
+        - string类: cplus/cpp_stl_vector.md
+        - bitset类: cplus/cpp_stl_vector.md
       - 高级主题: cplus/cpp_summary.md
     - Go语言:
       - 规划: goprogram/plan.md
-  - 算法:
+  - 数据结构与算法:
     - 数据结构与算法规划: algorithm/plan.md
     - 链表: algorithm/struct_linkedlist.md
   - Linux:
