@@ -26,29 +26,38 @@ nav:
       - 模板: cplus/cpp_muban.md
       - 异常: cplus/cpp_catch.md
       - STL: 
-        - STL基础: cplus/cpp_stl.md
-        - vector: cplus/cpp_stl_vector.md
-        - list: cplus/cpp_stl_list.md
-        - deque: cplus/cpp_stl_deque.md
-        - 函数对象: cplus/cpp_stl_vector.md
-        - 关联容器: cplus/cpp_stl_vector.md
-        - pair类模板: cplus/cpp_stl_vector.md
-        - multiset: cplus/cpp_stl_vector.md
-        - set: cplus/cpp_stl_vector.md
-        - multimap: cplus/cpp_stl_vector.md
-        - map: cplus/cpp_stl_vector.md
-        - 容器适配器: cplus/cpp_stl_vector.md
-        - stack: cplus/cpp_stl_vector.md
-        - queue和priority_queue: cplus/cpp_stl_vector.md
-        - STL算法分类: cplus/cpp_stl_vector.md
-        - string类: cplus/cpp_stl_vector.md
-        - bitset类: cplus/cpp_stl_vector.md
-      - 高级主题: cplus/cpp_summary.md
+        - STL基础: cplus/stl/cpp_stl.md
+        - vector: cplus/stl/cpp_stl_vector.md
+        - list: cplus/stl/cpp_stl_list.md
+        - deque: cplus/stl/cpp_stl_deque.md
+        - 函数对象: cplus/stl/cpp_stl_funcobject.md
+        - 关联容器与pair类模板: cplus/stl/cpp_stl_pair.md
+        - multiset: cplus/stl/cpp_stl_multiset.md
+        - set: cplus/stl/cpp_stl_set.md
+        - multimap: cplus/stl/cpp_stl_multimap.md
+        - map: cplus/stl/cpp_stl_map.md
+        - stack: cplus/stl/cpp_stl_stack.md
+        - queue和priority_queue: cplus/stl/cpp_stl_queue.md
+        - STL算法分类: cplus/stl/cpp_stl_algo.md
+        - string类: cplus/stl/cpp_stl_string.md
+        - bitset类: cplus/stl/cpp_stl_bitset.md
+      - 输入输出流: cplus/cpp_io.md
+      - 文件操作: cplus/cpp_file.md
+      - 高级主题: cplus/cpp_high.md
     - Go语言:
       - 规划: goprogram/plan.md
   - 数据结构与算法:
     - 数据结构与算法规划: algorithm/plan.md
     - 链表: algorithm/struct_linkedlist.md
+    - 栈与队列: algorithm/struct_stack_queue.md
+    - 树🌲: algorithm/struct_tree.md
+    - 图: algorithm/struct_graph.md
+    - 模式匹配: algorithm/algo_pattern.md
+    - 排序: algorithm/algo_sort.md
+    - 查找: algorithm/algo_sort.md
+    - 数据压缩: algorithm/algo_sort.md
+    - 内存管理: algorithm/algo_sort.md
+    - 动态规划: algorithm/algo_sort.md
   - Linux:
     - 规划: linux/plan.md
   - 网络:
