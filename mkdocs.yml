@@ -28,8 +28,8 @@ nav:
       - STL: 
         - STL基础: cplus/cpp_stl.md
         - vector: cplus/cpp_stl_vector.md
-        - list: cplus/cpp_stl_vector.md
-        - deque: cplus/cpp_stl_vector.md
+        - list: cplus/cpp_stl_list.md
+        - deque: cplus/cpp_stl_deque.md
         - 函数对象: cplus/cpp_stl_vector.md
         - 关联容器: cplus/cpp_stl_vector.md
         - pair类模板: cplus/cpp_stl_vector.md

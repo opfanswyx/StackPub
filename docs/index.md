@@ -1,3 +1,15 @@
+## About 
+>AS患者，三流码畜，勃学结业，极度失败，躺平状态。
+
+>都是些老生常谈的问题，尝试摘抄总结表达。
+
+### Contact 
+**[Email📮: opfanswyx@outlook.com](opfanswyx@outlook.com)**
+
+**[GitHub: https://github.com/opfanswyx](https://github.com/opfanswyx)**
+
+---
+
 ## Material color palette 颜色主题
 
 ### Primary colors 主色
@@ -77,15 +89,7 @@
   document.getElementsByClassName('md-nav__title')[1].click()
 </script>
 ---
-### About 
->AS患者，三流码畜，勃学结业，极度失败，躺平状态。
 
->都是些老生常谈的问题，尝试摘抄总结表达。
-
-### Contact 
-**[Email📮: opfanswyx@outlook.com](opfanswyx@outlook.com)**
-
-**[GitHub: https://github.com/opfanswyx](https://github.com/opfanswyx)**
 
 ---   
 ??? tip "blogroll"

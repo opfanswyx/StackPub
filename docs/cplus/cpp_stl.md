@@ -158,3 +158,5 @@ sort，用于对容器排序，其原型为：
 template<class_RandIt>
 void sort(_RandIt first, _RandIt last);
 ```
+
+在 STL 中，默认情况下，比较大小是通过<运算符进行的，和>运算符无关。
