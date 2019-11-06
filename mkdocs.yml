@@ -47,7 +47,6 @@ nav:
     - Go语言:
       - 规划: goprogram/plan.md
   - 数据结构与算法:
-    - 数据结构与算法规划: algorithm/plan.md
     - 链表: algorithm/struct_linkedlist.md
     - 栈与队列: algorithm/struct_stack_queue.md
     - 树🌲: algorithm/struct_tree.md
@@ -60,6 +59,7 @@ nav:
     - 动态规划: algorithm/algo_sort.md
   - Linux:
     - 规划: linux/plan.md
+    - Linux编程基础: linux/linux_program.md
   - 网络:
     - 规划: network/plan.md
   - 数据库:
