@@ -46,6 +46,8 @@ nav:
       - 高级主题: cplus/cpp_high.md
     - Go语言:
       - 规划: goprogram/plan.md
+    - PHP总结: source/php/php_summary.md
+    - Lua总结: source/lua/lua_summary.md
   - 数据结构与算法:
     - 链表: algorithm/struct_linkedlist.md
     - 栈与队列: algorithm/struct_stack_queue.md
@@ -99,6 +101,11 @@ extra:
   search:
     language: 'jp'
   manifest: 'manifest.webmanifest'
+
+extra_javascript:
+  - '_static/js/extra.js?v=15'
+  - 'https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+
 
 markdown_extensions:
   - admonition
