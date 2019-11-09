@@ -40,7 +40,7 @@
     
     
       
-        <title>规划 - Stack Pub</title>
+        <title>Linux基础 - Stack Pub</title>
       
     
     
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#_1" tabindex="1" class="md-skip">
+      <a href="#regular-expressionregexp" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -113,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                规划
+                Linux基础
               
             </span>
           
@@ -234,7 +234,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../linux/plan/" class="md-tabs__link">
+        <a href="../plan/" class="md-tabs__link md-tabs__link--active">
           Linux
         </a>
       
@@ -260,7 +260,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../../database/plan/" class="md-tabs__link">
           数据库
         </a>
       
@@ -1027,10 +1027,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Linux
@@ -1048,7 +1050,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../linux/plan/" title="规划" class="md-nav__link">
+    <a href="../plan/" title="规划" class="md-nav__link">
       规划
     </a>
   </li>
@@ -1058,11 +1060,100 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../linux/linux_base/" title="Linux基础" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Linux基础
+      </label>
+    
+    <a href="./" title="Linux基础" class="md-nav__link md-nav__link--active">
       Linux基础
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#regular-expressionregexp" class="md-nav__link">
+    正则表达式(Regular Expression,regexp)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    定位符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    选折符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    字符范围
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    点字符和限定符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    小括号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    反斜杠
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1072,7 +1163,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../linux/linux_program/" title="Linux编程基础" class="md-nav__link">
+    <a href="../linux_program/" title="Linux编程基础" class="md-nav__link">
       Linux编程基础
     </a>
   </li>
@@ -1123,12 +1214,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       数据库
@@ -1144,65 +1233,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        规划
-      </label>
-    
-    <a href="./" title="规划" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../database/plan/" title="规划" class="md-nav__link">
       规划
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    本模块规划
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sql" class="md-nav__link">
-    Sql语句
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mysql" class="md-nav__link">
-    Mysql相关
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1482,23 +1517,58 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    本模块规划
+  <a href="#regular-expressionregexp" class="md-nav__link">
+    正则表达式(Regular Expression,regexp)
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sql" class="md-nav__link">
-    Sql语句
+  <a href="#_1" class="md-nav__link">
+    定位符
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mysql" class="md-nav__link">
-    Mysql相关
+  <a href="#_2" class="md-nav__link">
+    选折符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    字符范围
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    点字符和限定符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    小括号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    反斜杠
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    示例
   </a>
   
 </li>
@@ -1524,14 +1594,245 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/database/plan.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/linux/linux_base.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>规划</h1>
+                  <h1>Linux基础</h1>
                 
-                <h2 id="_1">本模块规划<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="sql">Sql语句<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h3>
-<h3 id="mysql">Mysql相关<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h3>
+                <h2 id="regular-expressionregexp">正则表达式(Regular Expression,regexp)<a class="headerlink" href="#regular-expressionregexp" title="Permanent link">&para;</a></h2>
+<p>pcre/grep/</p>
+<h3 id="_1">定位符<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">定位符</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">^</td>
+<td align="center">匹配字符串的开始</td>
+</tr>
+<tr>
+<td align="center">$</td>
+<td align="center">匹配字符串结尾的位置</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">选折符<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>当要查找的条件有多个，只要其中一个满足即成立时，使用选择符"|"。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>grep -p --color &#39;Linux|UNIX&#39;
+</pre></div>
+</td></tr></table></p>
+<h3 id="_3">字符范围<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">示例</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">[abc]</td>
+<td align="center">匹配字符a,b,c</td>
+</tr>
+<tr>
+<td align="center">[^abc]</td>
+<td align="center">匹配除a,b,c以外的字符</td>
+</tr>
+<tr>
+<td align="center">[a-z]</td>
+<td align="center">匹配字母a-z范围内的字符</td>
+</tr>
+</tbody>
+</table>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[^a-z]
+[a-zA-Z0-9]
+</pre></div>
+</td></tr></table>
+
+<h3 id="_4">点字符和限定符<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>点字符"."用来匹配任意一个字符。</p>
+<p>限定符(?,+,*,{})用于匹配某个字符出现的次数。</p>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">说明</th>
+<th align="center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">.</td>
+<td align="center">匹配一个任意字符</td>
+<td align="center">s.t&rarr;sat,set,sit</td>
+</tr>
+<tr>
+<td align="center">?</td>
+<td align="center">匹配前面的字符零次或者一次</td>
+<td align="center">colou?r&rarr;color,colour</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="center">匹配前面的字符一次或者多次</td>
+<td align="center">go+gle&rarr;goole,gooooole</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">匹配前面的字符零次或者多次</td>
+<td align="center">go*gle&rarr;gogle,goooogle</td>
+</tr>
+<tr>
+<td align="center">{n}</td>
+<td align="center">匹配前面的字符n次</td>
+<td align="center">go{2}gle&rarr;google</td>
+</tr>
+<tr>
+<td align="center">{n,}</td>
+<td align="center">匹配前面的字符至少n次</td>
+<td align="center">go{3,}gle&rarr;gooogle,gooooooogle</td>
+</tr>
+<tr>
+<td align="center">{n,m}</td>
+<td align="center">匹配前面的字符至少n次，最多m次</td>
+<td align="center">employe{0,2}&rarr;employ,employe,employee</td>
+</tr>
+</tbody>
+</table>
+<p>当点字符和限定符连用时，可以实现匹配指定数量的<strong>任意字符</strong>。</p>
+<p>正则表达式支持贪婪匹配和惰性匹配两种，默认情况下是贪婪匹配。当要实现惰性匹配 ，在上一个限定符后面加上"?"符号。</p>
+<table>
+<thead>
+<tr>
+<th align="center">匹配方式</th>
+<th align="center">示例</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">贪婪</td>
+<td align="center">a.*b</td>
+<td align="center">最先出现的a到最后出现的b&rarr;<strong>a00b00bab</strong>c</td>
+</tr>
+<tr>
+<td align="center">惰性</td>
+<td align="center">a.*?b</td>
+<td align="center">最先出现的a到最先出现的b&rarr;<strong>a00b</strong>00b<strong>ab</strong>c</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">小括号<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>小括号的两个作用，一是改变作用范围，二是分组。</p>
+<table>
+<thead>
+<tr>
+<th align="center">示例</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">thir|fourth</td>
+<td align="center"><strong>thir</strong>th<strong>fourth</strong></td>
+</tr>
+<tr>
+<td align="center">(thir|four)th</td>
+<td align="center"><strong>thirth fourth</strong></td>
+</tr>
+<tr>
+<td align="center">app{2}</td>
+<td align="center"><strong>appp</strong>pappapp</td>
+</tr>
+<tr>
+<td align="center">(app){2}</td>
+<td align="center">apppp<strong>appapp</strong>(分组后表示匹配2个app)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">反斜杠<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>反斜杠"\"有两个作用，一是作为转义字符，二是表示一些不可打印的字符，指定预定义字符集等。</p>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">\d</td>
+<td align="center">任意一个十进制数字，相当于[0-9]</td>
+</tr>
+<tr>
+<td align="center">\D</td>
+<td align="center">任意一个非十进制的数字</td>
+</tr>
+<tr>
+<td align="center">\w</td>
+<td align="center">任意一个单词字符，相当于[a-zA-z0-9]</td>
+</tr>
+<tr>
+<td align="center">\W</td>
+<td align="center">任意一个非单词字符</td>
+</tr>
+<tr>
+<td align="center">\s</td>
+<td align="center">任意一个空白字符(空格，水平制表符)</td>
+</tr>
+<tr>
+<td align="center">\S</td>
+<td align="center">任意一个非空白字符</td>
+</tr>
+<tr>
+<td align="center">\b</td>
+<td align="center">单词分界符，\bapple &rarr; test <strong>apple</strong></td>
+</tr>
+<tr>
+<td align="center">\B</td>
+<td align="center">非单词分界符，\Bple &rarr; test ap<strong>ple</strong></td>
+</tr>
+<tr>
+<td align="center">\xhh</td>
+<td align="center">表示hh(十六进制2位数字)对应的ASCII字符，如\x61是a</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">示例<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>只允许访问html,css,jpg扩展名</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>^.*?\.(html|css|jpg)$
+</pre></div>
+</td></tr></table>
+
+<p>验证ip地址</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>0~99:    [1-9]?\d
+100~199: 1\d{2}
+200~255: 2([0-4]\d|5[0-5])
+0~255:   [1-9]?\d|1\d{2}|2([0-4]\d|5[0-5]) 
+0.0.0.0: ^(0\.){3}0$  --&gt;  ^(()\.){3}()$
+ip地址:   ^(([1-9]?\d|1\d{2}|2([0-4]\d|5[0-5]))\.){3}([1-9]?\d|1\d{2}|2([0-4]\d|5[0-5]))$
+</pre></div>
+</td></tr></table>
+
+<p>验证日期格式</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>验证年份:  [1-9]\d{3}
+验证月份:  [1-9]|1[0-2]
+验证天数:  [1-9]|[1-2]\d|3[01]
+完整正则表达式: ^[1-9]\d{3}-([1-9]|1[0-2])-([1-9]|[1-2]\d|3[01])$
+</pre></div>
+</td></tr></table>
                 
                   
                 
@@ -1552,7 +1853,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../network/plan/" title="规划" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../plan/" title="规划" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1567,13 +1868,13 @@
           </a>
         
         
-          <a href="../../source/plan/" title="规划" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../linux_program/" title="Linux编程基础" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                规划
+                Linux编程基础
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
