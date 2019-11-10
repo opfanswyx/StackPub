@@ -69,7 +69,10 @@ nav:
     - 规划: database/plan.md
   - 开源项目:
     - 规划: source/plan.md
-    - Nginx基础: source/nginx_base.md
+    - Nginx:
+      - Nginx基础: source/nginx/nginx_base.md
+    - Redis:
+      - Redis基础: source/redis/redis_base.md
     - TinyHttpd: source/tinyhttpd.md
   - 数学: 
     - 规划: math/plan.md

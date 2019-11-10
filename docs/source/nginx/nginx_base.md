@@ -139,8 +139,76 @@ http{
 |error_page|自定义错误页面|
 
 ### 访问控制
+
 ### 日志文件
+#### 访问日志
+/usr/local/nginx/logs
+
+```
+log_format main 'xxxx'
+
+access_log logs/access.log main;
+
+access_log off; //关闭日志
+```
+
+|内置变量|含义|
+|:-:|:-:|
+|$remote_addr|客户端ip地址|
+|$remote_usr|客户端用户名|
+|$time_local|访问时的服务器时区|
+|$request|请求的url和http协议|
+|$status|记录请求返回的http状态码|
+|$body_bytes_sent|发送给客户端的文件主体内容的大小|
+|$http_referer|来路url地址|
+|$http_user_agent|客户端浏览器信息|
+|$http_x_forwarded_for|客户端ip地址列表(包括中间经过的代理)|
+
+#### 错误日志
+nginx.conf文件的error_log默认配置
+```
+error_log logs/error.log
+
+error_log logs/error.log notice;
+
+error_log logs/error.log info;
+
+error_log /dev/null;
+```
+#### 日志文件切割
+##### 手动切割
+```
+mv access.log 201xxxx.log
+nginx -s reopen
+```
+##### 自动切割
+编写autolog.sh
+```
+#！/bin/bash
+
+logs_path = "/usr/local/nginx/logs/xxx"
+
+mv $logs_path/access.log $logs_path/'date+"%Y%m%d%H%M"'.log
+
+/usr/local/nginx/sbin/nginx -s reopen
+
+
+chmod +x autolog.sh
+
+crontab -e
+
+0 0 * * * /usr/local/nginx/logs/xxx/autolog.sh > /dev/null 2>&1
+```
 ### 虚拟主机
+#### 基于端口配置虚拟主机
+
+#### 基于ip配置nginx虚拟主机
+
+#### 基于域名配置虚拟主机
+
+### 设置目录列表
+
+### 自配置文件引入
 
 ## Web服务搭建
 ### nginx+php
