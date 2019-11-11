@@ -201,7 +201,17 @@ crontab -e
 ```
 ### 虚拟主机
 #### 基于端口配置虚拟主机
+```
+server{
+    listen 8001;
+    server_name 192.168.78.3;
+    root html/html8001;
+    index index.html index.htm;jmnjnkhnb   
+}
+server{
 
+}
+```
 #### 基于ip配置nginx虚拟主机
 
 #### 基于域名配置虚拟主机
