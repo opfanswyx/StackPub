@@ -81,12 +81,12 @@ nav:
     - Unity基础: unity/unity_base.md
     - Shader: unity/unity_shader.md
   - Kit: 
-    - 计划: tools/Note.md
-    - 基于mkdocs的blog搭建: tools/mkdocs.md
-    - VIM常用技巧: tools/vim.md
-    - GDB调试的基本使用: tools/gdb.md
-    - 书籍📚推荐: tools/book.md
-    - tmux基本技巧: tools/tmux.md
+    - 计划: kit/Note.md
+    - 基于mkdocs的blog搭建: kit/mkdocs.md
+    - VIM常用技巧: kit/vim.md
+    - GDB调试的基本使用: kit/gdb.md
+    - 书籍📚推荐: kit/book.md
+    - tmux基本技巧: kit/tmux.md
 
 theme:
   name: material
