@@ -1470,6 +1470,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fastcgi" class="md-nav__link">
+    FastCGI环境变量
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2140,6 +2147,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fastcgi" class="md-nav__link">
+    FastCGI环境变量
+  </a>
   
 </li>
         
@@ -3026,7 +3040,60 @@ php.ini-development     //开发环境
 php.ini-production      //线上环境
 </pre></div>
 </td></tr></table>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[PHP]
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[PHP]
+output_buffering=4096   //输出缓冲(字节数)
+;open_basedir=          //限制php脚本可访问的路径
+disable_functions =     //禁用的函数列表
+max_execution_time=30   //每个php脚本最长时间限制(秒)
+memory_limit=128M       //每个php脚本最大内存使用限制
+display_errors=On       //是否输出错误信息
+log_errors=On           //是否开启错误日志
+;error_log=php_errors.log   //错误日志保存位置
+post_max_size=8M        //通过post提交的最大限制
+default_mimetype=&quot;text/html&quot;    //默认的mime类型
+default_charset=&quot;UTF-8&quot;         //默认字符集
+file_uploads=On         //是否允许上传文件
+;upload_tmp_dir=        //上传文件临时保存目录
+upload_max_filesize=2M  //上传文件最大限制
+allow_url_fopen=On      //是否允许打开远程文件
+[Date]
+;date.timezone=         //时区配置
+[mail function]
+;sendmail_path=         //sendmail的路径
+[Session]
+session.save_handler=files      //将会话以文件形式保存
+;session.save_path=&quot;\tmp&quot;       //回话保存目录
+</pre></div>
+</td></tr></table></p>
+<h4 id="fastcgi">FastCGI环境变量<a class="headerlink" href="#fastcgi" title="Permanent link">&para;</a></h4>
+<p>在nginx的conf目录中有一个fastcgi.conf文件，该文件中通过fastcgi_param数组型指令保存了一些环境变量。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+fastcgi_param QUERY_STRING $query_string;
+...
 </pre></div>
 </td></tr></table></p>
 <h3 id="nginxapache">nginx+apache<a class="headerlink" href="#nginxapache" title="Permanent link">&para;</a></h3>
