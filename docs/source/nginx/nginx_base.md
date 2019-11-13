@@ -372,7 +372,35 @@ php.ini-production      //线上环境
 ```
 ```
 [PHP]
-
+output_buffering=4096   //输出缓冲(字节数)
+;open_basedir=          //限制php脚本可访问的路径
+disable_functions =     //禁用的函数列表
+max_execution_time=30   //每个php脚本最长时间限制(秒)
+memory_limit=128M       //每个php脚本最大内存使用限制
+display_errors=On       //是否输出错误信息
+log_errors=On           //是否开启错误日志
+;error_log=php_errors.log   //错误日志保存位置
+post_max_size=8M        //通过post提交的最大限制
+default_mimetype="text/html"    //默认的mime类型
+default_charset="UTF-8"         //默认字符集
+file_uploads=On         //是否允许上传文件
+;upload_tmp_dir=        //上传文件临时保存目录
+upload_max_filesize=2M  //上传文件最大限制
+allow_url_fopen=On      //是否允许打开远程文件
+[Date]
+;date.timezone=         //时区配置
+[mail function]
+;sendmail_path=         //sendmail的路径
+[Session]
+session.save_handler=files      //将会话以文件形式保存
+;session.save_path="\tmp"       //回话保存目录
+```
+#### FastCGI环境变量
+在nginx的conf目录中有一个fastcgi.conf文件，该文件中通过fastcgi_param数组型指令保存了一些环境变量。
+```
+fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+fastcgi_param QUERY_STRING $query_string;
+...
 ```
 ### nginx+apache
 ### openresty
