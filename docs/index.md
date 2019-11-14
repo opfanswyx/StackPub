@@ -1,12 +1,12 @@
-## About 
->AS患者，三流码畜，勃学结业，极度失败，躺平状态。
+# Stack Pub
+Stack Pub(堆栈酒馆) 是IT相关的NoteBook。
 
->都是些老生常谈的问题，尝试摘抄总结表达。
-
+本项目受[OI Wiki](https://https://oi-wiki.org/) 的启发。
 ### Contact 
-**[Email📮: opfanswyx@outlook.com](opfanswyx@outlook.com)**
 
-**[GitHub: https://github.com/opfanswyx](https://github.com/opfanswyx)**
+[Email📮: opfanswyx@outlook.com](opfanswyx@outlook.com)
+
+[GitHub: opfanswyx](https://github.com/opfanswyx)
 
 ---
 

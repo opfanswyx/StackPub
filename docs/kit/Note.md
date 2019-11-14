@@ -36,6 +36,8 @@ CDN
 ctl-6100 数位板
 数字草稿小黑板
 chrome-extension://ihlenndgcmojhcghmfjfneahoeklbjjh/pages/mappings.html
+
+ps板绘仿手绘教程
 ```
 
 ### switch想买的游戏(等打折)

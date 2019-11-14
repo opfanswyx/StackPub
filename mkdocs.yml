@@ -59,11 +59,14 @@ nav:
     - 数据压缩: algorithm/algo_sort.md
     - 内存管理: algorithm/algo_sort.md
     - 动态规划: algorithm/algo_sort.md
-  - Linux:
-    - 规划: linux/plan.md
-    - Linux基础: linux/linux_base.md
-    - Linux编程基础: linux/linux_program.md
-  - 网络:
+  - 操作系统:
+    - CSAPP NOTE: 
+      - 规划: os/csapp/plan.md
+      - 计算机系统漫游: os/csapp/chapter1.md
+    - Linux:
+      - Linux基础: os/linux/linux_base.md
+      - Linux编程基础: os/linux/linux_program.md
+  - 计算机网络:
     - 规划: network/plan.md
   - 数据库:
     - 规划: database/plan.md
@@ -80,7 +83,7 @@ nav:
     - 规划: unity/List.md
     - Unity基础: unity/unity_base.md
     - Shader: unity/unity_shader.md
-  - Kit: 
+  - Kit🔧: 
     - 计划: kit/Note.md
     - 基于mkdocs的blog搭建: kit/mkdocs.md
     - VIM常用技巧: kit/vim.md
