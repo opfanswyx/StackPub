@@ -400,14 +400,134 @@ session.save_handler=files      //将会话以文件形式保存
 ```
 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 fastcgi_param QUERY_STRING $query_string;
-...
 ```
+
+|选项|说明|示例|
+|:-:|:-:|:-:|
+|SCRIPT_FILENAME|脚本文件路径|/usr/local/nginx/html/index.php|
+|QUERY_STRING|?后面的URL参数|a=1&b=2|
+|REQUEST_METHOD|请求方式|POST|
+|CONTENT_TYPE|请求内容的类型|application/x-www-form-urlencoded|
+|CONTENT_LENGTH|请求内容长度|8|
+|SCRIPT_NAME|脚本文件名|/index.php|
+|REQUEST_URI|请求URI|/index.php?a=1&b=1|
+|DOCUMENT_URI|文档uri|/index.php|
+|DOCUMENT_ROOT|文档根目录|/usr/local/nginx/html|
+|SERVER_PROTOCOL|HTTP协议版本|HTTP/1.1|
+|REQUEST_SCHEME|请求协议(http/https)|http|
+|GATEWAY_INTERFACE|网关接口|CGI/1.1|
+|SERVER_SOFTWARE|服务器软件和版本|nginx/1.10.1|
+|REMOTE_ADDR|来源地址|192.168.78.1|
+|REMOTE_PORT|来源端口|60100|
+|SERVER_ADDR|服务器地址|192.168.78.2|
+|SERVER_PORT|服务器端口|80|
+|SERVER_NAME|服务器名称|ng.test|
+
+#### 在Nginx配置文件中支持php
+```
+server{
+    listen 80;
+    server_name ng.test www.ng.test;
+    root html/www.ng.test;
+    index index.html index.htm index.php;
+    location ~\.php${
+        fastcgi_pass 127.0.0.1:9000;
+        include fastcgi.conf;
+    }  
+}
+```
+
+#### 判断php文件是否存在
+404页面 & PATHINFO
+```
+location ~\.php${
+    try_files $uri = 404;
+    fastcgi_pass 127.0.0.1:9000;
+    include fastcgi.conf;
+}
+```
+
 ### nginx+apache
+[Apache HTTP Server(httpd)](https://httpd.apache.org)
+
+```
+
+```
 ### openresty
+获取[OpenResty](https://openresty.org)
 
+```
+tar -zxvf openresty-1.11.2.1.tar.gz
+cd openresty-1.11.2.1
+yum -y install perl pcre-devel openssl-devel
+./configure
+make && make install
+```
+```
+bin：存放二进制可执行文件。
+luajit：存放LuaJIT(Lua代码解释器)相关的文件。
+lualib：存放lua库文件。
+nginx：OpenResty整合的Nginx存放在这个目录。
+pod：存放用于bin/restydoc程序读取的pod文档。
+resty.index：存放pkd文档索引。
+site：OPM(OpenResty Package Manager)包的存放目录。
+```
+```
+cd /usr/local/openresty/bin
+./resty -e 'print("hello")'
+./resty ~/hello.lua
 
+vi conf/nginx.conf
+
+worker_processes 1
+error_log logs/error.log
+events{
+    worker_connections 1024;
+}
+http{
+    server{
+        listen 8080;
+        location / {
+            default_type text/html;
+            content_by_lua_file test.lua;
+        }
+    }
+}
+```
 ## 负载均衡与缓存
 ### 反向代理
+#### 反向代理与正向代理的区别
+正向代理:客户端将发送的请求和指定的目标服务器发送给代理服务器，代理服务器向目标服务器发起请求，并将获得的响应结果返回给客户端的过程。
+
+反向代理:反向代理对于客户端来说就是目标服务器，客户端向反向代理服务器发送请求后，反向代理服务器将该请求转发给内部网络上的后端服务器，并将后端服务器上得到的响应结果返回给客户端。
+
+在nginx配置文件中，proxy_pass指令通常在location块中进行设置。
+```
+server{
+    listen 80;
+    server_name test.ng.test;
+    location / {
+        proxy_pass http://192.168.78.128;
+    }
+}
+
+server{
+    listen 80;
+    server_name test.web.com;
+    location / {
+        proxy_pass http://192.168.78.200;
+    }
+}
+```
+
+|指令|说明|
+|:-:|:-:|
+|proxy_set_header|在讲客户端请求发送给后端服务器之前，更改来自客户端的请求头信息|
+|proxy_connect_timeout|配置nginx与后端代理服务器尝试建立连接的超时时间|
+|proxy_read_timeout|配置nginx向后端服务器组发出read请求后，等待响应的超时时间|
+|proxy_send_timeout|配置nginx向后端服务器组发出write请求后，等待响应的超时时间|
+|proxy_redirect|用于修改后端服务器返回的响应头中的location和refresh|
+
 ### 负载均衡
 ### 缓存配置
 ### 邮件服务
