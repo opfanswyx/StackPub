@@ -87,6 +87,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#lua" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -878,9 +882,76 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Lua总结
+      </label>
+    
     <a href="./" title="Lua总结" class="md-nav__link md-nav__link--active">
       Lua总结
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    Lua环境安装
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    注释
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单行注释
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    多行注释
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lua_1" class="md-nav__link">
+    Lua数据类型
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1545,6 +1616,75 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lua" class="md-nav__link">
+    Lua环境安装
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    注释
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单行注释
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    多行注释
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lua_1" class="md-nav__link">
+    Lua数据类型
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -1555,12 +1695,81 @@
                 
                   <h1>Lua总结</h1>
                 
-                <p>迭代器</p>
-<p>table</p>
-<p>元表</p>
-<p>协程</p>
-<p>垃圾回收</p>
-<p>面向对象</p>
+                <h2 id="lua">Lua环境安装<a class="headerlink" href="#lua" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>curl -R -O http://www.lua.org/ftp/lua-5.3.0.tar.gz
+tar zxf lua-5.3.0.tar.gz
+cd lua-5.3.0
+make linux test
+make install
+</pre></div>
+</td></tr></table>
+
+<h3 id="_1">注释<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h4 id="_2">单行注释<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>--
+</pre></div>
+</td></tr></table>
+
+<h4 id="_3">多行注释<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>--[[
+多行注释
+多行注释
+]]--
+</pre></div>
+</td></tr></table>
+
+<p>在默认情况下，变量总是认为是全局的。</p>
+<p>全局变量不需要声明，给一个变量赋值后即创建了这个全局变量，访问一个没有初始化的全局变量也不会出错，只不过得到的结果是：nil。</p>
+<h2 id="lua_1">Lua数据类型<a class="headerlink" href="#lua_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">nil</td>
+<td align="center">表示一个无效值，nil作比较时应该加上双引号"</td>
+</tr>
+<tr>
+<td align="center">boolean</td>
+<td align="center">fase和true</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">表示双精度类型的实浮点数</td>
+</tr>
+<tr>
+<td align="center">string</td>
+<td align="center">字符串由一对双引号或单引号来表示</td>
+</tr>
+<tr>
+<td align="center">function</td>
+<td align="center">由C或Lua编写的函数</td>
+</tr>
+<tr>
+<td align="center">userdata</td>
+<td align="center">表示任意存储在变量中的C数据结构</td>
+</tr>
+<tr>
+<td align="center">thread</td>
+<td align="center">表示执行的独立线路，用于执行协同程序</td>
+</tr>
+<tr>
+<td align="center">table</td>
+<td align="center">Lua 中的表（table）其实是一个"关联数组"（associative arrays），数组的索引可以是数字、字符串或表类型。在 Lua 里，table 的创建是通过"构造表达式"来完成，最简单构造表达式是{}，用来创建一个空表。</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
