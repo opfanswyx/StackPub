@@ -44,9 +44,11 @@ nav:
       - 输入输出流: cplus/cpp_io.md
       - 文件操作: cplus/cpp_file.md
       - 高级主题: cplus/cpp_high.md
+    - 正则表达式: source/regexp.md
     - Go语言:
       - 规划: goprogram/plan.md
     - PHP总结: source/php/php_summary.md
+    - Shell编程: source/shell.md
     - Lua总结: source/lua/lua_summary.md
   - 数据结构与算法:
     - 链表: algorithm/struct_linkedlist.md
@@ -60,20 +62,22 @@ nav:
     - 内存管理: algorithm/algo_sort.md
     - 动态规划: algorithm/algo_sort.md
   - 操作系统:
+    - Linux:
+      - Linux常用命令: os/linux/linux_command.md
+      - Linux编程基础: os/linux/linux_program.md
     - CSAPP NOTE: 
       - 规划: os/csapp/plan.md
       - 计算机系统漫游: os/csapp/chapter1.md
-    - Linux:
-      - Linux基础: os/linux/linux_base.md
-      - Linux编程基础: os/linux/linux_program.md
   - 计算机网络:
     - 规划: network/plan.md
   - 数据库:
     - 规划: database/plan.md
   - 开源项目:
-    - 规划: source/plan.md
     - Nginx:
-      - Nginx基础: source/nginx/nginx_base.md
+      - Nginx安装与基本配置: source/nginx/nginx_base.md
+      - Web服务搭建与模块化配置: source/nginx/nginx_web.md
+      - 负载均衡与缓存: source/nginx/nginx_balence.md
+      - 高可用负载均衡集群: source/nginx/nginx_high.md
     - Redis:
       - Redis基础: source/redis/redis_base.md
     - TinyHttpd: source/tinyhttpd.md
