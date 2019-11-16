@@ -1,6 +1,6 @@
 ## 计划📖(周)
 ```
-
+/usr/local/lib/python3.7/site-packages/material/partials/integrations/
 ```
 ## 完善StackPub博客
 
