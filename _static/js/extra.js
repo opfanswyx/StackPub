@@ -18,3 +18,4 @@ window.MathJax = {
   showProcessingMessages: false,
   messageStyle: "none"
 };
+

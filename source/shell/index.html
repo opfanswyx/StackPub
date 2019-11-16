@@ -13,6 +13,8 @@
         <meta name="description" content="Atticus's Docs">
       
       
+        <link rel="canonical" href="https://opfanswyx.top/source/shell/">
+      
       
         <meta name="author" content="Atticus">
       
@@ -96,7 +98,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Stack Pub" class="md-header-nav__button md-logo">
+        <a href="https://opfanswyx.top" title="Stack Pub" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -188,13 +190,16 @@
     <ul class="md-tabs__list">
       
         
-  <li class="md-tabs__item">
-    
-      <a href="../.." class="md-tabs__link">
-        Hello World
-      </a>
-    
-  </li>
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          简介
+        </a>
+      
+    </li>
+  
 
       
         
@@ -345,7 +350,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Stack Pub" class="md-nav__button md-logo">
+    <a href="https://opfanswyx.top" title="Stack Pub" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -380,10 +385,34 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      简介
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        简介
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../.." title="Hello World" class="md-nav__link">
-      Hello World
+    <a href="../.." title="Hello Wolrd" class="md-nav__link">
+      Hello Wolrd
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -954,6 +983,12 @@
       
       
       
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
       
     </ul>
   
@@ -1708,6 +1743,12 @@
       
       
       
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
     </ul>
   
 </nav>
@@ -1735,7 +1776,29 @@
                 
               
               
-                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '15c136d340d3fcee74f4', 
+
+  clientSecret: '3f4fef6e6bc874fc99b0ee567d79e22ea20695e8', 
+
+  repo: 'StackPubTalk',
+  owner: 'opfanswyx',
+  admin: ['opfanswyx'],
+
+  id: location.href,      
+  distractionFreeMode: false  
+})
+
+gitalk.render('gitalk-container')
+</script>
+
+
 
 
               
@@ -1787,7 +1850,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2018 - 2019 Atticus
+            Copyright &copy; 2018 - 2019 <a href="https://github.com/opfanswyx">Atticus</a> <br><span class="md-footer-custom-text">博客内容遵守:</span> <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0 协议条款</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
           </div>
         
         powered by
@@ -1797,6 +1860,19 @@
           Material for MkDocs</a>
       </div>
       
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="mailto:opfanswyx@outlook.com" class="md-footer-social__link fa fa-envelope"></a>
+    
+      <a href="https://github.com/opfanswyx" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://t.me/opfanswyx" class="md-footer-social__link fa fa-telegram"></a>
+    
+      <a href="//shang.qq.com/wpa/qunwpa?idkey=2ffaaf5a3df5fbb57aa50e84469c9eff6c7a960b4ca4b893317c8583398eb6be" class="md-footer-social__link fa fa-qq"></a>
+    
+  </div>
+
     </div>
   </div>
 </footer>
