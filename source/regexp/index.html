@@ -2059,24 +2059,30 @@ ip地址:   ^(([1-9]?\d|1\d{2}|2([0-4]\d|5[0-5]))\.){3}([1-9]?\d|1\d{2}|2([0-4]\
                 
               
               
-                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '15c136d340d3fcee74f4', 
+
+  clientSecret: '3f4fef6e6bc874fc99b0ee567d79e22ea20695e8', 
+
+  repo: 'StackPubTalk',
+  owner: 'opfanswyx',
+  admin: ['opfanswyx'],
+
+  id: location.href,      
+  distractionFreeMode: false  
+})
+
+gitalk.render('gitalk-container')
+</script>
 
 
-  <h2 id="__comments">评论</h2>
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://opfanswyx.top/source/regexp/";
-      this.page.identifier =
-        "/source/regexp/";
-    };
-    (function() {
-      var d = document, s = d.createElement("script");
-      s.src = "//Atticus.disqus.com/embed.js";
-      s.setAttribute("data-timestamp", +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
+
 
               
             </article>
