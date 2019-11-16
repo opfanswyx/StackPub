@@ -52,10 +52,10 @@ nav:
       - 输入输出流: cplus/cpp_io.md
       - 文件操作: cplus/cpp_file.md
       - 高级主题: cplus/cpp_high.md
-    - 正则表达式: source/regexp.md
     - Go语言:
       - 规划: goprogram/plan.md
     - PHP总结: source/php/php_summary.md
+    - 正则表达式: source/regexp.md
     - Shell编程: source/shell.md
     - Lua总结: source/lua/lua_summary.md
   - 数据结构与算法:
