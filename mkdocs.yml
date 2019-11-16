@@ -1,16 +1,24 @@
 site_name: Stack Pub
 site_description: Atticus's Docs
 site_author: Atticus
+site_url: https://opfanswyx.top
+strict: true
 
 # Repository
 repo_name: 'Atticus/Stack Pub'
 repo_url: 'https://github.com/opfanswyx/StackPub'
 
 # Copyright
-copyright: 'Copyright &copy; 2018 - 2019 Atticus'
+copyright: 
+  Copyright &copy; 2018 - 2019 <a href="https://github.com/opfanswyx">Atticus</a>
+  <br><span class="md-footer-custom-text">博客内容遵守:</span>
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0 协议条款</a>
 
+
+#Contents
 nav:
-  - Hello World: index.md
+  - 简介: 
+    - Hello Wolrd: index.md
   - 编程语言:
     - C语言: 
       - C语言基础: cprogram/c_base.md
@@ -90,9 +98,9 @@ nav:
   - Kit🔧: 
     - 计划: kit/Note.md
     - 基于mkdocs的blog搭建: kit/mkdocs.md
+    - 书籍📚推荐: kit/book.md
     - VIM常用技巧: kit/vim.md
     - GDB调试的基本使用: kit/gdb.md
-    - 书籍📚推荐: kit/book.md
     - tmux基本技巧: kit/tmux.md
 
 theme:
@@ -112,10 +120,22 @@ theme:
 extra:
   search:
     language: 'jp'
+  disqus: 'Atticus'
   manifest: 'manifest.webmanifest'
+  social:
+    - type: envelope
+      link: mailto:opfanswyx@outlook.com
+    - type: github
+      link: https://github.com/opfanswyx
+    - type: telegram
+      link: https://t.me/opfanswyx
+    - type: qq
+      link: //shang.qq.com/wpa/qunwpa?idkey=2ffaaf5a3df5fbb57aa50e84469c9eff6c7a960b4ca4b893317c8583398eb6be
+
 
 extra_javascript:
   - '_static/js/extra.js?v=15'
+  - '_static/js/baidu-tongji.js'
   - 'https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
 
 
