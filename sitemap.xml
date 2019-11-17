@@ -176,7 +176,27 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://opfanswyx.top/algorithm/struct_linkedlist/</loc>
+     <loc>https://opfanswyx.top/algorithm/struct_seqlist/</loc>
+     <lastmod>2019-11-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://opfanswyx.top/algorithm/struct_linklist/</loc>
+     <lastmod>2019-11-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://opfanswyx.top/algorithm/struct_listfunction/</loc>
+     <lastmod>2019-11-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://opfanswyx.top/algorithm/struct_dlist/</loc>
+     <lastmod>2019-11-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://opfanswyx.top/algorithm/struct_clist/</loc>
      <lastmod>2019-11-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -286,7 +306,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://opfanswyx.top/math/plan/</loc>
+     <loc>https://opfanswyx.top/math/math_graph/</loc>
      <lastmod>2019-11-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
