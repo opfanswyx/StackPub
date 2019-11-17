@@ -2,7 +2,7 @@ site_name: Stack Pub
 site_description: Atticus's Docs
 site_author: Atticus
 site_url: https://opfanswyx.top
-strict: true
+strict: false
 
 # Repository
 repo_name: 'Atticus/Stack Pub'
@@ -59,7 +59,12 @@ nav:
     - Shell编程: source/shell.md
     - Lua总结: source/lua/lua_summary.md
   - 数据结构与算法:
-    - 链表: algorithm/struct_linkedlist.md
+    - 链表:
+      - 顺序链表: algorithm/struct_seqlist.md 
+      - 链式链表: algorithm/struct_linklist.md 
+      - 链表的各种操作: algorithm/struct_listfunction.md 
+      - 双向链表: algorithm/struct_dlist.md 
+      - 循环♻️链表: algorithm/struct_clist.md 
     - 栈与队列: algorithm/struct_stack_queue.md
     - 树🌲: algorithm/struct_tree.md
     - 图: algorithm/struct_graph.md
@@ -90,7 +95,7 @@ nav:
       - Redis基础: source/redis/redis_base.md
     - TinyHttpd: source/tinyhttpd.md
   - 数学: 
-    - 规划: math/plan.md
+    - 图形学相关数学: math/math_graph.md
   - 图形学:
     - 规划: unity/List.md
     - Unity基础: unity/unity_base.md

@@ -1,7 +1,5 @@
 [LaTeX 符号](https://www.caam.rice.edu/~heinken/latex/symbols.pdf)
 
-$$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$$ ， $$p(x|y) = \frac{p(y|x)p(x)}{p(y)}$$
-
 ## 笛卡尔坐标系
 ### 二维笛卡尔坐标系
 ![二维坐标系](../image/two_dcs.jpeg)
@@ -27,6 +25,8 @@ $$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$$ ， $$p(x|y) = \frac{p(y|x)p(x)}{p(y
 ![](../image/point_vector.jpeg)
 
 ### 矢量运算
+
+#### 矢量和标量的乘除
 我们不能把标量和矢量相加减。但可以对它们进行乘法运算。结果会得到一个不同长度且可能方向相反的新矢量。
 
 KV = (KV<sub>x</sub>, KV<sub>y</sub>, KV<sub>z</sub>)
@@ -39,7 +39,66 @@ $$\frac{v}{k} = \frac{x,y,z}{k} = \frac{1}{k}(x,y,z) = (\frac{x}{k},\frac{y}{k},
 
 $2(1,2,3)=(2,4,6)\qquad$ $-3.5(2.0)=(-7.0)\qquad$ $\frac{1,2,3}{2}=(0.5,1,1.5)$
 
+#### 矢量的加减法
+矢量加减法满足三角形定则(triaangle)。
+
+$$
+a+b=(a_{x}+b_{x},a_{y}+b_{y},a_{z}+b_{z})
+$$
+
+$$
+a-b=(a_{x}-b_{x},a_{y}-b_{y},a_{z}-b_{z})
+$$
+
+### 矢量的模
+
+$$
+|V|=$\sqrt{{V_{x}}^{2}+{V_{y}}^{2}+{V_{z}}^{2}}
+$$
+
+### 单位矢量
+
+$$\hat{V} = \frac{V}{|V|} ,V是任意非零矢量 $$ 
+
+### 矢量的点积
+矢量之间也可以进行乘法，矢量的乘法有两种最常用的种类:点积(dot product)和叉积(cross product)。
+#### 点积运算
+公式1
+
+$$a\cdot b=(a_{x},a_{y},a_{z})\cdot(b_{x},b_{y},b_{z})=a_{x}b_{x}+a_{y}b_{y}+a_{z}b_{z}$$
+
+矢量点击满足交换律:   
+
+$$ a\cdot b = b\cdot a $$
+
+性质一：点积可结合标量乘法。
+
+$$ (ka)\cdot b=a\cdot (kb)=k(a\cdot b) $$
+
+性质二：点积可结合矢量的加法和减法。
+
+$$a\cdot(b+c) = a\cdot b+a\cdot c $$
+
+性质三：一个矢量和本身进行点积的结果是该矢量的模的平方。
+
+$$ V\cdot V = v_{x}v_{x}+v_{y}v_{y}+v_{z}v_{z}={|V|}^{2} $$
+
+公式2
+
+$$a\cdot b=|a||b|\cos\theta$$
+
+#### 叉积运算
+
+$$a\times b=(a_{x},a_{y},a_{z})\times(b_{x},b_{y},b_{z})=(a_{y}b_{z}-a_{z}b_{y},a_{z}b_{x}-a_{x}b_{z},a_{x}b_{y}-a_{y}b_{x}) $$
+
 ## 矩阵
+
+$$M=
+    \begin{bmatrix} 
+        m_{11} & m_{12} & m_{13} \\
+        m_{21} & m_{22} & m_{23} \\
+        m_{31} & m_{32} & m_{33} \\
+    \end{bmatrix}$$
 
 ## 矩阵的几何变换
 
