@@ -1,8 +1,8 @@
 
 # Stack Pub
-Stack Pub(堆栈酒馆) 是计算机软件开发相关的NoteBook，主要包括后端开发与游戏开发方面相关知识。
+Stack Pub(堆栈酒馆) 是计算机软件开发相关的NoteBook，主要包括后端开发与游戏开发方面相关知识。本Blog受[OI Wiki](https://oi-wiki.org/) 的启发，基于[mkdocs-material](kit/mkdocs/)搭建，使用[Gitalk](https://gitalk.github.io/)评论系统，托管于[Github](https://github.com/opfanswyx/StackPub)平台。
 
-本Blog受[OI Wiki](https://oi-wiki.org/) 的启发，基于[mkdocs-material](kit/mkdocs/)搭建，使用[Gitalk](https://gitalk.github.io/)评论系统，托管于[Github](https://github.com/opfanswyx/StackPub)平台。
+博客内容主要来源于读书总结（[书籍📚推荐](kit/book.md)），论坛文章与工作经验。如有侵权请联系我（联系方式见右下角↘），本博客遵循：```署名-相同方式共享 4.0 国际```协议条款（详见↙左下角）。
 
 ---
 

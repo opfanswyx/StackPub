@@ -24,6 +24,8 @@ nav:
       - C语言基础: cprogram/c_base.md
       - C语言与面向对象: cprogram/c_object.md
       - C语言设计模式: cprogram/c_design.md
+    - 正则表达式: source/regexp.md
+    - Shell编程: source/shell.md
     - C Plus Plus: 
       - C++基础: cplus/cpp_base.md
       - 类和对象: cplus/cpp_object.md
@@ -54,9 +56,10 @@ nav:
       - 高级主题: cplus/cpp_high.md
     - Go语言:
       - 规划: goprogram/plan.md
-    - PHP总结: source/php/php_summary.md
-    - 正则表达式: source/regexp.md
-    - Shell编程: source/shell.md
+    - PHP: 
+      - PHP基础: source/php/php_base.md
+      - PHP面向对象: source/php/php_object.md
+      - PHP WEB相关: source/php/php_web.md
     - Lua总结: source/lua/lua_summary.md
   - 数据结构与算法:
     - 链表:
