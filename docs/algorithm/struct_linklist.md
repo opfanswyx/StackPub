@@ -1,50 +1,49 @@
-## linklist.h
+## 链式存储链表结构体
 ```c
 #ifndef _LIST_H_
 #define _LIST_H_
-struct Node		//结点
+struct Node		/* 结点 */
 {
-	int data;		//数据域
-	struct Node *next;	//指向下一个结点的指针
+	int data;		/* 数据域 */ 
+	struct Node *next;	/* 指向下一个结点的指针 */
 };
 
-struct Header	//头结点
+struct Header	/* 头结点 */
 {
-	int length;		//记录链表大小
+	int length;		/* 记录链表大小 */
 	struct Node *next;
 };
 
 typedef struct Node List;
 typedef struct Header pHead;
 
-pHead *createList();		//创建链表
-int isEmpty(pHead *l);		//判断链表是否为空
-int Insert(pHead *l,int pos,int val);		//插入元素，插入成功返回1
-List *Delete(pHead *l, int ele);			//删除元素，删除成功则返回删除的元素
-List *find(pHead *l,int ele);				//查找某个元素是否存在
-int Size(pHead *l);			//获取链表大小
-void Destory(pHead *l);		//销毁链表
-void print(pHead *l);		//打印链表
+pHead *createList();		/* 创建链表 */
+int isEmpty(pHead *l);	/* 判断链表是否为空 */
+int Insert(pHead *l,int pos,int val);		/* 插入元素 */
+List *Delete(pHead *l, int ele);		/* 删除元素 */
+List *find(pHead *l,int ele);		/* 查找某个元素是否存在 */
+int Size(pHead *l);			/* 获取链表大小 */
+void Destory(pHead *l);		/* 销毁链表 */
+void print(pHead *l);		/* 打印链表 */
 
 #endif
 ```
-## linklist.c
+## 链式存储链表实现
 ```c
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include "link_list.h"
 
-//创建链表
-pHead *createList()				//pHead是struct Header的别名，是头结点类型
+pHead *createList()	/* pHead是struct Header的别名，是头结点类型 */
 {
-	pHead *ph=(pHead*)malloc(sizeof(pHead));	//为头节点分配内存
-	ph->length=0;								//为头结点初始化
+	pHead *ph=(pHead*)malloc(sizeof(pHead));	
+	ph->length=0;								
 	ph->next=NULL;
-	return ph;					//返回头结点地址
+	return ph;					
 }
-//获取链表大小
-int Size(pHead *ph)
+
+int Size(pHead *ph) /* 获取链表大小 */
 {
 	if(ph==NULL)
 	{
@@ -53,9 +52,10 @@ int Size(pHead *ph)
 	}
 	return ph->length;
 }
-int Insert(pHead *ph,int pos, int val)	//在某个位置插入某个元素，插入成功返回1
+
+int Insert(pHead *ph,int pos, int val)
 {
-	//先做健壮性判断
+	/* 先做健壮性判断 */
 	if(ph==NULL || pos<0 || pos >ph->length)
 	{
 		printf("error\n");
@@ -82,17 +82,16 @@ int Insert(pHead *ph,int pos, int val)	//在某个位置插入某个元素，插
 	ph->length++;
 	return 1;
 }
-//查找某个元素
-List *find(pHead *ph,int val)
+
+List *find(pHead *ph,int val) /* 查找某个元素 */
 {
-	//先做健壮性判断
 	if(ph==NULL)
 	{
 		printf("error\n");
 		return NULL;
 	}
-	//遍历链表来查找元素
-	List *pTmp=ph->next;
+	
+	List *pTmp=ph->next; /* 遍历链表来查找元素 */
 	do
 	{
 		if(pTmp->data==val)
@@ -104,10 +103,9 @@ List *find(pHead *ph,int val)
 	printf("no find %d data\n",val);
 	return NULL;
 }
-//删除元素
-List *Delete(pHead *ph,int val)
+
+List *Delete(pHead *ph,int val) /* 删除元素 */
 {
-	//先做健壮性判断
 	if(ph==NULL)
 	{
 		printf("ph==NULL\n");
@@ -119,16 +117,16 @@ List *Delete(pHead *ph,int val)
 		printf("not find %d\n",val);
 	}
 
-	//遍历链表找到要删除的结点，并找出其前驱及后继结点
-	List *pRe=ph->next;		//当前结点
+	/* 遍历链表找到要删除的结点，并找出其前驱及后继结点 */
+	List *pRe=ph->next;		
 	List *pCur=NULL;
-	if(pRe->data==val)		//第一个结点
+	if(pRe->data==val)	/* 第一个结点 */
 	{
 		ph->next=pRe->next;
 		ph->length--;
 		return pRe;
 	}
-	else			//其它结点
+	else	
 	{
 		int i;
 		for(i=0;i<ph->length;i++)
@@ -144,8 +142,8 @@ List *Delete(pHead *ph,int val)
 		}
 	}
 }
-//销毁链表
-void Destory(pHead *ph)
+
+void Destory(pHead *ph) /* 销毁链表 */
 {
 	List *pCur=ph->next;
 	List *pTmp;
@@ -162,8 +160,8 @@ void Destory(pHead *ph)
 	ph->length=0;
 	ph->next=NULL;
 }
-//遍历打印链表
-void print(pHead *ph)
+
+void print(pHead *ph) /* 遍历打印链表 */
 {
 	if(ph==NULL)
 	{
@@ -179,7 +177,7 @@ void print(pHead *ph)
 }
 
 ```
-## main.c
+## Unit Test
 ```c
 #define _CRT_SECURE_NO_WARNINGA
 #include "link_list.h"
@@ -224,5 +222,4 @@ int main()
 	system("pause");
 	return 0;
 }
-
 ```

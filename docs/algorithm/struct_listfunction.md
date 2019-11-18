@@ -1,4 +1,4 @@
-## list_oper.h
+## 链表的各种操作
 ```c
 #ifndef __FUNCTION_H__
 #define __FUNCTION_H__
@@ -17,59 +17,58 @@ struct Node
 typedef struct Node Node;
 typedef Node *pNode;
 
-pNode InitNodeList(pNode *pHead);//初始化
+pNode InitNodeList(pNode *pHead); /* 初始化 */
 
-pNode BuyNewNode(DataType data);//新建节点
+pNode BuyNewNode(DataType data);  /* 新建节点 */
+/* 头插法 */
+void InsertNodeByFrontToTail(pNode *pHead, DataType data);
+/* 正序打印 */
+void PrintNodeProntToTail(pNode pHead);
+/* 尾插法 */
+void InserttNodeByTailToFront(pNode *pHead, DataType data);
+/* 反转链表—一般方法 */
+pNode ReceiveNodeList(pNode pHead);
+/* 反转链表—递归实现 */
+pNode ReceiveNodeList_DG(pNode pHead);
+/* 合并两个有序单链表——一般方法 */
+pNode MeryTwoSortNodeChangeOneSortNode(pNode pHead1, pNode pHead2);
+/* 合并两个有序单链表——递归实现 */
+pNode MeryTwoSortNodeChangeOneSortNode_DG(pNode pHead1, pNode pHead2);
 
-void InsertNodeByFrontToTail(pNode *pHead, DataType data);//头插法
+void BubbleSortNodeList(pNode pHead); /* 链表排序——冒泡法实现 */
 
-void PrintNodeProntToTail(pNode pHead);//正序打印
+pNode SearchMIdNode(pNode pHead); /* 查找中间节点——快慢指针法 */
 
-void InserttNodeByTailToFront(pNode *pHead, DataType data);//尾插法
+pNode FindLastKNode(pNode pHead, int key); /* 找到倒数第K个节点 */
+/* 非头结点前插入data */
+void InsertNotIntoKHead(pNode pos, DataType data);
+/* 寻找链表中data为K的节点 */
+pNode FindDataInNodeList(pNode pHead, DataType k);
 
-pNode ReceiveNodeList(pNode pHead);//反转链表—一般方法
+void DeleteLastKNode(pNode pHead, int key);/* 删除倒数第K个节点 */
 
-pNode ReceiveNodeList_DG(pNode pHead);//反转链表——递归实现
+void DeleteNotTailNode(pNode pos); /* 删除单链表的非尾结点 */
 
-pNode MeryTwoSortNodeChangeOneSortNode(pNode pHead1, pNode pHead2);//合并两个有序单链表——一般方法
+void GetCircleForJoseph(pNode pHead); /* 构造约瑟夫环 */
+/* 单链表实现约瑟夫环  */
+void GetJosephCircle(pNode pHead, size_t K);
+ 
+void GetCircleForList(pNode pHead); /* 构造带环链表 */
 
-pNode MeryTwoSortNodeChangeOneSortNode_DG(pNode pHead1, pNode pHead2);//合并两个有序单链表——递归实现
+pNode isHaveCircle(pNode pHead); /* 判断链表是否带环 */
 
-void BubbleSortNodeList(pNode pHead);//链表排序——冒泡法实现
+int GetCircleLength(pNode pHead); /* 求环的长度 */
 
-pNode SearchMIdNode(pNode pHead);//查找中间节点——快慢指针法
+pNode GetCircleIntoNode(pNode pHead); /* 求环的入口点 */
 
-pNode FindLastKNode(pNode pHead, int key);//找到倒数第K个节点
+pNode pFrontNode(pNode pHead); /* 返回链表第一个节点 */
 
-void InsertNotIntoKHead(pNode pos, DataType data);// 非头结点前插入data
-
-pNode FindDataInNodeList(pNode pHead, DataType k);//寻找链表中data为K的节点
-
-void DeleteLastKNode(pNode pHead, int key);//删除倒数第K个节点
-
-void DeleteNotTailNode(pNode pos);//删除单链表的非尾结点
-
-void GetCircleForJoseph(pNode pHead);//构造约瑟夫环
-
-void GetJosephCircle(pNode pHead, size_t K);//单链表实现约瑟夫环
-
-void GetCircleForList(pNode pHead);//构造带环链表
-
-pNode isHaveCircle(pNode pHead);//判断链表是否带环
-
-int GetCircleLength(pNode pHead);//求环的长度
-
-pNode GetCircleIntoNode(pNode pHead);//求环的入口点
-
-pNode pFrontNode(pNode pHead);//返回链表第一个节点
-
-pNode pTailNode(pNode pHead); //返回链表最后一个节点
-
-void InsertNotHead(pNode pos, DataType data);// 非头结点前插入data
-
+pNode pTailNode(pNode pHead); /* 返回链表最后一个节点 */
+/* 非头结点前插入data */
+void InsertNotHead(pNode pos, DataType data);
 #endif
 ```
-## list_oper.c
+
 ```c
 #include"function.h"
 
@@ -162,9 +161,9 @@ pNode ReceiveNodeList_DG(pNode pHead)
 
 	pNewNode = ReceiveNodeList_DG(pHead->_pNext);
 
-	pHead->_pNext->_pNext = pHead;                       //翻转链表的指向
-	pHead->_pNext = NULL;                        //记得赋值NULL，防止链表错乱
-	return pNewNode;                          //新链表头永远指向的是原链表的链尾
+	pHead->_pNext->_pNext = pHead;   /* 翻转链表的指向 */
+	pHead->_pNext = NULL;         /* 记得赋值NULL，防止链表错乱 */
+	return pNewNode;     /* 新链表头永远指向的是原链表的链尾 */
 
 }
 
@@ -185,7 +184,7 @@ pNode MeryTwoSortNodeChangeOneSortNode(pNode pHead1, pNode pHead2)
 		++Node2Len;
 	}
 
-	if (Node1Len < Node2Len)     //长的链表为pHead1
+	if (Node1Len < Node2Len)     /* 长的链表为pHead1 */
 	{
 		pTemp = pHead1;
 		pHead1 = pHead2;
@@ -346,7 +345,7 @@ pNode FindDataInNodeList(pNode pHead, DataType k)
 	return NULL;
 }
 
-pNode pFrontNode(pNode pHead)       //返回链表第一个节点
+pNode pFrontNode(pNode pHead)       /* 返回链表第一个节点 */
 {
 	pNode pPcur = pHead;
 	if (pHead == NULL)
@@ -354,7 +353,7 @@ pNode pFrontNode(pNode pHead)       //返回链表第一个节点
 	return pPcur;
 }
 
-pNode pTailNode(pNode pHead)    //返回链表最后一个节点
+pNode pTailNode(pNode pHead)    /* 返回链表最后一个节点 */
 {
 	pNode pPcur = pHead;
 	if (pHead == NULL)
@@ -410,11 +409,10 @@ int GetCircleLength(pNode pHead)
 	return count;
 }
 
-
 pNode GetCircleIntoNode(pNode pHead)
 {
 	pNode pCur = pHead;
-	//在判断带环问题时，返回了环中快慢指针的相遇点。
+	/* 在判断带环问题时，返回了环中快慢指针的相遇点。*/
 	pNode pMeetNodeInCircle = NULL;
 	pMeetNodeInCircle = isHaveCircle(pHead);
 
@@ -426,8 +424,6 @@ pNode GetCircleIntoNode(pNode pHead)
 	return pMeetNodeInCircle;
 }
 
-
-
 void GetCircleForJoseph(pNode pHead)
 {
 	pNode front = NULL;
@@ -437,7 +433,6 @@ void GetCircleForJoseph(pNode pHead)
 
 	tail->_pNext = front;
 }
-
 
 void GetJosephCircle(pNode pHead, size_t K)
 {
@@ -478,7 +473,6 @@ int GetNodeListLength(pNode pHead)
 	return count;
 }
 
-
 void DeleteNotTailNode(pNode pos)
 {
 	assert(pos);
@@ -488,7 +482,7 @@ void DeleteNotTailNode(pNode pos)
 		return;
 	else
 	{
-		//交换节点值
+		/* 交换节点值 */
 		temp = pos->data;
 		pos->data = pos->_pNext->data;
 		pos->_pNext->data = temp;
@@ -499,7 +493,6 @@ void DeleteNotTailNode(pNode pos)
 		pTempNode = NULL;
 	}
 }
-
 
 void InsertNotHead(pNode pos, DataType data)
 {
@@ -523,7 +516,7 @@ void InsertNotHead(pNode pos, DataType data)
 	pNewNode->data = pTemp;
 }
 ```
-## main.c
+## Unit Test
 ```c
 #include"function.h"
 
@@ -558,15 +551,15 @@ void test()
 	PrintNodeProntToTail(pHead1);
 
 	printf("\n链表的反转、还原:\n");
-	pReverseNode = ReceiveNodeList(pHead1);     //反转
+	pReverseNode = ReceiveNodeList(pHead1);    /* 反转 */
 	PrintNodeProntToTail(pReverseNode);
 
-	pR = ReceiveNodeList_DG(pReverseNode);      //反转
+	pR = ReceiveNodeList_DG(pReverseNode);   /* 反转 */
 	PrintNodeProntToTail(pR);
 
 	pHead1 = pR;
 	printf("\npHead1: ");
-	PrintNodeProntToTail(pHead1);          //还原pHead1
+	PrintNodeProntToTail(pHead1);          /* 还原pHead1 */
 
 	printf("\n");
 
@@ -584,8 +577,7 @@ void test()
 	pNewHead = MeryTwoSortNodeChangeOneSortNode_DG(pHead1, pHead2);
 	PrintNodeProntToTail(pNewHead);
 
-
-	//新建无序链表3
+	/* 新建无序链表3 */
 	InsertNodeByFrontToTail(&pHead3, 9);
 	InsertNodeByFrontToTail(&pHead3, 4);
 	InsertNodeByFrontToTail(&pHead3, 5);
@@ -614,7 +606,7 @@ void test()
 	printf("\n删除倒数第K个节点\n");
 	DeleteLastKNode(pNewHead, 3);
 
-	//构造一个带环链表4
+	/* 构造一个带环链表4 */
 	InsertNodeByFrontToTail(&pHead4, 9);
 	InsertNodeByFrontToTail(&pHead4, 8);
 	InsertNodeByFrontToTail(&pHead4, 6);
@@ -648,7 +640,7 @@ void test()
 	pIntoCircleNode = GetCircleIntoNode(pHead4);
 	printf("%d\n", pIntoCircleNode->data);
 
-	//构造一个链表，pHead5：    头插法构造单链表
+	/* 构造一个链表，pHead5; 头插法构造单链表 */
 	InsertNodeByFrontToTail(&pHead5, 9);
 	InsertNodeByFrontToTail(&pHead5, 8);
 	InsertNodeByFrontToTail(&pHead5, 7);
@@ -660,13 +652,13 @@ void test()
 	InsertNodeByFrontToTail(&pHead5, 1);
 
 	printf("\n约瑟夫环问题:\n");
-	//构造环
+	/* 构造环 */
 	GetCircleForJoseph(pHead5);
 	printf("构造OK\n");
 
 	//PrintNodeProntToTail(pHead5);
 
-	//约瑟夫环
+	/* 约瑟夫环 */
 	GetJosephCircle(pHead5, 4);
 
 	printf("构造链表6\n");

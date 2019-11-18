@@ -1,4 +1,4 @@
-## dlist.h
+## 双向链表结构体
 ```c
 #ifndef _DLIST_H_
 #define _DLIST_H_
@@ -6,20 +6,21 @@
 struct Node;
 typedef struct Head *pHead;
 typedef struct Node *pNode;
-//定义头结点
-struct Head
+
+struct Head /* 定义头结点 */
 {
 	int length;
 	pNode next;
 
 };
-//定义数据节点
-struct Node
+
+struct Node /* 定义数据节点 */
 {
 	int data;
 	pNode pre;
 	pNode next;
 };
+
 pHead DlistCreate();
 int getLength(pHead ph);
 int IsEmpty(pHead ph);
@@ -31,7 +32,7 @@ void printFront(pHead ph);
 void printLast(pHead ph);
 #endif
 ```
-## dlist.c
+## 双向链表实现
 ```c
 #include<stdio.h>
 #include<stdlib.h>
@@ -44,14 +45,14 @@ pHead DlistCreate()
 	{
 		printf("malloc ph error\n");
 	}
-	ph->length=0;
-	ph->next=NULL;
+	ph->length = 0;
+	ph->next = NULL;
 	return ph;
 }
 
 int getLength(pHead ph)
 {
-	if(ph==NULL)
+	if(ph == NULL)
 	{
 		printf("error\n");
 	}
@@ -60,11 +61,11 @@ int getLength(pHead ph)
 
 int IsEmpty(pHead ph)
 {
-	if(ph==NULL)
+	if(ph == NULL)
 	{
 		printf("error\n");
 	}
-	if(ph->length==0)
+	if(ph->length == 0)
 	{
 		return 1;
 	}
@@ -73,28 +74,33 @@ int IsEmpty(pHead ph)
 		return 0;
 	}
 }
+
 int DlistInsert(pHead ph, int pos, int val)
 {
-	pNode pval=NULL;
-	if(ph==NULL||pos<0||pos>ph->length)
+	pNode pval = NULL;
+	if(ph == NULL||pos < 0||pos > ph->length)
 	{
 		printf("error\n");
 	}
-	//如果参数无误，为元素分配结点空间
+	/* 如果参数无误，为元素分配结点空间 */
 	pval =(pNode)malloc(sizeof(struct Node));
+	if(pval == NULL)
+	{
+			return 0;
+	}
 	pval->data=val;
-	//判断在哪个位置插入，先判断链表是否为空
+	/* 判断在哪个位置插入，先判断链表是否为空 */
 	if(IsEmpty(ph))
 	{
-		ph->next=pval;		//直接将结点插入头结点后
+		ph->next=pval;		/* 直接将结点插入头结点后 */
 		pval->next=NULL;
-		pval->pre=NULL;		//第一个结点不回指头结点
+		pval->pre=NULL;		/* 第一个结点不回指头结点 */
 	}
 	else
 	{
 		pNode pCur=ph->next;
-		if(pos==0)		//在第一个位置(头结点后)插入
-						//与链表为空的区别在与链表不空且在0位置插入
+		/* 与链表为空的区别在与链表不空且在0位置插入 */
+		if(pos==0)		/* 在第一个位置(头结点后)插入 */
 		{
 			ph->next=pval;
 			pval->pre=NULL;
@@ -104,11 +110,11 @@ int DlistInsert(pHead ph, int pos, int val)
 		else
 		{
 			int i;
-			for(i=1; i<pos; i++)	//i!=0因为pos=0做了特殊的处理
+			for(i=1; i<pos; i++) /* i!=0因为pos=0做了特殊的处理 */
 			{
 				pCur=pCur->next;
 			}
-			//循环结束，此时pCur指向的是要插入的位置
+			/* 循环结束，此时pCur指向的是要插入的位置 */
 			pval->next=pCur->next;
 			pCur->next->pre=pval;
 			pval->pre=pCur;
@@ -118,6 +124,7 @@ int DlistInsert(pHead ph, int pos, int val)
 	ph->length++;
 	return 1;
 }
+
 pNode DlistDelete(pHead ph, int val)
 {
 	if(ph==NULL || ph->length==0)
@@ -137,6 +144,7 @@ pNode DlistDelete(pHead ph, int val)
 	pNext->pre=pRe;
 	return pval;
 }
+
 pNode DlistFind(pHead ph, int val)
 {
 	if(ph==NULL)
@@ -157,6 +165,7 @@ pNode DlistFind(pHead ph, int val)
 	printf("not find\n");
 	return NULL;
 }
+
 void DlistDestory(pHead ph)
 {
 	pNode pCur=ph->next;
@@ -174,8 +183,8 @@ void DlistDestory(pHead ph)
 	ph->length=0;
 	ph->next=NULL;
 }
-//从前打印
-void printFront(pHead ph)
+
+void printFront(pHead ph) /* 从前打印 */
 {
 	if(ph==NULL)
 	{
@@ -189,8 +198,8 @@ void printFront(pHead ph)
 	}
 	printf("\n");
 }
-//从后打印
-void printLast(pHead ph)
+
+void printLast(pHead ph) /* 从后打印 */
 {
 	if(ph==NULL)
 	{
@@ -210,7 +219,7 @@ void printLast(pHead ph)
 	printf("\n");
 }
 ```
-## main.c
+## Unit Test
 ```c
 #define _CRT_SECURE_NO_WARNINGS
 #include "dlist.h"
@@ -254,5 +263,4 @@ int main()
 	system("pause");
 	return 0;
 }
-
 ```

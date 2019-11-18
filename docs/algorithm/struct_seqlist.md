@@ -1,41 +1,44 @@
-## seqlist.h
+## 顺序存储链表结构体
 ```c
 #ifndef _SEQLIST_H_
 #define _SEQLIST_H_
 
-typedef struct _tag_SeqList	//头节点，记录表的信息
+typedef struct _tag_SeqList	/* 头节点，记录表的信息 */
 {
-	int capacity;	//表容量
-	int length;		//表长度
-	int *node;		//node[capacity],为指针素组 char **node;
+	int capacity;	/* 表容量 */
+	int length;		/* 表长度 */
+	int *node;		/* node[capacity],为指针素组 char **node; */
 }TSeqList;
 
 typedef void SeqList;
 typedef void SeqListNode;
 
-SeqList *SeqList_Create(int capacity);		//创建顺序表
-void SeqList_Destory(SeqList *list);		//销毁顺序表
-void SeqList_Clear(SeqList *list);			//清空顺序表
-int SeqList_Length(SeqList *list);			//获取顺序表长度
-int SeqList_Capacity(SeqList *list);		//获取顺序表容量
-int SeqList_Insert(SeqList *list,SeqListNode *node,int pos);	//在pos位置插入元素
-SeqList *SeqList_Get(SeqList *list,int pos);	//获取pos位置的元素
-SeqList *SeqList_Delete(SeqList *list, int pos);	//删除pos位置的元素
+SeqList *SeqList_Create(int capacity);	/* 创建顺序表 */
+void SeqList_Destory(SeqList *list);		/* 销毁顺序表 */
+void SeqList_Clear(SeqList *list);			/* 清空顺序表 */
+int SeqList_Length(SeqList *list);			/* 获取顺序表长度 */
+int SeqList_Capacity(SeqList *list);		/* 获取顺序表容量 */
+/* 在pos位置插入元素 */
+int SeqList_Insert(SeqList *list,SeqListNode *node,int pos);	
+/* 获取pos位置的元素 */
+SeqList *SeqList_Get(SeqList *list,int pos);	
+/* 删除pos位置的元素 */
+SeqList *SeqList_Delete(SeqList *list, int pos);
 #endif
 ```
 
-## seqlist.c
+## 顺序存储链表实现
 ```c
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include "SeqList.h"
-//创建顺序表
-SeqList *SeqList_Create(int capacity)	//返回值为SeqList*类型，即顺序表的地址
+/* 创建顺序表,返回值为SeqList*类型，即顺序表的地址 */
+SeqList *SeqList_Create(int capacity)	
 {
 	int ret;
 	TSeqList *temp=NULL;
-	temp=(TSeqList*)malloc(sizeof(TSeqList)); 	//为头节点分配地址
+	temp=(TSeqList*)malloc(sizeof(TSeqList)); /* 为头节点分配地址 */
 	if(temp==NULL)
 	{
 		ret=1;
@@ -45,7 +48,8 @@ SeqList *SeqList_Create(int capacity)	//返回值为SeqList*类型，即顺序�
 	memset(temp, 0, sizeof(TSeqList));
 	temp->capacity=capacity;
 	temp->length=0;
-	temp->node=(int*)malloc(sizeof(void*)*capacity);	//分配一个指针数组	char**malloc(sizeof(char*)*capacity)
+	/* 分配一个指针数组	char**malloc(sizeof(char*)*capacity) */
+	temp->node=(int*)malloc(sizeof(void*)*capacity);	
 	if(temp->node==NULL)
 	{
 		ret=2;
@@ -54,8 +58,8 @@ SeqList *SeqList_Create(int capacity)	//返回值为SeqList*类型，即顺序�
 	}
 	return temp;
 }
-//求顺序表容量
-int SeqList_Capacity(SeqList *list)
+
+int SeqList_Capacity(SeqList *list) /* 求顺序表容量 */
 {
 	TSeqList *temp=NULL;
 	if(list==NULL)
@@ -65,8 +69,8 @@ int SeqList_Capacity(SeqList *list)
 	temp=(TSeqList *)list;
 	return temp->capacity;
 }
-//获取顺序表长度
-int SeqList_Length(SeqList *list)
+
+int SeqList_Length(SeqList *list) /* 获取顺序表长度 */
 {
 	TSeqList *temp=NULL;
 	if(list==NULL)
@@ -76,35 +80,37 @@ int SeqList_Length(SeqList *list)
 	temp=(TSeqList *)list;
 	return temp->length;
 }
-//插入元素
+/* 插入元素 */
 int SeqList_Insert(SeqList *list,SeqListNode *node,int pos)
 {
 	int i;
 	TSeqList *temp=NULL;
-	if(list==NULL || node==NULL)	//健壮性判断
+	if(list==NULL || node==NULL)	/* 健壮性判断 */
 	{
 		return -1;
 	}
 	temp=(TSeqList *)list;
-	if(temp->length >= temp->capacity)	//如果顺序表已满
+	if(temp->length >= temp->capacity)	/* 如果顺序表已满 */
 	{
 		return -2;
 	}
-	//容错
-	if(pos >temp->length)		//如果给出的pos位置在线性表长度之后，即中间有空余
+	/* 如果给出的pos位置在线性表长度之后，即中间有空余 */
+	if(pos >temp->length)		
 	{
-		pos=temp->length;		//就修正到最后一个元素后面
+		pos=temp->length;		/* 就修正到最后一个元素后面 */
 	}
-	for(i=temp->length;i>pos;i--)	//将插入元素后的元素依次后移
+	/* 将插入元素后的元素依次后移 */
+	for(i=temp->length;i>pos;i--)	
 	{
 		temp->node[i]=temp->node[i-1];
 	}
-	temp->node[i]=(SeqListNode *)node;	//腾出的位置插入新元素
-	temp->length++;				//插入成功后，长度加1
+	/* 腾出的位置插入新元素 */
+	temp->node[i]=(SeqListNode *)node; 
+	temp->length++;				/* 插入成功后，长度加1 */
 	return 0;
 }
-//删除元素
-SeqList *SeqList_Delete(SeqList *list, int pos)
+
+SeqList *SeqList_Delete(SeqList *list, int pos) /* 删除元素 */
 {
 	int i;
 	TSeqList *tlist=NULL;
@@ -115,7 +121,7 @@ SeqList *SeqList_Delete(SeqList *list, int pos)
 		printf("SeqList_Detele() error\n");
 		return NULL;
 	}
-	temp=(SeqListNode*)tlist->node[pos];	//要删除的元素
+	temp=(SeqListNode*)tlist->node[pos];	/* 要删除的元素 */
 	for(i=pos+1;i<tlist->length;i++)
 	{
 		tlist->node[i-1]=tlist->node[i];
@@ -123,8 +129,8 @@ SeqList *SeqList_Delete(SeqList *list, int pos)
 	tlist->length--;
 	return temp;
 }
-//查找元素
-SeqList *SeqList_Get(SeqList *list, int pos)
+
+SeqList *SeqList_Get(SeqList *list, int pos) /* 查找元素 */
 {
 	TSeqList *tlist=NULL;
 	SeqListNode *temp=NULL;
@@ -134,11 +140,12 @@ SeqList *SeqList_Get(SeqList *list, int pos)
 		printf("SeqList_Get() error\n");
 		return NULL;
 	}
-	temp=(SeqListNode *)tlist->node[pos];	//将表中pos位置的结点指针赋给temp
+	/* 将表中pos位置的结点指针赋给temp */
+	temp=(SeqListNode *)tlist->node[pos];	
 	return temp;
 }
-//清空顺序表
-void SeqList_Clear(SeqList *list)
+
+void SeqList_Clear(SeqList *list)  /* 清空顺序表 */
 {
 	TSeqList *temp=NULL;
 	if(list==NULL)
@@ -150,8 +157,8 @@ void SeqList_Clear(SeqList *list)
 	memset(temp->node, 0, (temp->capacity*sizeof(void*)));
 	return;
 }
-//销毁顺序表
-void SeqList_Destory(SeqList *list)
+
+void SeqList_Destory(SeqList *list) /* 销毁顺序表 */
 {
 	TSeqList *temp=NULL;
 	if(list==NULL)
@@ -161,15 +168,14 @@ void SeqList_Destory(SeqList *list)
 	temp=(TSeqList *)list;
 	if(temp->node != NULL)
 	{
-		free(temp->node);	// 先释放头节点中的指针数组
+		free(temp->node);	/* 先释放头节点中的指针数组 */
 	}
-	free(temp);		//在释放头节点
+	free(temp);		/* 在释放头节点 */
 	return;
 }
-
 ```
 
-## main.c
+## Unit Test
 ```c
 #include<stdio.h>
 #include<stdlib.h>
@@ -184,9 +190,10 @@ typedef struct _Teacher
 
 int main()
 {
-	int ret=0;
-	int len=0;
-	int i=0;
+	int ret =0;
+	int len =0;
+	int i		=0;
+
 	SeqList *list=NULL;
 	Teacher t1={
 		"loci",
@@ -208,11 +215,12 @@ int main()
 		"ktkt",
 		28
 	};
-	//创建顺序表
+
+	/* 创建顺序表 */
 	list=SeqList_Create(10);
 
-	//插入结点
-	ret=SeqList_Insert(list,(SeqListNode*)&t1,0);	//位置0表示始终头部插入
+	/* 头插法 */
+	ret=SeqList_Insert(list,(SeqListNode*)&t1,0);	
 	ret=SeqList_Insert(list,(SeqListNode*)&t2,0);
 	ret=SeqList_Insert(list,(SeqListNode*)&t3,0);
 	ret=SeqList_Insert(list,(SeqListNode*)&t4,0);
@@ -222,11 +230,10 @@ int main()
 	printf("顺序表长度:%d\n",SeqList_Length(list));
 	len=SeqList_Length(list);
 
-	//遍历顺序表
 	printf("遍历顺序表：\n");
 	for(i=0;i<len; i++)
 	{
-		Teacher *temp=(Teacher *)SeqList_Get(list,i);	//获取顺序表结点
+		Teacher *temp=(Teacher *)SeqList_Get(list,i);	
 		if(temp==NULL)
 		{
 			printf("func SeqList_Get() error\n");
@@ -235,11 +242,11 @@ int main()
 		printf("teachr name:%s\tage:%d\n",temp->name,temp->age);
 	}
 
-	//销毁链表
 	printf("销毁顺序表：\n");
 	while(SeqList_Length(list)>0)
 	{
-		Teacher *temp=(Teacher *)SeqList_Delete(list,0);	//删除头部元素
+		/* 删除头部元素 */
+		Teacher *temp=(Teacher *)SeqList_Delete(list,0);	
 		if(temp==NULL)
 		{
 			printf("func SeqList_Delete error\n");
