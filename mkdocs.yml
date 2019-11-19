@@ -55,6 +55,7 @@ nav:
       - 文件操作: cplus/cpp_file.md
       - 高级主题: cplus/cpp_high.md
     - Go语言:
+      - Go语言基础: goprogram/go_base.md
       - 规划: goprogram/plan.md
     - PHP: 
       - PHP基础: source/php/php_base.md
