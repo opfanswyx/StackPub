@@ -1,6 +1,6 @@
 ## 计划📖(周)
 ```
-/usr/local/lib/python3.7/site-packages/material/partials/integrations/
+
 ```
 ## 完善StackPub博客
 
@@ -52,6 +52,12 @@ mkdcos嵌入gitalk
 ``` 
 有空搞搞CDN
 数字草稿小黑板
+
+主题python扩展插件修改 /usr/local/lib/python3.7/site-packages/material/partials/integrations/
+
+LLVM教程 https://llvm-tutorial-cn.readthedocs.io/en/latest/index.html
+
+HasKell教程 http://cnhaskell.com/
 
 CVim google vim插件 chrome-extension://ihlenndgcmojhcghmfjfneahoeklbjjh/pages/mappings.html
 
