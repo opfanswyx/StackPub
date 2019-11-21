@@ -224,19 +224,13 @@
         
   
   
-    
-    
-  
-  
     <li class="md-tabs__item">
       
-        <a href="../../algorithm/struct_seqlist/" class="md-tabs__link">
+        <a href="../../algorithm/task/" class="md-tabs__link">
           数据结构与算法
         </a>
       
     </li>
-  
-
   
 
       
@@ -938,7 +932,376 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    变量
+    变量与常量
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    变量声明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    多重赋值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    匿名变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    作用域
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape-analysis" class="md-nav__link">
+    变量逃逸(Escape Analysis)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    常量
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iota" class="md-nav__link">
+    iota 常量生成器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    类型别名
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    基本数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    整数类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    浮点数类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    复数类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool" class="md-nav__link">
+    bool类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#byterune" class="md-nav__link">
+    byte与rune
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    字符串类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    指针
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    类型转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    复合数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    数组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slice" class="md-nav__link">
+    切片(slice)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    Map(字典/关联数组)类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syncmap" class="md-nav__link">
+    sync.Map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    列表List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    流程控制
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    选择
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    循环
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-range" class="md-nav__link">
+    for range键值循环
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    跳转
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3func" class="md-nav__link">
+    1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    类(结构体)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    实例化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    继承
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    接口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    垃圾回收处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    异常处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    包管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    并发
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    协程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    断言和反射
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    文件处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    网络编程
   </a>
   
 </li>
@@ -1078,15 +1441,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../algorithm/task/" title="本模块规划" class="md-nav__link">
+      本模块规划
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
     
-    <label class="md-nav__link" for="nav-3-1">
+    <label class="md-nav__link" for="nav-3-2">
       链表
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-1">
+      <label class="md-nav__title" for="nav-3-2">
         链表
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1818,7 +2193,376 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    变量
+    变量与常量
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    变量声明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    多重赋值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    匿名变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    作用域
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape-analysis" class="md-nav__link">
+    变量逃逸(Escape Analysis)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    常量
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iota" class="md-nav__link">
+    iota 常量生成器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    类型别名
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    基本数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    整数类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    浮点数类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    复数类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool" class="md-nav__link">
+    bool类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#byterune" class="md-nav__link">
+    byte与rune
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    字符串类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    指针
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    类型转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    复合数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    数组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slice" class="md-nav__link">
+    切片(slice)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    Map(字典/关联数组)类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syncmap" class="md-nav__link">
+    sync.Map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    列表List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    流程控制
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    选择
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    循环
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-range" class="md-nav__link">
+    for range键值循环
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    跳转
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-2-3func" class="md-nav__link">
+    1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    类(结构体)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    实例化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    继承
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    接口
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    垃圾回收处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    异常处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    包管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    并发
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    协程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    断言和反射
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    文件处理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    网络编程
   </a>
   
 </li>
@@ -1853,22 +2597,226 @@
                 <p><center>
 <img alt="Go_Gopher" src="../../image/Go_Gopher.jpg" />
 </center></p>
-<h2 id="_1">变量<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Go语言的基本类型有：</p>
+<h2 id="_1">变量与常量<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">变量声明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>声明变量的一般形式，指定变量类型，声明后若不赋值，使用<strong>默认值</strong>。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">name</span> <span class="kd">type</span>
+<span class="nx">name</span> <span class="p">=</span> <span class="nx">value</span>
+</pre></div>
+</td></tr></table></p>
+<p>简短模式声明(short variable declaration)，省略var。有以下限制：</p>
 <ul>
-<li>bool</li>
-<li>string</li>
-<li>int、int8、int16、int32、int64</li>
-<li>uint、uint8、uint16、uint32、uint64、uintptr</li>
-<li>byte // uint8 的别名</li>
-<li>rune // int32 的别名 代表一个 Unicode 码</li>
-<li>float32、float64</li>
-<li>complex64、complex128</li>
+<li>不能提供数据类型。</li>
+<li>左侧的变量不应该是已经声明过的(多变量声明时，<strong>至少保证一个是新变量</strong>)，否则会导致编译错误。</li>
+<li>简短声明<strong>只能被用在函数体内，不可以用于全局变量的声明与赋值</strong>。</li>
 </ul>
-<p>Go语言变量声明有以下三种格式:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">name</span> <span class="o">:=</span> <span class="nx">value</span>
+</pre></div>
+</td></tr></table>
+
+<p>多变量声明模式：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">name1</span><span class="p">,</span> <span class="nx">name2</span><span class="p">,</span> <span class="nx">name3</span> <span class="kd">type</span>
+<span class="nx">name1</span><span class="p">,</span> <span class="nx">name2</span><span class="p">,</span> <span class="nx">name3</span> <span class="p">=</span> <span class="nx">v1</span><span class="p">,</span> <span class="nx">v2</span><span class="p">,</span> <span class="nx">v3</span>
+
+<span class="kd">var</span> <span class="nx">name1</span><span class="p">,</span> <span class="nx">name2</span><span class="p">,</span> <span class="nx">name3</span> <span class="p">=</span> <span class="nx">v1</span><span class="p">,</span> <span class="nx">v2</span><span class="p">,</span> <span class="nx">v3</span>
+
+<span class="kd">var</span> <span class="p">(</span>
+    <span class="nx">name1</span> <span class="nx">type1</span>
+    <span class="nx">name2</span> <span class="nx">type2</span>
+    <span class="nx">name3</span> <span class="kd">struct</span><span class="p">{</span>
+        <span class="nx">name4</span> <span class="nx">type4</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</td></tr></table></p>
+<h3 id="_3">初始化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>Go语言在声明(不初始化)变量时，会自动对变量对应的内存区初始化该变量的默认值：</p>
 <ul>
-<li>标准格式 <code>var name type</code></li>
-<li>批量格式
+<li>整型和浮点型变量的默认值为 0 和 0.0。</li>
+<li>字符串变量的默认值为空字符串。</li>
+<li>布尔型变量默认为 bool。</li>
+<li>切片、函数、指针变量的默认为 nil。</li>
+</ul>
+<p>变量初始化的标准格式：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">name</span> <span class="kd">type</span> <span class="p">=</span> <span class="nx">value</span>
+</pre></div>
+</td></tr></table>
+如果变量声明时具有初始值，可省略变量声明中的类型，Go将根据初始值来推断变量类型(<strong>类型推断</strong>Type inference)。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">name</span> <span class="p">=</span> <span class="nx">value</span> <span class="cm">/* no type */</span>
+</pre></div>
+</td></tr></table></p>
+<p>短变量声明并初始化时，至少有一个新声明的变量出现在左值中，其他变量名可能是重复声明，编译器不会报错。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">name1</span><span class="p">,</span> <span class="nx">name2</span> <span class="o">:=</span> <span class="nx">value1</span><span class="p">,</span> <span class="nx">value2</span>
+<span class="nx">name3</span><span class="p">,</span> <span class="nx">name2</span> <span class="o">:=</span> <span class="nx">value3</span><span class="p">,</span> <span class="nx">value2</span>
+</pre></div>
+</td></tr></table></p>
+<h3 id="_4">多重赋值<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>除了多变量声明、初始化，还可以进行多变量同时赋值。多重赋值时，变量的左值和右值按从左到右的顺序赋值。</p>
+<p>多重赋值的特性，还可进行<strong>变量交换</strong>。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">100</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">200</span>
+<span class="nx">b</span><span class="p">,</span> <span class="nx">a</span> <span class="p">=</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span>
+</pre></div>
+</td></tr></table></p>
+<h3 id="_5">匿名变量<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>匿名变量使用"_"标识符(空白标识符)，匿名变量可以像其他变量一样声明或赋值(任何类型都可以赋值给它)，但任何赋值都会被抛弃，不能在后续代码中使用(对其它变量赋值)。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">function1</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+匿名变量不占用内存空间，不会分配内存。匿名变量与匿名变量之间也不会因为多次声明而无法使用。</p>
+<h3 id="_6">作用域<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>变量定义位置的不同，可以分为以下三种作用域：</p>
+<ul>
+<li>函数外定义的变量称为全局变量作用域。</li>
+<li>函数内定义的变量称为局部变量作用域。</li>
+<li>函数定义中的变量称为形式参数作用域。</li>
+</ul>
+<h3 id="escape-analysis">变量逃逸(Escape Analysis)<a class="headerlink" href="#escape-analysis" title="Permanent link">&para;</a></h3>
+<p>编译器觉得变量应该分配在堆和栈上的原则是：</p>
+<ul>
+<li>变量是否被取地址。</li>
+<li>变量是否发生逃逸。</li>
+</ul>
+<h3 id="_7">常量<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>常量使用关键字<code>const</code>定义，用于存储不会改变的数据，常量是在编译时被创建的，即使定义在函数内部也是如此，并且只能是布尔型、数字型（整数型、浮点型和复数）和字符串型。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">const</span> <span class="nx">name</span> <span class="p">[</span><span class="kd">type</span><span class="p">]</span> <span class="p">=</span> <span class="nx">value</span>
+<span class="kd">const</span> <span class="nx">b</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&quot;abc&quot;</span>  <span class="c1">//显式类型定义</span>
+<span class="kd">const</span> <span class="nx">b</span> <span class="p">=</span> <span class="s">&quot;abc&quot;</span>     <span class="c1">//隐式类型定义</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="iota">iota 常量生成器<a class="headerlink" href="#iota" title="Permanent link">&para;</a></h4>
+<p><code>iota</code>常量生成器用于生成一组以相似规则初始化的常量，不用每行都写一遍初始化表达式。在一个<code>const</code>声明语句中，在第一个声明的常量所在的行，<code>iota</code>将会被置为0，然后在每一个有常量声明的行加一。</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">//模拟枚举</span>
+<span class="kd">type</span> <span class="nx">Weekday</span> <span class="kt">int</span>
+<span class="kd">const</span> <span class="p">(</span>
+    <span class="nx">Sunday</span> <span class="nx">Weekday</span> <span class="p">=</span> <span class="kc">iota</span>
+    <span class="nx">Monday</span>
+    <span class="nx">Tuesday</span>
+    <span class="nx">Wednesday</span>
+    <span class="nx">Thursday</span>
+    <span class="nx">Friday</span>
+    <span class="nx">Saturday</span>
+<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+无类型常量</p>
+<h3 id="_8">类型别名<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">type</span> <span class="nx">TypeAlias</span> <span class="p">=</span> <span class="nx">Type</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="_9">基本数据类型<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10">整数类型<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="left">位(bit)宽度</th>
+<th align="left">字节宽度</th>
+<th align="left">数值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">int</td>
+<td align="left">32位机器32位</br>64位机器64位</td>
+<td align="left">4</br>8</td>
+<td align="left">-2<sup>31</sup> ~ 2<sup>31</sup>-1</br>-2<sup>63</sup> ~ 2<sup>63</sup>-1</td>
+</tr>
+<tr>
+<td align="center">uint</td>
+<td align="left">32位机器32位</br>64位机器64位</td>
+<td align="left">4</br>8</td>
+<td align="left">0 ~ 2<sup>32</sup></br>0 ~ 2<sup>64</sup></td>
+</tr>
+<tr>
+<td align="center">int8</td>
+<td align="left">8</td>
+<td align="left">1</td>
+<td align="left">-128~127</td>
+</tr>
+<tr>
+<td align="center">int16</td>
+<td align="left">16</td>
+<td align="left">2</td>
+<td align="left">-32768~32767</td>
+</tr>
+<tr>
+<td align="center">int32</td>
+<td align="left">32</td>
+<td align="left">4</td>
+<td align="left">约-21.47~21.47亿</td>
+</tr>
+<tr>
+<td align="center">int64</td>
+<td align="left">64</td>
+<td align="left">8</td>
+<td align="left">约-922亿亿~922亿亿</td>
+</tr>
+<tr>
+<td align="center">uint8</td>
+<td align="left">8</td>
+<td align="left">1</td>
+<td align="left">0~255</td>
+</tr>
+<tr>
+<td align="center">uint16</td>
+<td align="left">16</td>
+<td align="left">2</td>
+<td align="left">0~65535</td>
+</tr>
+<tr>
+<td align="center">uint32</td>
+<td align="left">32</td>
+<td align="left">4</td>
+<td align="left">约0~42.94亿</td>
+</tr>
+<tr>
+<td align="center">uint64</td>
+<td align="left">64</td>
+<td align="left">8</td>
+<td align="left">约0~1844亿亿</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>8进制标识法"0"</li>
+<li>16进制表示法"0x"</li>
+</ul>
+<h3 id="_11">浮点数类型<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>Go语言中浮点数部分只能用10进制表示。</p>
+<ul>
+<li>float32 IEEE-754 32位浮点型数</li>
+<li>float64 IEEE-754 64位浮点型数</li>
+</ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1876,25 +2824,327 @@
 5
 6
 7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="p">(</span>
-    <span class="nx">a</span> <span class="kt">int</span>
-    <span class="nx">b</span> <span class="kt">string</span>
-    <span class="nx">c</span> <span class="p">[]</span><span class="kt">float32</span>
-    <span class="nx">d</span> <span class="kd">func</span><span class="p">()</span> <span class="kt">bool</span>
-    <span class="nx">e</span> <span class="kd">struct</span> <span class="p">{</span>
-        <span class="nx">x</span> <span class="kt">int</span>
-    <span class="p">}</span>
-<span class="p">)</span>
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">const</span> <span class="nx">e</span> <span class="p">=</span> <span class="mf">.71828</span> <span class="c1">// 0.71828</span>
+<span class="kd">const</span> <span class="nx">f</span> <span class="p">=</span> <span class="mf">1.</span>     <span class="c1">// 1</span>
+
+<span class="kd">var</span> <span class="nx">a</span> <span class="kt">float32</span> <span class="p">=</span> <span class="mf">3.9E-2</span> <span class="c1">//表示浮点数0.039</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="kt">float64</span> <span class="p">=</span> <span class="mf">3.9E+1</span> <span class="c1">//表示浮点数39</span>
+
+<span class="kd">const</span> <span class="nx">Avogadro</span> <span class="p">=</span> <span class="mf">6.02214129e23</span>  <span class="c1">// 阿伏伽德罗常数</span>
+<span class="kd">const</span> <span class="nx">Planck</span>   <span class="p">=</span> <span class="mf">6.62606957e-34</span> <span class="c1">// 普朗克常数</span>
 </pre></div>
-</td></tr></table></li>
-<li>简短格式 <code>名字 := 表达式</code>简短模式有以下限制：<ul>
-<li>定义变量，同时显式初始化。</li>
-<li>不能提供数据类型。</li>
-<li>只能用在函数内部。</li>
+</td></tr></table>
+
+<h3 id="_12">复数类型<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>complex128 64位实数和虚数 复数的默认类型</li>
+<li>complex64 32位实数和虚数</li>
 </ul>
-</li>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">name</span> <span class="kt">complex128</span> <span class="p">=</span> <span class="nb">complex</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span>
+<span class="nx">name</span> <span class="o">:=</span> <span class="nb">complex</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span>   <span class="c1">//x+yi(i 是虚数单位)</span>
+<span class="nb">real</span><span class="p">(</span><span class="nx">z</span><span class="p">)</span> <span class="c1">//实部</span>
+<span class="nb">imag</span><span class="p">(</span><span class="nx">z</span><span class="p">)</span> <span class="c1">//虚部</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="bool">bool类型<a class="headerlink" href="#bool" title="Permanent link">&para;</a></h3>
+<p>布尔类型的值只有两种：<code>true</code>或<code>false</code>。</p>
+<p>布尔值并不会隐式转换为数字值 0 或 1，反之亦然。布尔型无法参与数值运算，也无法与其他类型进行强制转换。</p>
+<p>if 和 for 语句的条件部分都是布尔类型的值，并且==和&lt;等比较操作也会产生布尔型的值。</p>
+<p>布尔值可以和 &amp;&amp;（AND）和 ||（OR）操作符结合，并且有短路行为。</p>
+<h3 id="byterune">byte与rune<a class="headerlink" href="#byterune" title="Permanent link">&para;</a></h3>
+<p>byte与rune都属于别名类型。byte是uint8的别名类型，而rune是int32的别名类型。</p>
+<p>%U输出格式为<code>U+hhhh</code>的字符串。</p>
+<h3 id="_13">字符串类型<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>字符串的表示法有两种：</p>
+<ul>
+<li>解释型("")表示法，转义符会起作用，不能跨行。</li>
+<li>原生(`)表示法，所见即所得的(除了回车符)，能跨行。</li>
 </ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">str1</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&quot;hello world&quot;</span>
+<span class="kd">var</span> <span class="nx">str2</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">`hello </span>
+<span class="s">world`</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="_14">指针<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">var_name</span> <span class="o">*</span><span class="kd">var</span><span class="o">-</span><span class="kd">type</span>
+<span class="kd">var</span> <span class="nx">var_name</span> <span class="o">**</span><span class="kd">var</span><span class="o">-</span><span class="kd">type</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="_15">类型转换<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">valueOfTypeB</span> <span class="p">=</span> <span class="nx">typeB</span><span class="p">(</span><span class="nx">valueOfTypeA</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="_16">复合数据类型<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<h3 id="_17">数组<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>数组声明:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">数组变量名</span> <span class="p">[</span><span class="nx">元素数量</span><span class="p">]</span><span class="nx">Type</span>
+<span class="kd">var</span> <span class="nx">q</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span> <span class="p">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">array</span> <span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="kt">int</span>
+<span class="c1">// 声明并初始化数组中索引为 1 和 3 的元素</span>
+<span class="nx">array</span> <span class="p">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">{</span><span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">},</span> <span class="mi">3</span><span class="p">:</span> <span class="p">{</span><span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">}}</span>
+</pre></div>
+</td></tr></table>
+数组长度的位置出现“...”省略号，则表示数组的长度是根据初始化值的个数来计算。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">q</span> <span class="o">:=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></p>
+<h3 id="slice">切片(slice)<a class="headerlink" href="#slice" title="Permanent link">&para;</a></h3>
+<p>切片(slice)是对数组的一个连续片段的引用，所以切片是一个<strong>引用类型</strong>，这个片段可以是整个数组，也可以是由起始和终止索引标识的一些项的子集，需要注意的是，终止索引标识的项不包括在切片内。</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">slice</span> <span class="p">[</span><span class="nx">开始位置</span> <span class="p">:</span> <span class="nx">结束位置</span><span class="p">]</span>
+</pre></div>
+</td></tr></table>
+切片类型声明:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">name</span> <span class="p">[]</span><span class="nx">Type</span>
+<span class="kd">var</span> <span class="nx">numListEmpty</span> <span class="p">=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{}</span>  <span class="c1">//空切片</span>
+</pre></div>
+</td></tr></table>
+切片是动态结构，只能与 nil 判定相等，不能互相判定相等。</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">make</span><span class="p">(</span> <span class="p">[]</span><span class="nx">Type</span><span class="p">,</span> <span class="nx">size</span><span class="p">,</span> <span class="nx">cap</span> <span class="p">)</span>
+</pre></div>
+</td></tr></table>
+切片append()操作
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="p">[]</span><span class="kt">int</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// 追加1个元素</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">// 追加多个元素, 手写解包方式</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span><span class="o">...</span><span class="p">)</span> <span class="c1">// 追加一个切片, 切片需要解包</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nb">append</span><span class="p">([]</span><span class="kt">int</span><span class="p">{</span><span class="mi">0</span><span class="p">},</span> <span class="nx">a</span><span class="o">...</span><span class="p">)</span> <span class="c1">// 在开头添加1个元素</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nb">append</span><span class="p">([]</span><span class="kt">int</span><span class="p">{</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="nx">a</span><span class="o">...</span><span class="p">)</span> <span class="c1">// 在开头添加1个切片</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="p">[]</span><span class="kt">int</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">a</span><span class="p">[:</span><span class="nx">i</span><span class="p">],</span> <span class="nb">append</span><span class="p">([]</span><span class="kt">int</span><span class="p">{</span><span class="nx">x</span><span class="p">},</span> <span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">:]</span><span class="o">...</span><span class="p">)</span><span class="o">...</span><span class="p">)</span> <span class="c1">// 在第i个位置插入x</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">a</span><span class="p">[:</span><span class="nx">i</span><span class="p">],</span> <span class="nb">append</span><span class="p">([]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">},</span> <span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">:]</span><span class="o">...</span><span class="p">)</span><span class="o">...</span><span class="p">)</span> <span class="c1">// 在第i个位置插入切片</span>
+</pre></div>
+</td></tr></table>
+切片copy()操作<code>copy( destSlice, srcSlice []T) int</code>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">slice1</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="nx">slice2</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nb">copy</span><span class="p">(</span><span class="nx">slice2</span><span class="p">,</span> <span class="nx">slice1</span><span class="p">)</span> <span class="c1">// 只会复制slice1的前3个元素到slice2中</span>
+<span class="nb">copy</span><span class="p">(</span><span class="nx">slice1</span><span class="p">,</span> <span class="nx">slice2</span><span class="p">)</span> <span class="c1">// 只会复制slice2的3个元素到slice1的前3个位置</span>
+</pre></div>
+</td></tr></table>
+切片删除操作
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="p">=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nx">a</span><span class="p">[</span><span class="nx">N</span><span class="p">:]</span> <span class="c1">// 删除开头N个元素</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nx">a</span><span class="p">[:</span><span class="nb">copy</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">a</span><span class="p">[</span><span class="nx">N</span><span class="p">:])]</span> <span class="c1">// 删除开头N个元素</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">a</span><span class="p">[:</span><span class="nx">i</span><span class="p">],</span> <span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="nx">N</span><span class="p">:]</span><span class="o">...</span><span class="p">)</span> <span class="c1">// 删除中间N个元素</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nx">a</span><span class="p">[:</span><span class="nx">i</span><span class="o">+</span><span class="nb">copy</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">:],</span> <span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="nx">N</span><span class="p">:])]</span> <span class="c1">// 删除中间N个元素</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nx">a</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span><span class="o">-</span><span class="nx">N</span><span class="p">]</span> <span class="c1">// 删除尾部N个元素</span>
+</pre></div>
+</td></tr></table>
+循环迭代切片range
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// 创建一个整型切片</span>
+<span class="c1">// 其长度和容量都是 4 个元素</span>
+<span class="nx">slice</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">}</span>
+<span class="c1">// 迭代每一个元素，并显示其值</span>
+<span class="k">for</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">value</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">slice</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Index: %d Value: %d\n&quot;</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+多维切片
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// 创建一个整型切片</span>
+<span class="nx">slice</span> <span class="o">:=</span> <span class="p">[][]</span><span class="kt">int</span><span class="p">{{</span><span class="mi">10</span><span class="p">},</span> <span class="p">{</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">}}</span>
+<span class="c1">// 为第一个切片追加值为 20 的元素</span>
+<span class="nx">slice</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">slice</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></p>
+<h3 id="map">Map(字典/关联数组)类型<a class="headerlink" href="#map" title="Permanent link">&para;</a></h3>
+<p>map 是引用类型，可以使用如下方式声明：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">mapname</span> <span class="kd">map</span><span class="p">[</span><span class="nx">keytype</span><span class="p">]</span><span class="nx">valuetype</span>
+</pre></div>
+</td></tr></table>
+可以使用<code>make()</code>，但不能使用<code>new()</code>来构造map。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="nx">keytype</span><span class="p">]</span><span class="nx">valuetype</span><span class="p">,</span> <span class="nx">cap</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+用切片作为map的值
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">mp1</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">][]</span><span class="kt">int</span><span class="p">)</span>
+<span class="nx">mp2</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="o">*</span><span class="p">[]</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">scene</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">)</span>
+<span class="nx">scene</span><span class="p">[</span><span class="s">&quot;route&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="mi">66</span>
+<span class="nx">scene</span><span class="p">[</span><span class="s">&quot;brazil&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="mi">4</span>
+<span class="nx">scene</span><span class="p">[</span><span class="s">&quot;china&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="mi">960</span>
+<span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">scene</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+使用 delete() 函数从 map 中删除键值对：<code>delete(map, 键)</code>。</p>
+<h4 id="syncmap">sync.Map<a class="headerlink" href="#syncmap" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="p">(</span>
+      <span class="s">&quot;fmt&quot;</span>
+      <span class="s">&quot;sync&quot;</span>
+<span class="p">)</span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">scene</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">Map</span>
+    <span class="c1">// 将键值对保存到sync.Map</span>
+    <span class="nx">scene</span><span class="p">.</span><span class="nx">Store</span><span class="p">(</span><span class="s">&quot;greece&quot;</span><span class="p">,</span> <span class="mi">97</span><span class="p">)</span>
+    <span class="nx">scene</span><span class="p">.</span><span class="nx">Store</span><span class="p">(</span><span class="s">&quot;london&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="nx">scene</span><span class="p">.</span><span class="nx">Store</span><span class="p">(</span><span class="s">&quot;egypt&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="c1">// 从sync.Map中根据键取值</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">scene</span><span class="p">.</span><span class="nx">Load</span><span class="p">(</span><span class="s">&quot;london&quot;</span><span class="p">))</span>
+    <span class="c1">// 根据键删除对应的键值对</span>
+    <span class="nx">scene</span><span class="p">.</span><span class="nx">Delete</span><span class="p">(</span><span class="s">&quot;london&quot;</span><span class="p">)</span>
+    <span class="c1">// 遍历所有sync.Map中的键值对</span>
+    <span class="nx">scene</span><span class="p">.</span><span class="nx">Range</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="kd">interface</span><span class="p">{})</span> <span class="kt">bool</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;iterate:&quot;</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="list">列表List<a class="headerlink" href="#list" title="Permanent link">&para;</a></h3>
+<p>在Go语言中，列表使用 container/list 包来实现，内部的实现原理是双链表，列表能够高效地进行任意位置的元素插入和删除操作。</p>
+<p>list 的初始化有两种方法：分别是使用 New() 函数和 var 关键字声明，两种方法的初始化效果都是一致的。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">变量名</span> <span class="o">:=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">New</span><span class="p">()</span>
+<span class="kd">var</span> <span class="nx">变量名</span> <span class="nx">list</span><span class="p">.</span><span class="nx">List</span>
+</pre></div>
+</td></tr></table>
+
+<p>列表与切片和 map 不同的是，列表并没有具体元素类型的限制。</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">InsertAfter(v interface {}, mark * Element) * Element</td>
+<td align="left">在 mark 点之后插入元素，mark 点由其他插入函数提供</td>
+</tr>
+<tr>
+<td align="center">InsertBefore(v interface {}, mark * Element) *Element</td>
+<td align="left">在 mark 点之前插入元素，mark 点由其他插入函数提供</td>
+</tr>
+<tr>
+<td align="center">PushBackList(other *List)</td>
+<td align="left">添加 other 列表元素到尾部</td>
+</tr>
+<tr>
+<td align="center">PushFrontList(other *List)</td>
+<td align="left">添加 other 列表元素到头部</td>
+</tr>
+</tbody>
+</table>
+<p>PushFront和PushBack方法都会返回一个 <em>list.Element 结构，如果在以后的使用中需要删除插入的元素，则只能通过 </em>list.Element 配合 Remove() 方法进行删除。</p>
+<h2 id="_18">流程控制<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="_19">条件<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<h3 id="_20">选择<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>Go语言中case是一个独立的代码块，执行完毕后不会像C语言那样紧接着执行下一个case。加入了<code>fallthrough</code>关键字来顺序执行所有case分支。</p>
+<h3 id="_21">循环<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>Go语言中的循环语句只支持for关键字，而不支持while和do-while结构。</p>
+<h4 id="for-range">for range键值循环<a class="headerlink" href="#for-range" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">val</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">coll</span> <span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="_22">跳转<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p><code>goto</code>,<code>break</code>,<code>continue</code>.</p>
+<h2 id="_23">函数<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<p>函数声明包括函数名、形式参数列表、返回值列表（可省略）以及函数体。</p>
+<p>如果返回值是同一种类型，则用括号将多个返回值类型括起来，用逗号分隔每个返回值的类型。</p>
+<p>Go语言支持对返回值进行命名，这样返回值就和参数一样拥有参数变量名和类型。</p>
+<h2 id="1-2-3func"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">函数名</span><span class="p">(</span><span class="nx">形式参数列表</span><span class="p">)(</span><span class="nx">返回值列表</span><span class="p">){</span>
+    <span class="nx">函数体</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table><a class="headerlink" href="#1-2-3func" title="Permanent link">&para;</a></h2>
+<h2 id="_24">类(结构体)<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
+<h3 id="_25">方法<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<h3 id="_26">实例化<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<h3 id="_27">继承<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<h2 id="_28">接口<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<h2 id="_29">垃圾回收处理<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h2>
+<h2 id="_30">异常处理<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h2>
+<h2 id="_31">包管理<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h2>
+<h2 id="_32">并发<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h2>
+<h3 id="_33">协程<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
+<h2 id="_34">断言和反射<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h2>
+<h2 id="_35">文件处理<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h2>
+<h2 id="_36">网络编程<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h2>
                 
                   
                 
