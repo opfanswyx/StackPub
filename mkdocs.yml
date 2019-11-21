@@ -63,6 +63,7 @@ nav:
       - PHP WEB相关: source/php/php_web.md
     - Lua总结: source/lua/lua_summary.md
   - 数据结构与算法:
+    - 本模块规划: algorithm/task.md
     - 链表:
       - 顺序链表: algorithm/struct_seqlist.md 
       - 链式链表: algorithm/struct_linklist.md 
