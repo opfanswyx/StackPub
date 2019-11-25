@@ -377,26 +377,94 @@ func 函数名(形式参数列表)(返回值列表){
     函数体
 }
 ```
+### 函数变量
+```go
+var name function()
+
+name()
+```
+### 匿名函数
+匿名函数，即在需要使用函数时再定义函数，匿名函数没有函数名只有函数体，函数可以作为一种类型被赋值给函数类型的变量，匿名函数也往往以变量方式传递。
+```go
+func(参数列表)(返回参数列表){
+    函数体
+}
+```
+在定义时调用
+```go
+func(data int) {
+    fmt.Println("hello", data)
+}(100)
+```
+匿名函数赋值给变量
+```go
+// 将匿名函数体保存到f()中
+f := func(data int) {
+    fmt.Println("hello", data)
+}
+f(100) // 使用f()调用
+```
+### 闭包(Closure)
+闭包（Closure）在某些编程语言中也被称为```Lambda表达式```。
+```go
+package main
+import (
+    "fmt"
+)
+// 创建一个玩家生成器, 输入名称, 输出生成器
+func playerGen(name string) func() (string, int) {
+    // 血量一直为150
+    hp := 150
+    // 返回创建的闭包
+    return func() (string, int) {
+        return name, hp  // 将变量引用到闭包中
+    }
+}
+func main() {
+    // 创建一个玩家生成器
+    generator := playerGen("player One")
+    // 返回玩家的名字和血量
+    name, hp := generator()
+    // 打印值
+    fmt.Println(name, hp)
+}
+```
+### 变参函数
+类型...type本质上是一个数组切片。
+```go
+func myfunc(args ...type) {
+    for _, arg := range args {
+        fmt.Println(arg)
+    }
+}
+```
+任意类型的可变参数
+```go
+func Printf(format string, args ...interface{}) {
+    // ...
+}
+```
+在多个可变参数函数中传递参数时，在可变参数变量后面添加```...```。
+```go
+func print(slist ...interface{}) {
+    // 将slist可变参数切片完整传递给下一个函数
+    rawPrint(slist...)
+}
+```
+### defer(延迟执行语句)
+当有多个```defer```行为被注册时，它们会以逆序执行（类似栈，即后进先出）。
+```go
+package main
+import (
+    "fmt"
+)
+func main() {
+    fmt.Println("defer begin")
+    defer fmt.Println(1) // 将defer放入延迟调用栈
+    defer fmt.Println(2)
+    defer fmt.Println(3) // 最后一个放入, 位于栈顶, 最先调用
+    fmt.Println("defer end")
+}
+```
+所以使用```defer```能非常方便地处理**资源释放问题**。
 ---
-
-## 类(结构体)
-### 方法
-### 实例化
-### 继承
-
-## 接口
-
-## 垃圾回收处理
-
-## 异常处理
-
-## 包管理
-
-## 并发
-### 协程
-
-## 断言和反射
-
-## 文件处理
-
-## 网络编程
