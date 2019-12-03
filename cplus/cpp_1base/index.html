@@ -13,7 +13,7 @@
         <meta name="description" content="Atticus's Docs">
       
       
-        <link rel="canonical" href="https://opfanswyx.top/cplus/cpp_base/">
+        <link rel="canonical" href="https://opfanswyx.top/cplus/cpp_1base/">
       
       
         <meta name="author" content="Atticus">
@@ -648,7 +648,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_object/" title="类和对象" class="md-nav__link">
+    <a href="../cpp_2object/" title="类和对象" class="md-nav__link">
       类和对象
     </a>
   </li>
@@ -660,7 +660,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_quote/" title="引用" class="md-nav__link">
+    <a href="../cpp_3quote/" title="引用" class="md-nav__link">
       引用
     </a>
   </li>
@@ -672,7 +672,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_inher/" title="继承与派生" class="md-nav__link">
+    <a href="../cpp_4inher/" title="继承与派生" class="md-nav__link">
       继承与派生
     </a>
   </li>
@@ -684,7 +684,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_polym/" title="多态与虚函数" class="md-nav__link">
+    <a href="../cpp_5polym/" title="多态与虚函数" class="md-nav__link">
       多态与虚函数
     </a>
   </li>
@@ -696,7 +696,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_ysfcz/" title="运算符重载" class="md-nav__link">
+    <a href="../cpp_6ysfcz/" title="运算符重载" class="md-nav__link">
       运算符重载
     </a>
   </li>
@@ -708,7 +708,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_muban/" title="模板" class="md-nav__link">
+    <a href="../cpp_7template/" title="模板" class="md-nav__link">
       模板
     </a>
   </li>
@@ -720,7 +720,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_catch/" title="异常" class="md-nav__link">
+    <a href="../cpp_8catch/" title="异常" class="md-nav__link">
       异常
     </a>
   </li>
@@ -936,7 +936,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_io/" title="输入输出流" class="md-nav__link">
+    <a href="../cpp_9io/" title="输入输出流" class="md-nav__link">
       输入输出流
     </a>
   </li>
@@ -948,7 +948,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_file/" title="文件操作" class="md-nav__link">
+    <a href="../cpp_10file/" title="文件操作" class="md-nav__link">
       文件操作
     </a>
   </li>
@@ -960,7 +960,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_high/" title="高级主题" class="md-nav__link">
+    <a href="../cpp_11high/" title="高级主题" class="md-nav__link">
       高级主题
     </a>
   </li>
@@ -998,6 +998,18 @@
   <li class="md-nav__item">
     <a href="../../goprogram/go_base/" title="Go语言基础" class="md-nav__link">
       Go语言基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../goprogram/go_oop/" title="Go语言面向对象相关" class="md-nav__link">
+      Go语言面向对象相关
     </a>
   </li>
 
@@ -1947,7 +1959,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/cplus/cpp_base.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/cplus/cpp_1base.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                   <h1>C++基础</h1>
@@ -1974,18 +1986,17 @@ using name::xxx;
 </td></tr></table>
 
 <h3 id="const">const<a class="headerlink" href="#const" title="Permanent link">&para;</a></h3>
-<p>C语言对 const 的处理和普通变量一样，会到内存中读取数据；C++ 对 const 的处理更像是编译时期的#define，是一个值替换的过程。</p>
-<p>C和C++中全局 const 变量的作用域相同，都是当前文件，不同的是它们的可见范围：C语言中 const 全局变量的可见范围是整个程序，在其他文件中使用 extern 声明后就可以使用；而C++中 const 全局变量的可见范围仅限于当前文件，在其他文件中不可见，所以它可以定义在头文件中，多次引入后也不会出错。</p>
+<p>C语言对<code>const</code>的处理和普通变量一样，会到内存中读取数据，C++对<code>const</code>的处理更像是编译时期的#define，是一个值替换的过程。</p>
+<p>C和C++中全局<code>const</code>变量的作用域相同，都是当前文件，不同的是它们的可见范围：C语言中<code>const</code>全局变量的可见范围是整个程序，在其他文件中使用<code>extern</code>声明后就可以使用；而C++中<code>const</code>全局变量的可见范围仅限于当前文件，在其他文件中不可见，可以定义在头文件中，多次引入后不会出错。</p>
 <h3 id="inline">inline内联函数<a class="headerlink" href="#inline" title="Permanent link">&para;</a></h3>
-<p>在函数定义处添加 inline 关键字，在函数声明处添加 inline 关键字虽然没有错，但这种做法是无效的，编译器会忽略函数声明处的 inline 关键字。</p>
+<p><code>inline</code>关键字在函数定义处添加，在函数声明处添加<code>inline</code>关键字虽然没有错，但这种做法是无效的，编译器会忽略函数声明处的<code>inline</code>关键字。</p>
 <p>在多文件编程时，建议将内联函数的定义直接放在头文件中，并且禁用内联函数的声明。</p>
 <h3 id="_2">函数默认参数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>C++规定，默认参数只能放在形参列表的最后，而且一旦为某个形参指定了默认值，那么它后面的所有形参都必须有默认值。</p>
-<p>这是因为C++ 规定，在给定的作用域中只能指定一次默认参数。（同一源文件内定义+声明带默认参数会报错）</p>
+<p>C++规定，默认参数只能放在形参列表的最后，而且一旦为某个形参指定了默认值，那么后面的所有形参都必须有默认值。</p>
+<p>在给定的作用域中只能指定一次默认参数。（同一源文件内定义+声明带默认参数会报错）</p>
 <h3 id="_3">重载<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>函数重载：函数名字相同，数列表不同（参数列表又叫参数签名，包括参数的类型、参数的个数和参数的顺序，只要有一个不同就叫做参数列表不同）。函数的返回类型可以相同也可以不相同。仅仅返回类型不同不足以成为函数的重载。</p>
-<p>参数列表又叫参数签名，包括参数的类型、参数的个数和参数的顺序，只要有一个不同就叫做参数列表不同。</p>
-<p>注意类型转换与二义性</p>
+<p>函数重载：函数名字相同，参数列表不同（包括参数的类型、参数的个数和参数的顺序，只要有一个不同就叫做参数列表不同）。函数的返回类型可以相同也可以不相同。仅仅返回类型不同不足以成为函数的重载。</p>
+<p>注意重载过程中可能发生类型转换与二义性。</p>
                 
                   
                 
@@ -2043,7 +2054,7 @@ gitalk.render('gitalk-container')
           </a>
         
         
-          <a href="../cpp_object/" title="类和对象" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../cpp_2object/" title="类和对象" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">

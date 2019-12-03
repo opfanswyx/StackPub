@@ -13,7 +13,7 @@
         <meta name="description" content="Atticus's Docs">
       
       
-        <link rel="canonical" href="https://opfanswyx.top/cplus/cpp_polym/">
+        <link rel="canonical" href="https://opfanswyx.top/cplus/cpp_11high/">
       
       
         <meta name="author" content="Atticus">
@@ -42,7 +42,7 @@
     
     
       
-        <title>多态与虚函数 - Stack Pub</title>
+        <title>高级主题 - Stack Pub</title>
       
     
     
@@ -115,7 +115,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                多态与虚函数
+                高级主题
               
             </span>
           
@@ -548,7 +548,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_base/" title="C++基础" class="md-nav__link">
+    <a href="../cpp_1base/" title="C++基础" class="md-nav__link">
       C++基础
     </a>
   </li>
@@ -560,7 +560,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_object/" title="类和对象" class="md-nav__link">
+    <a href="../cpp_2object/" title="类和对象" class="md-nav__link">
       类和对象
     </a>
   </li>
@@ -572,7 +572,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_quote/" title="引用" class="md-nav__link">
+    <a href="../cpp_3quote/" title="引用" class="md-nav__link">
       引用
     </a>
   </li>
@@ -584,7 +584,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_inher/" title="继承与派生" class="md-nav__link">
+    <a href="../cpp_4inher/" title="继承与派生" class="md-nav__link">
       继承与派生
     </a>
   </li>
@@ -594,85 +594,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        多态与虚函数
-      </label>
-    
-    <a href="./" title="多态与虚函数" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../cpp_5polym/" title="多态与虚函数" class="md-nav__link">
       多态与虚函数
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    多态与虚函数
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    虚析构函数的必要性
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    纯虚函数和抽象类详解
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    虚函数表
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#typeidrtti" class="md-nav__link">
-    typeid运算符与RTTI机制
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
-            评论
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -682,7 +608,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_ysfcz/" title="运算符重载" class="md-nav__link">
+    <a href="../cpp_6ysfcz/" title="运算符重载" class="md-nav__link">
       运算符重载
     </a>
   </li>
@@ -694,7 +620,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_muban/" title="模板" class="md-nav__link">
+    <a href="../cpp_7template/" title="模板" class="md-nav__link">
       模板
     </a>
   </li>
@@ -706,7 +632,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_catch/" title="异常" class="md-nav__link">
+    <a href="../cpp_8catch/" title="异常" class="md-nav__link">
       异常
     </a>
   </li>
@@ -922,7 +848,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_io/" title="输入输出流" class="md-nav__link">
+    <a href="../cpp_9io/" title="输入输出流" class="md-nav__link">
       输入输出流
     </a>
   </li>
@@ -934,7 +860,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_file/" title="文件操作" class="md-nav__link">
+    <a href="../cpp_10file/" title="文件操作" class="md-nav__link">
       文件操作
     </a>
   </li>
@@ -944,11 +870,160 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../cpp_high/" title="高级主题" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        高级主题
+      </label>
+    
+    <a href="./" title="高级主题" class="md-nav__link md-nav__link--active">
       高级主题
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    进阶
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-constructor" class="md-nav__link">
+    拷贝构造函数(Copy Constructor)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    深拷贝和浅拷贝
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    重载=(赋值运算符)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    拷贝控制操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    类型转换相关
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    转换构造函数(将其它类型转换为当前类的类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    类型转换函数(将当前类的类型转换为其它类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    强制类型转换运算符
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared_ptr" class="md-nav__link">
+    智能指针shared_ptr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lambda" class="md-nav__link">
+    lambda表达式(匿名函数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autodecltype" class="md-nav__link">
+    auto和decltype关键字
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    移动构造函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    右值引用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -984,6 +1059,18 @@
   <li class="md-nav__item">
     <a href="../../goprogram/go_base/" title="Go语言基础" class="md-nav__link">
       Go语言基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../goprogram/go_oop/" title="Go语言面向对象相关" class="md-nav__link">
+      Go语言面向对象相关
     </a>
   </li>
 
@@ -1858,7 +1945,15 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    多态与虚函数
+    进阶
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-constructor" class="md-nav__link">
+    拷贝构造函数(Copy Constructor)
   </a>
   
     <nav class="md-nav">
@@ -1866,21 +1961,21 @@
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    虚析构函数的必要性
+    深拷贝和浅拷贝
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    纯虚函数和抽象类详解
+    重载=(赋值运算符)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    虚函数表
+    拷贝控制操作
   </a>
   
 </li>
@@ -1889,11 +1984,78 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#typeidrtti" class="md-nav__link">
-    typeid运算符与RTTI机制
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    类型转换相关
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    转换构造函数(将其它类型转换为当前类的类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    类型转换函数(将当前类的类型转换为其它类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    强制类型转换运算符
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared_ptr" class="md-nav__link">
+    智能指针shared_ptr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lambda" class="md-nav__link">
+    lambda表达式(匿名函数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autodecltype" class="md-nav__link">
+    auto和decltype关键字
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    移动构造函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    右值引用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1919,70 +2081,15 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/cplus/cpp_polym.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/cplus/cpp_11high.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>多态与虚函数</h1>
+                  <h1>高级主题</h1>
                 
-                <h2 id="_1">多态与虚函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>通过基类指针只能访问派生类的成员变量，但是不能访问派生类的成员函数。</p>
-<p>让基类指针能够访问派生类的成员函数，C++ 增加了虚函数（Virtual Function）。使用虚函数非常简单，只需要在函数声明前面增加 virtual 关键字。</p>
-<p>有了虚函数，基类指针指向基类对象时就使用基类的成员（包括成员函数和成员变量），指向派生类对象时就使用派生类的成员。换句话说，基类指针可以按照基类的方式来做事，也可以按照派生类的方式来做事，它有多种形态，或者说有多种表现方式，我们将这种现象称为多态（Polymorphism）。</p>
-<p>虚函数的注意事项
-1. 只需要在虚函数的声明处加上 virtual 关键字，函数定义处可以加也可以不加。</p>
-<ol>
-<li>
-<p>可以只将基类中的函数声明为虚函数，这样所有派生类中具有遮蔽关系的同名函数都将自动成为虚函数。</p>
-</li>
-<li>
-<p>当在基类中定义了虚函数时，如果派生类没有定义新的函数来遮蔽此函数，那么将使用基类的虚函数。</p>
-</li>
-<li>
-<p>只有派生类的虚函数覆盖基类的虚函数（函数原型相同）才能构成多态（通过基类指针访问派生类函数）。</p>
-</li>
-<li>
-<p>构造函数不能是虚函数。</p>
-</li>
-<li>
-<p>析构函数可以声明为虚函数，而且有时候必须要声明为虚函数。</p>
-</li>
-</ol>
-<p>构成多态的条件
-1. 必须存在继承关系；
-2. 继承关系中必须有同名的虚函数，并且它们是覆盖关系（函数原型相同）。
-3. 存在基类的指针，通过该指针调用虚函数。</p>
-<h3 id="_2">虚析构函数的必要性<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>大部分情况下都应该将基类的析构函数声明为虚函数。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Base</span><span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="n">Base</span><span class="p">();</span>
-    <span class="k">virtual</span> <span class="o">~</span><span class="n">Base</span><span class="p">();</span>
-<span class="k">protected</span><span class="o">:</span>
-    <span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">;</span>
-<span class="p">};</span>
-</pre></div>
-</td></tr></table></p>
-<h3 id="_3">纯虚函数和抽象类详解<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">virtual</span> <span class="err">返回值类型</span> <span class="err">函数名</span> <span class="p">(</span><span class="err">函数参数</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-纯虚函数没有函数体，只有函数声明，在虚函数声明的结尾加上=0，表明此函数为纯虚函数。</p>
-<p>包含纯虚函数的类称为抽象类（Abstract Class）。纯虚函数没有函数体，无法实例化。派生类必须实现纯虚函数才能被实例化。</p>
-<p>抽象基类除了约束派生类的功能，还可以实现多态。</p>
-<p>一个纯虚函数就可以使类成为抽象基类，但是抽象基类中除了包含纯虚函数外，还可以包含其它的成员函数（虚函数或普通函数）和成员变量。</p>
-<p>只有类中的虚函数才能被声明为纯虚函数，普通成员函数和顶层函数均不能声明为纯虚函数。</p>
-<h3 id="_4">虚函数表<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>编译器之所以能通过指针指向的对象找到虚函数，是因为在创建对象时额外地增加了虚函数表。</p>
-<p>如果一个类包含了虚函数，那么在创建该类的对象时就会额外地增加一个数组，数组中的每一个元素都是虚函数的入口地址。不过数组和对象是分开存储的，为了将对象和数组关联起来，编译器还要在对象中安插一个指针，指向数组的起始位置。数组就是虚函数表（Virtual function table），简写为vtable。</p>
-<h2 id="typeidrtti">typeid运算符与RTTI机制<a class="headerlink" href="#typeidrtti" title="Permanent link">&para;</a></h2>
-<p>typeid 运算符用来获取一个表达式的类型信息。类型信息是创建数据的模板，数据占用多大内存、能进行什么样的操作、该如何操作等，这些都由它的类型信息决定。</p>
-<p>这种在程序运行后确定对象的类型信息的机制称为运行时类型识别（Run-Time Type Identification，RTTI）。在 C++ 中，只有类中包含了虚函数时才会启用 RTTI 机制，其他所有情况都可以在编译阶段确定类型信息。
+                <h2 id="_1">进阶<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="copy-constructor">拷贝构造函数(Copy Constructor)<a class="headerlink" href="#copy-constructor" title="Permanent link">&para;</a></h3>
+<p>const 引用
+只要创建对象，就会调用构造函数。拷贝是在初始化阶段进行的，也就是用其它对象的数据来初始化新对象的内存。
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -2009,36 +2116,85 @@
 24
 25
 26
-27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-<span class="c1">//基类</span>
-<span class="k">class</span> <span class="nc">People</span><span class="p">{</span>
+<span class="k">class</span> <span class="nc">Student</span><span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-    <span class="k">virtual</span> <span class="kt">void</span> <span class="n">func</span><span class="p">(){</span> <span class="p">}</span>
+    <span class="n">Student</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="kt">float</span> <span class="n">score</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">);</span>  <span class="c1">//普通构造函数</span>
+    <span class="n">Student</span><span class="p">(</span><span class="k">const</span> <span class="n">Student</span> <span class="o">&amp;</span><span class="n">stu</span><span class="p">);</span>  <span class="c1">//拷贝构造函数（声明）</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">display</span><span class="p">();</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">m_name</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">m_age</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">m_score</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="c1">//派生类</span>
-<span class="k">class</span> <span class="nc">Student</span><span class="o">:</span> <span class="k">public</span> <span class="n">People</span><span class="p">{</span> <span class="p">};</span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="n">People</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+<span class="n">Student</span><span class="o">::</span><span class="n">Student</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="kt">float</span> <span class="n">score</span><span class="p">)</span><span class="o">:</span> <span class="n">m_name</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">m_age</span><span class="p">(</span><span class="n">age</span><span class="p">),</span> <span class="n">m_score</span><span class="p">(</span><span class="n">score</span><span class="p">){</span> <span class="p">}</span>
+<span class="c1">//拷贝构造函数（定义）</span>
+<span class="n">Student</span><span class="o">::</span><span class="n">Student</span><span class="p">(</span><span class="k">const</span> <span class="n">Student</span> <span class="o">&amp;</span><span class="n">stu</span><span class="p">){</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">m_name</span> <span class="o">=</span> <span class="n">stu</span><span class="p">.</span><span class="n">m_name</span><span class="p">;</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">m_age</span> <span class="o">=</span> <span class="n">stu</span><span class="p">.</span><span class="n">m_age</span><span class="p">;</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">m_score</span> <span class="o">=</span> <span class="n">stu</span><span class="p">.</span><span class="n">m_score</span><span class="p">;</span>
 
-    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">){</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">People</span><span class="p">();</span>
-    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="c1">//根据不同的类型进行不同的操作</span>
-    <span class="k">if</span><span class="p">(</span><span class="k">typeid</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="o">==</span> <span class="k">typeid</span><span class="p">(</span><span class="n">People</span><span class="p">)){</span>
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;I am human.&quot;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
-    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;I am a student.&quot;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Copy constructor was called.&quot;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">Student</span><span class="o">::</span><span class="n">display</span><span class="p">(){</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">m_name</span><span class="o">&lt;&lt;</span><span class="s">&quot;的年龄是&quot;</span><span class="o">&lt;&lt;</span><span class="n">m_age</span><span class="o">&lt;&lt;</span><span class="s">&quot;，成绩是&quot;</span><span class="o">&lt;&lt;</span><span class="n">m_score</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
+    <span class="n">Student</span> <span class="n">stu1</span><span class="p">(</span><span class="s">&quot;小明&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mf">90.5</span><span class="p">);</span>
+    <span class="n">Student</span> <span class="n">stu2</span> <span class="o">=</span> <span class="n">stu1</span><span class="p">;</span>  <span class="c1">//调用拷贝构造函数</span>
+    <span class="n">Student</span> <span class="nf">stu3</span><span class="p">(</span><span class="n">stu1</span><span class="p">);</span>  <span class="c1">//调用拷贝构造函数</span>
+    <span class="n">stu1</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
+    <span class="n">stu2</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
+    <span class="n">stu3</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
+
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-除了 typeid 运算符，dynamic_cast 运算符和异常处理也依赖于 RTTI 机制，并且要能够通过派生类获取基类的信息，或者说要能够判断一个类是否是另一个类的基类，要在基类和派生类之间再增加一条绳索。称此为继承链（Inheritance Chain）。</p>
+在定义的同时进行赋值叫做初始化（Initialization），定义完成以后再赋值（不管在定义的时候有没有赋值）就叫做赋值（Assignment）。初始化只能有一次，赋值可以有多次。</p>
+<p>当以拷贝的方式初始化一个对象时，会调用拷贝构造函数；当给一个对象赋值时，会调用重载过的赋值运算符。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="_2">深拷贝和浅拷贝<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="_3">重载=(赋值运算符)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="_4">拷贝控制操作<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h3 id="_5">类型转换相关<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h4 id="_6">转换构造函数(将其它类型转换为当前类的类型)<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h4 id="_7">类型转换函数(将当前类的类型转换为其它类型)<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<h4 id="_8">强制类型转换运算符<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<h3 id="shared_ptr">智能指针shared_ptr<a class="headerlink" href="#shared_ptr" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ptr</span><span class="p">(</span><span class="k">new</span> <span class="n">T</span><span class="p">);</span>  <span class="c1">// T 可以是 int、char、类等各种类型</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="lambda">lambda表达式(匿名函数)<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h3>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[</span><span class="err">外部变量访问方式说明符</span><span class="p">]</span> <span class="p">(</span><span class="err">参数表</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="err">返回值类型</span>
+<span class="p">{</span>
+   <span class="err">语句块</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+其中，“外部变量访问方式说明符”可以是=或&amp;，表示{}中用到的、定义在{}外面的变量在{}中是否允许被改变。=表示不允许，&amp;表示允许。当然，在{}中也可以不使用定义在外面的变量。“-&gt; 返回值类型”可以省略。</p>
+<h3 id="autodecltype">auto和decltype关键字<a class="headerlink" href="#autodecltype" title="Permanent link">&para;</a></h3>
+<h3 id="_9">移动构造函数<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_10">右值引用<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
                 
                   
                 
@@ -2081,7 +2237,7 @@ gitalk.render('gitalk-container')
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../cpp_inher/" title="继承与派生" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../cpp_10file/" title="文件操作" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2090,19 +2246,19 @@ gitalk.render('gitalk-container')
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                继承与派生
+                文件操作
               </span>
             </div>
           </a>
         
         
-          <a href="../cpp_ysfcz/" title="运算符重载" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../goprogram/go_base/" title="Go语言基础" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                运算符重载
+                Go语言基础
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

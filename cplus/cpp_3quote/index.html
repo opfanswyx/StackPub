@@ -13,7 +13,7 @@
         <meta name="description" content="Atticus's Docs">
       
       
-        <link rel="canonical" href="https://opfanswyx.top/cplus/cpp_io/">
+        <link rel="canonical" href="https://opfanswyx.top/cplus/cpp_3quote/">
       
       
         <meta name="author" content="Atticus">
@@ -42,7 +42,7 @@
     
     
       
-        <title>输入输出流 - Stack Pub</title>
+        <title>引用 - Stack Pub</title>
       
     
     
@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#c" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -111,7 +115,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                输入输出流
+                引用
               
             </span>
           
@@ -544,7 +548,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_base/" title="C++基础" class="md-nav__link">
+    <a href="../cpp_1base/" title="C++基础" class="md-nav__link">
       C++基础
     </a>
   </li>
@@ -556,7 +560,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_object/" title="类和对象" class="md-nav__link">
+    <a href="../cpp_2object/" title="类和对象" class="md-nav__link">
       类和对象
     </a>
   </li>
@@ -566,11 +570,84 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../cpp_quote/" title="引用" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        引用
+      </label>
+    
+    <a href="./" title="引用" class="md-nav__link md-nav__link--active">
       引用
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    C++引用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    指针和引用的区别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#const" class="md-nav__link">
+    const和引用的奇妙反应
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    引用不能绑定到临时数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -580,7 +657,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_inher/" title="继承与派生" class="md-nav__link">
+    <a href="../cpp_4inher/" title="继承与派生" class="md-nav__link">
       继承与派生
     </a>
   </li>
@@ -592,7 +669,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_polym/" title="多态与虚函数" class="md-nav__link">
+    <a href="../cpp_5polym/" title="多态与虚函数" class="md-nav__link">
       多态与虚函数
     </a>
   </li>
@@ -604,7 +681,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_ysfcz/" title="运算符重载" class="md-nav__link">
+    <a href="../cpp_6ysfcz/" title="运算符重载" class="md-nav__link">
       运算符重载
     </a>
   </li>
@@ -616,7 +693,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_muban/" title="模板" class="md-nav__link">
+    <a href="../cpp_7template/" title="模板" class="md-nav__link">
       模板
     </a>
   </li>
@@ -628,7 +705,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_catch/" title="异常" class="md-nav__link">
+    <a href="../cpp_8catch/" title="异常" class="md-nav__link">
       异常
     </a>
   </li>
@@ -842,18 +919,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="输入输出流" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../cpp_9io/" title="输入输出流" class="md-nav__link">
       输入输出流
     </a>
-    
   </li>
 
         
@@ -863,7 +933,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_file/" title="文件操作" class="md-nav__link">
+    <a href="../cpp_10file/" title="文件操作" class="md-nav__link">
       文件操作
     </a>
   </li>
@@ -875,7 +945,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cpp_high/" title="高级主题" class="md-nav__link">
+    <a href="../cpp_11high/" title="高级主题" class="md-nav__link">
       高级主题
     </a>
   </li>
@@ -913,6 +983,18 @@
   <li class="md-nav__item">
     <a href="../../goprogram/go_base/" title="Go语言基础" class="md-nav__link">
       Go语言基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../goprogram/go_oop/" title="Go语言面向对象相关" class="md-nav__link">
+      Go语言面向对象相关
     </a>
   </li>
 
@@ -1774,26 +1856,104 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    C++引用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    指针和引用的区别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#const" class="md-nav__link">
+    const和引用的奇妙反应
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    引用不能绑定到临时数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/cplus/cpp_io.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/cplus/cpp_3quote.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>输入输出流</h1>
+                  <h1>引用</h1>
                 
-                <p><img alt="iostream" src="../../image/cpp_io.png" /></p>
+                <h2 id="c">C++引用<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
+<p>引用定义时需要添加<code>&amp;</code>，使用时不添加<code>&amp;</code>，使用时添加&amp;表示取地址。引用必须在定义的同时初始化，并且以后也要从一而终，不能再引用其它数据，这有点类似于常量（const 变量）。</p>
+<p>引用只是对指针进行了简单的封装，它的底层依然是通过指针实现的，引用占用的内存和指针占用的内存长度一样，在 32 位环境下是 4 个字节，在 64 位环境下是 8 个字节，之所以不能获取引用的地址，是因为编译器进行了内部转换。</p>
+<h3 id="_1">指针和引用的区别<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ol>
-<li>ios 是抽象基类。</li>
-<li>istream 是用于输入的流类，cin 就是该类的对象，虚继承。</li>
-<li>ostream 是用于输出的流类，cout 就是该类的对象，虚继承。</li>
-<li>ifstream 是用于从文件读取数据的类。</li>
-<li>ofstream 是用于向文件写入数据的类。</li>
-<li>iostream 是既能用于输入，又能用于输出的类。</li>
-<li>fstream 是既能从文件读取数据，又能向文件写入数据的类。</li>
+<li>引用必须在定义时初始化，不能再指向其他数据；指针没有这个限制，指针在定义时不必赋值，也能指向任意数据。</li>
+<li>有 const 指针，但是没有 const 引用。</li>
+<li>指针可以有多级，但是引用只能有一级。</li>
+<li>指针和引用的自增（++）自减（--）运算意义不一样。对指针使用 ++ 表示指向下一份数据，对引用使用 ++ 表示它所指代的数据本身加 1。</li>
 </ol>
+<h3 id="const">const和引用的奇妙反应<a class="headerlink" href="#const" title="Permanent link">&para;</a></h3>
+<h4 id="_2">引用不能绑定到临时数据<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>指针就是数据或代码在内存中的地址，指针变量指向的就是内存中的数据或代码。指针只能指向内存，不能指向寄存器或者硬盘，因为寄存器和硬盘没法寻址。</p>
+<p>int、double、bool、char 等基本类型的数据往往不超过 8 个字节，用一两个寄存器就能存储，所以这些类型的临时数据通常会放到寄存器中；而对象、结构体变量是自定义类型的数据，大小不可预测，所以这些类型的临时数据通常会放到内存中。</p>
+<p>常量表达式的值虽然在内存中，但是没有办法寻址，所以也不能使用&amp;来获取它的地址，更不能用指针指向它。</p>
+<p>引用不能指代临时数据如函数参数等。</p>
+<p>临时数据，例如表达式的结果、函数的返回值等，它们可能会放在内存中，也可能会放在寄存器中。一旦它们被放到了寄存器中，就没法用&amp;获取它们的地址了，也就没法用指针指向它们。</p>
+<p>编译器会为临时数据创建一个新的、无名的临时变量，并将临时数据放入该临时变量中，然后再将引用绑定到该临时变量。</p>
+<p>给引用添加 const 限定后，不但可以将引用绑定到临时数据，还可以将引用绑定到类型相近的数据(const引用与转换类型)，它们背后的机制都是临时变量。</p>
+<p>引用类型的函数形参请尽可能的使用const。</p>
                 
                   
                 
@@ -1836,7 +1996,7 @@ gitalk.render('gitalk-container')
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../stl/cpp_stl_bitset/" title="bitset类" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../cpp_2object/" title="类和对象" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1845,19 +2005,19 @@ gitalk.render('gitalk-container')
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                bitset类
+                类和对象
               </span>
             </div>
           </a>
         
         
-          <a href="../cpp_file/" title="文件操作" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../cpp_4inher/" title="继承与派生" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                文件操作
+                继承与派生
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
