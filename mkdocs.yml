@@ -27,14 +27,14 @@ nav:
     - 正则表达式: source/regexp.md
     - Shell编程: source/shell.md
     - C Plus Plus: 
-      - C++基础: cplus/cpp_base.md
-      - 类和对象: cplus/cpp_object.md
-      - 引用: cplus/cpp_quote.md
-      - 继承与派生: cplus/cpp_inher.md
-      - 多态与虚函数: cplus/cpp_polym.md
-      - 运算符重载: cplus/cpp_ysfcz.md
-      - 模板: cplus/cpp_muban.md
-      - 异常: cplus/cpp_catch.md
+      - C++基础: cplus/cpp_1base.md
+      - 类和对象: cplus/cpp_2object.md
+      - 引用: cplus/cpp_3quote.md
+      - 继承与派生: cplus/cpp_4inher.md
+      - 多态与虚函数: cplus/cpp_5polym.md
+      - 运算符重载: cplus/cpp_6ysfcz.md
+      - 模板: cplus/cpp_7template.md
+      - 异常: cplus/cpp_8catch.md
       - STL: 
         - STL基础: cplus/stl/cpp_stl.md
         - vector: cplus/stl/cpp_stl_vector.md
@@ -51,9 +51,9 @@ nav:
         - STL算法分类: cplus/stl/cpp_stl_algo.md
         - string类: cplus/stl/cpp_stl_string.md
         - bitset类: cplus/stl/cpp_stl_bitset.md
-      - 输入输出流: cplus/cpp_io.md
-      - 文件操作: cplus/cpp_file.md
-      - 高级主题: cplus/cpp_high.md
+      - 输入输出流: cplus/cpp_9io.md
+      - 文件操作: cplus/cpp_10file.md
+      - 高级主题: cplus/cpp_11high.md
     - Go语言:
       - Go语言基础: goprogram/go_base.md
       - Go语言面向对象相关: goprogram/go_oop.md

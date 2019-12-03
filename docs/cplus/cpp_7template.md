@@ -1,11 +1,13 @@
 ## 模板和泛型
-### 模板函数
+在C++中，数据的类型也可以通过参数来传递，在函数定义时可以不指明具体的数据类型，当发生函数调用时，编译器可以根据传入的实参自动推断数据类型。这就是类型的参数化。
+
+### 函数模板(Function TempLate)
 ```c++
 template <typename 类型参数1 , typename 类型参数2 , ...> 返回值类型  函数名(形参列表){
     //在函数体中可以使用类型参数
 }
 ```
-### 类模板
+### 类模板(Class Template)
 ```c++
 template<typename 类型参数1 , typename 类型参数2 , …> class 类名{
     //TODO:
@@ -16,49 +18,7 @@ template<typename 类型参数1 , typename 类型参数2 , …>
     //TODO:
 }
 ```
-```c++
-#include <iostream>
-using namespace std;
-template<class T1, class T2>  //这里不能有分号
-class Point{
-public:
-    Point(T1 x, T2 y): m_x(x), m_y(y){ }
-public:
-    T1 getX() const;  //获取x坐标
-    void setX(T1 x);  //设置x坐标
-    T2 getY() const;  //获取y坐标
-    void setY(T2 y);  //设置y坐标
-private:
-    T1 m_x;  //x坐标
-    T2 m_y;  //y坐标
-};
-template<class T1, class T2>  //模板头
-T1 Point<T1, T2>::getX() const /*函数头*/ {
-    return m_x;
-}
-template<class T1, class T2>
-void Point<T1, T2>::setX(T1 x){
-    m_x = x;
-}
-template<class T1, class T2>
-T2 Point<T1, T2>::getY() const{
-    return m_y;
-}
-template<class T1, class T2>
-void Point<T1, T2>::setY(T2 y){
-    m_y = y;
-}
-int main(){
-    Point<int, int> p1(10, 20);
-    cout<<"x="<<p1.getX()<<", y="<<p1.getY()<<endl;
-    Point<int, char*> p2(10, "东经180度");
-    cout<<"x="<<p2.getX()<<", y="<<p2.getY()<<endl;
-    Point<char*, char*> *p3 = new Point<char*, char*>("东经180度", "北纬210度");
-    cout<<"x="<<p3->getX()<<", y="<<p3->getY()<<endl;
-    return 0;
-}
-```
-可边长数组实现
+可变长数组实现
 ```c++
 #include <iostream>
 #include <cstring>
@@ -66,24 +26,24 @@ using namespace std;
 template <class T>
 class CArray
 {
-    int size; //数组元素的个数
-    T *ptr; //指向动态分配的数组
+    int size;   //数组元素的个数
+    T *ptr;     //指向动态分配的数组
 public:
-    CArray(int s = 0);  //s代表数组元素的个数
+    CArray(int s = 0);          //s代表数组元素的个数
     CArray(CArray & a);
     ~CArray();
     void push_back(const T & v); //用于在数组尾部添加一个元素v
     CArray & operator=(const CArray & a); //用于数组对象间的赋值
     T length() { return size; }
-    T & operator[](int i)
-    {//用以支持根据下标访问数组元素，如a[i] = 4;和n = a[i]这样的语句
+    T & operator[](int i)      //用以支持根据下标访问数组元素，如a[i] = 4;和n = a[i]这样的语句
+    {       
         return ptr[i];
     }
 };
 template<class T>
 CArray<T>::CArray(int s):size(s)
 {
-     if(s == 0)
+    if(s == 0)
          ptr = NULL;
     else
         ptr = new T[s];
@@ -97,7 +57,7 @@ CArray<T>::CArray(CArray & a)
         return;
     }
     ptr = new T[a.size];
-    memcpy(ptr, a.ptr, sizeof(T ) * a.size);
+    memcpy(ptr, a.ptr, sizeof(T) * a.size);
     size = a.size;
 }
 template <class T>
@@ -117,14 +77,14 @@ CArray<T> & CArray<T>::operator=(const CArray & a)
         size = 0;
         return * this;
     }
-     if(size < a.size) { //如果原有空间够大，就不用分配新的空间
-         if(ptr)
+    if(size < a.size) { //如果原有空间够大，就不用分配新的空间
+        if(ptr)
             delete [] ptr;
         ptr = new T[a.size];
     }
     memcpy(ptr,a.ptr,sizeof(T)*a.size);   
     size = a.size;
-     return *this;
+    return *this;
 }
 template <class T>
 void CArray<T>::push_back(const T & v)
@@ -149,12 +109,13 @@ int main()
     return 0;
 }
 ```
-### 重载函数模板
+### 函数模板**重载**
+C++允许对函数模板进行重载。
 ```c++
 #include <iostream>
 using namespace std;
-template<class T> void Swap(T &a, T &b);  //模板①：交换基本类型的值
-template<typename T> void Swap(T a[], T b[], int len);  //模板②：交换两个数组
+template<class T> void Swap(T &a, T &b);  //交换基本类型的值
+template<typename T> void Swap(T a[], T b[], int len);  //交换两个数组
 void printArray(int arr[], int len);  //打印数组元素
 int main(){
     //交换基本类型的值
@@ -193,13 +154,15 @@ void printArray(int arr[], int len){
     }
 }
 ```
+#### 函数模板实参推断
+在使用类模板创建对象时，需要显式的指明实参。而对于函数模板，调用函数时可以不显式地指明实参。
 
-为函数模板显式地指明实参
+但是对于函数模板，类型转换受到更多的限制，仅能进行```const 转换```和```数组或函数指针转换```，其他的类型转换都不能应用于函数模板。
 
-### 模板的显示具体化（Explicit Specialization）
+### 模板的显示具体化(Explicit Specialization)
 模板中的语句（函数体或者类体）不一定就能适应所有的类型，可能会有个别的类型没有意义，或者会导致语法错误。(例如：>能够用来比较 int、float、char 等基本类型数据的大小，但是却不能用来比较结构体变量、对象以及数组的大小，因为我们并没有针对结构体、类和数组重载>)
 
-函数模板的显示具体化
+#### 函数模板的显示具体化
 ```c++
 #include <iostream>
 #include <string>
@@ -236,7 +199,7 @@ ostream & operator<<(ostream &out, const STU &stu){
     return out;
 }
 ```
-### 类模板的显示具体化
+#### 类模板的显示具体化
 ```c++
 #include <iostream>
 using namespace std;
@@ -283,7 +246,10 @@ int main(){
     return 0;
 }
 ```
-### 部分显示具体化
+#### 部分显示具体化
+
+部分显式具体化只能用于类模板，不能用于函数模板。
+
 ```c++
 #include <iostream>
 using namespace std;
@@ -440,8 +406,9 @@ int main(){
 非类型参数的类型不能随意指定，它受到了严格的限制，只能是一个整数，或者是一个指向对象或函数的指针（也可以是引用）。
 
 模板的实例化是由编译器完成（隐式实例化）的，而不是由链接器完成的，这可能会导致在链接期间找不到对应的实例。所以不能将模板的声明和定义分散到多个文件中
-
-### 模板的显式实例化
+### 模板实例化
+模板的实例化是由编译器完成的，而不是由链接器完成的，这可能会导致在链接期间找不到对应的实例。所以模板定义（实现）部分应当合并放在一起。
+#### 模板的显式实例化
 显式实例化一个类模板时，会一次性实例化该类的所有成员，包括成员变量和成员函数。
 
 有了类模板的显式实例化，就可以将类模板的声明和定义分散到不同的文件中。
