@@ -67,7 +67,38 @@ static const State *startPlay(const State *pThis){
 ```
 ## 模版方法模式
 ```c
+int read_file(const char *pFname, int (*processor)(File *fp)){
+    File *fp = fopen(pFname, "r");
+    if(NULL == fp){
+        return -1;
+    }
 
+    int ret = processor(fp);
+
+    fclose(fp);
+    return ret;
+}
+
+static int range_processor(File *fp){
+    int min = INT_MAX;
+    int max = INT_MIN;
+
+    char buf[256];
+
+    while((fgets(buf, sizeof(buf), fp)) != NULL){
+        if(buf[0] == '\n)
+            return -1;
+        int value = atoi(buf);
+        min = min > value ? value : min;
+        max = max < value ? value : max;
+    }
+
+    return max - min;
+}
+
+int range(const char *pFname){
+    return read_file(pFname, range_processor);
+}
 ```
 ## 观察者模式
 
