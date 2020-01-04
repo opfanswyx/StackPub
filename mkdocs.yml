@@ -23,7 +23,12 @@ nav:
     - C语言: 
       - C语言基础: cprogram/c_base.md
       - C语言与面向对象: cprogram/c_object.md
-      - C语言设计模式: cprogram/c_design.md
+      - C语言设计模式: 
+        - 状态模式: cprogram/c_design/c_state.md
+        - 模板方法模式: cprogram/c_design/c_template.md
+        - 观察者模式: cprogram/c_design/c_observer.md
+        - 责任链模式: cprogram/c_design/c_chain.md
+        - 访问者模式: cprogram/c_design/c_visitor.md
     - 正则表达式: source/regexp.md
     - Shell编程: source/shell.md
     - C Plus Plus: 
