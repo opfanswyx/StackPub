@@ -13,7 +13,7 @@
         <meta name="description" content="Atticus's Docs">
       
       
-        <link rel="canonical" href="https://opfanswyx.top/goprogram/go_oop/">
+        <link rel="canonical" href="https://opfanswyx.top/cprogram/c_design/c_chain/">
       
       
         <meta name="author" content="Atticus">
@@ -37,23 +37,23 @@
       
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
-      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="shortcut icon" href="../../../favicon.ico">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
     
     
       
-        <title>Go语言面向对象相关 - Stack Pub</title>
+        <title>责任链模式 - Stack Pub</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -62,9 +62,9 @@
         <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
-      <link rel="manifest" href="../../manifest.webmanifest">
+      <link rel="manifest" href="../../../manifest.webmanifest">
     
     
     
@@ -115,7 +115,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Go语言面向对象相关
+                责任链模式
               
             </span>
           
@@ -194,7 +194,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           简介
         </a>
       
@@ -211,7 +211,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../cprogram/c_base/" class="md-tabs__link">
+        <a href="../../c_base/" class="md-tabs__link md-tabs__link--active">
           编程语言
         </a>
       
@@ -226,7 +226,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../algorithm/task/" class="md-tabs__link">
+        <a href="../../../algorithm/task/" class="md-tabs__link">
           数据结构与算法
         </a>
       
@@ -243,7 +243,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../os/linux/linux_command/" class="md-tabs__link">
+        <a href="../../../os/linux/linux_command/" class="md-tabs__link">
           操作系统
         </a>
       
@@ -258,7 +258,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../network/plan/" class="md-tabs__link">
+        <a href="../../../network/plan/" class="md-tabs__link">
           计算机网络
         </a>
       
@@ -271,7 +271,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../database/plan/" class="md-tabs__link">
+        <a href="../../../database/plan/" class="md-tabs__link">
           数据库
         </a>
       
@@ -288,7 +288,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../source/nginx/nginx_base/" class="md-tabs__link">
+        <a href="../../../source/nginx/nginx_base/" class="md-tabs__link">
           开源项目
         </a>
       
@@ -303,7 +303,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../math/math_graph/" class="md-tabs__link">
+        <a href="../../../math/math_graph/" class="md-tabs__link">
           数学
         </a>
       
@@ -316,7 +316,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../unity/List/" class="md-tabs__link">
+        <a href="../../../unity/List/" class="md-tabs__link">
           图形学
         </a>
       
@@ -329,7 +329,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../leetcode/1.two-sum/" class="md-tabs__link">
+        <a href="../../../leetcode/1.two-sum/" class="md-tabs__link">
           LeetCode
         </a>
       
@@ -342,7 +342,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../kit/paper/" class="md-tabs__link">
+        <a href="../../../kit/paper/" class="md-tabs__link">
           经验总结🔧
         </a>
       
@@ -418,7 +418,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Hello Wolrd" class="md-nav__link">
+    <a href="../../.." title="Hello Wolrd" class="md-nav__link">
       Hello Wolrd
     </a>
   </li>
@@ -454,10 +454,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       C语言
@@ -475,7 +477,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cprogram/c_base/" title="C语言基础" class="md-nav__link">
+    <a href="../../c_base/" title="C语言基础" class="md-nav__link">
       C语言基础
     </a>
   </li>
@@ -487,7 +489,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cprogram/c_object/" title="C语言与面向对象" class="md-nav__link">
+    <a href="../../c_object/" title="C语言与面向对象" class="md-nav__link">
       C语言与面向对象
     </a>
   </li>
@@ -497,10 +499,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1-3" type="checkbox" id="nav-2-1-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1-3" type="checkbox" id="nav-2-1-3" checked>
     
     <label class="md-nav__link" for="nav-2-1-3">
       C语言设计模式
@@ -518,7 +522,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cprogram/c_design/c_state/" title="状态模式" class="md-nav__link">
+    <a href="../c_state/" title="状态模式" class="md-nav__link">
       状态模式
     </a>
   </li>
@@ -530,7 +534,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cprogram/c_design/c_template/" title="模板方法模式" class="md-nav__link">
+    <a href="../c_template/" title="模板方法模式" class="md-nav__link">
       模板方法模式
     </a>
   </li>
@@ -542,7 +546,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cprogram/c_design/c_observer/" title="观察者模式" class="md-nav__link">
+    <a href="../c_observer/" title="观察者模式" class="md-nav__link">
       观察者模式
     </a>
   </li>
@@ -552,11 +556,51 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../cprogram/c_design/c_chain/" title="责任链模式" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        责任链模式
+      </label>
+    
+    <a href="./" title="责任链模式" class="md-nav__link md-nav__link--active">
       责任链模式
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    职责链模式
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -566,7 +610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cprogram/c_design/c_visitor/" title="访问者模式" class="md-nav__link">
+    <a href="../c_visitor/" title="访问者模式" class="md-nav__link">
       访问者模式
     </a>
   </li>
@@ -588,7 +632,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/regexp/" title="正则表达式" class="md-nav__link">
+    <a href="../../../source/regexp/" title="正则表达式" class="md-nav__link">
       正则表达式
     </a>
   </li>
@@ -600,7 +644,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/shell/" title="Shell编程" class="md-nav__link">
+    <a href="../../../source/shell/" title="Shell编程" class="md-nav__link">
       Shell编程
     </a>
   </li>
@@ -631,7 +675,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_1base/" title="C++基础" class="md-nav__link">
+    <a href="../../../cplus/cpp_1base/" title="C++基础" class="md-nav__link">
       C++基础
     </a>
   </li>
@@ -643,7 +687,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_2object/" title="类和对象" class="md-nav__link">
+    <a href="../../../cplus/cpp_2object/" title="类和对象" class="md-nav__link">
       类和对象
     </a>
   </li>
@@ -655,7 +699,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_3quote/" title="引用" class="md-nav__link">
+    <a href="../../../cplus/cpp_3quote/" title="引用" class="md-nav__link">
       引用
     </a>
   </li>
@@ -667,7 +711,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_4inher/" title="继承与派生" class="md-nav__link">
+    <a href="../../../cplus/cpp_4inher/" title="继承与派生" class="md-nav__link">
       继承与派生
     </a>
   </li>
@@ -679,7 +723,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_5polym/" title="多态与虚函数" class="md-nav__link">
+    <a href="../../../cplus/cpp_5polym/" title="多态与虚函数" class="md-nav__link">
       多态与虚函数
     </a>
   </li>
@@ -691,7 +735,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_6ysfcz/" title="运算符重载" class="md-nav__link">
+    <a href="../../../cplus/cpp_6ysfcz/" title="运算符重载" class="md-nav__link">
       运算符重载
     </a>
   </li>
@@ -703,7 +747,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_7template/" title="模板" class="md-nav__link">
+    <a href="../../../cplus/cpp_7template/" title="模板" class="md-nav__link">
       模板
     </a>
   </li>
@@ -715,7 +759,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_8catch/" title="异常" class="md-nav__link">
+    <a href="../../../cplus/cpp_8catch/" title="异常" class="md-nav__link">
       异常
     </a>
   </li>
@@ -746,7 +790,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl/" title="STL基础" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl/" title="STL基础" class="md-nav__link">
       STL基础
     </a>
   </li>
@@ -758,7 +802,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_vector/" title="vector" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_vector/" title="vector" class="md-nav__link">
       vector
     </a>
   </li>
@@ -770,7 +814,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_list/" title="list" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_list/" title="list" class="md-nav__link">
       list
     </a>
   </li>
@@ -782,7 +826,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_deque/" title="deque" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_deque/" title="deque" class="md-nav__link">
       deque
     </a>
   </li>
@@ -794,7 +838,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_funcobject/" title="函数对象" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_funcobject/" title="函数对象" class="md-nav__link">
       函数对象
     </a>
   </li>
@@ -806,7 +850,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_pair/" title="关联容器与pair类模板" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_pair/" title="关联容器与pair类模板" class="md-nav__link">
       关联容器与pair类模板
     </a>
   </li>
@@ -818,7 +862,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_multiset/" title="multiset" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_multiset/" title="multiset" class="md-nav__link">
       multiset
     </a>
   </li>
@@ -830,7 +874,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_set/" title="set" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_set/" title="set" class="md-nav__link">
       set
     </a>
   </li>
@@ -842,7 +886,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_multimap/" title="multimap" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_multimap/" title="multimap" class="md-nav__link">
       multimap
     </a>
   </li>
@@ -854,7 +898,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_map/" title="map" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_map/" title="map" class="md-nav__link">
       map
     </a>
   </li>
@@ -866,7 +910,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_stack/" title="stack" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_stack/" title="stack" class="md-nav__link">
       stack
     </a>
   </li>
@@ -878,7 +922,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_queue/" title="queue和priority_queue" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_queue/" title="queue和priority_queue" class="md-nav__link">
       queue和priority_queue
     </a>
   </li>
@@ -890,7 +934,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_algo/" title="STL算法分类" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_algo/" title="STL算法分类" class="md-nav__link">
       STL算法分类
     </a>
   </li>
@@ -902,7 +946,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_string/" title="string类" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_string/" title="string类" class="md-nav__link">
       string类
     </a>
   </li>
@@ -914,7 +958,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/stl/cpp_stl_bitset/" title="bitset类" class="md-nav__link">
+    <a href="../../../cplus/stl/cpp_stl_bitset/" title="bitset类" class="md-nav__link">
       bitset类
     </a>
   </li>
@@ -931,7 +975,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_9io/" title="输入输出流" class="md-nav__link">
+    <a href="../../../cplus/cpp_9io/" title="输入输出流" class="md-nav__link">
       输入输出流
     </a>
   </li>
@@ -943,7 +987,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_10file/" title="文件操作" class="md-nav__link">
+    <a href="../../../cplus/cpp_10file/" title="文件操作" class="md-nav__link">
       文件操作
     </a>
   </li>
@@ -955,7 +999,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/cpp_11high/" title="高级主题" class="md-nav__link">
+    <a href="../../../cplus/cpp_11high/" title="高级主题" class="md-nav__link">
       高级主题
     </a>
   </li>
@@ -970,12 +1014,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
     
     <label class="md-nav__link" for="nav-2-5">
       Go语言
@@ -993,7 +1035,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../go_base/" title="Go语言基础" class="md-nav__link">
+    <a href="../../../goprogram/go_base/" title="Go语言基础" class="md-nav__link">
       Go语言基础
     </a>
   </li>
@@ -1003,154 +1045,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Go语言面向对象相关
-      </label>
-    
-    <a href="./" title="Go语言面向对象相关" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../../goprogram/go_oop/" title="Go语言面向对象相关" class="md-nav__link">
       Go语言面向对象相关
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    类(结构体)
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    实例化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    方法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    继承
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setfinalizer" class="md-nav__link">
-    垃圾回收和SetFinalizer
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    接口
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    垃圾回收处理
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    异常处理
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    包管理
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    并发
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    协程
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    断言和反射
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    文件处理
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    网络编程
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
-            评论
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1160,7 +1059,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../plan/" title="规划" class="md-nav__link">
+    <a href="../../../goprogram/plan/" title="规划" class="md-nav__link">
       规划
     </a>
   </li>
@@ -1196,7 +1095,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/php/php_base/" title="PHP基础" class="md-nav__link">
+    <a href="../../../source/php/php_base/" title="PHP基础" class="md-nav__link">
       PHP基础
     </a>
   </li>
@@ -1208,7 +1107,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/php/php_object/" title="PHP面向对象" class="md-nav__link">
+    <a href="../../../source/php/php_object/" title="PHP面向对象" class="md-nav__link">
       PHP面向对象
     </a>
   </li>
@@ -1220,7 +1119,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/php/php_web/" title="PHP WEB相关" class="md-nav__link">
+    <a href="../../../source/php/php_web/" title="PHP WEB相关" class="md-nav__link">
       PHP WEB相关
     </a>
   </li>
@@ -1237,7 +1136,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/lua/lua_summary/" title="Lua总结" class="md-nav__link">
+    <a href="../../../source/lua/lua_summary/" title="Lua总结" class="md-nav__link">
       Lua总结
     </a>
   </li>
@@ -1273,7 +1172,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/task/" title="本模块规划" class="md-nav__link">
+    <a href="../../../algorithm/task/" title="本模块规划" class="md-nav__link">
       本模块规划
     </a>
   </li>
@@ -1304,7 +1203,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/struct_seqlist/" title="顺序链表" class="md-nav__link">
+    <a href="../../../algorithm/struct_seqlist/" title="顺序链表" class="md-nav__link">
       顺序链表
     </a>
   </li>
@@ -1316,7 +1215,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/struct_linklist/" title="链式链表" class="md-nav__link">
+    <a href="../../../algorithm/struct_linklist/" title="链式链表" class="md-nav__link">
       链式链表
     </a>
   </li>
@@ -1328,7 +1227,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/struct_listfunction/" title="链表的各种操作" class="md-nav__link">
+    <a href="../../../algorithm/struct_listfunction/" title="链表的各种操作" class="md-nav__link">
       链表的各种操作
     </a>
   </li>
@@ -1340,7 +1239,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/struct_dlist/" title="双向链表" class="md-nav__link">
+    <a href="../../../algorithm/struct_dlist/" title="双向链表" class="md-nav__link">
       双向链表
     </a>
   </li>
@@ -1352,7 +1251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/struct_clist/" title="循环♻️链表" class="md-nav__link">
+    <a href="../../../algorithm/struct_clist/" title="循环♻️链表" class="md-nav__link">
       循环♻️链表
     </a>
   </li>
@@ -1369,7 +1268,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/struct_stack_queue/" title="栈与队列" class="md-nav__link">
+    <a href="../../../algorithm/struct_stack_queue/" title="栈与队列" class="md-nav__link">
       栈与队列
     </a>
   </li>
@@ -1381,7 +1280,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/struct_tree/" title="树🌲" class="md-nav__link">
+    <a href="../../../algorithm/struct_tree/" title="树🌲" class="md-nav__link">
       树🌲
     </a>
   </li>
@@ -1393,7 +1292,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/struct_graph/" title="图" class="md-nav__link">
+    <a href="../../../algorithm/struct_graph/" title="图" class="md-nav__link">
       图
     </a>
   </li>
@@ -1405,7 +1304,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/algo_pattern/" title="模式匹配" class="md-nav__link">
+    <a href="../../../algorithm/algo_pattern/" title="模式匹配" class="md-nav__link">
       模式匹配
     </a>
   </li>
@@ -1417,7 +1316,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/algo_sort/" title="排序" class="md-nav__link">
+    <a href="../../../algorithm/algo_sort/" title="排序" class="md-nav__link">
       排序
     </a>
   </li>
@@ -1429,7 +1328,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/algo_sort/" title="查找" class="md-nav__link">
+    <a href="../../../algorithm/algo_sort/" title="查找" class="md-nav__link">
       查找
     </a>
   </li>
@@ -1441,7 +1340,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/algo_sort/" title="数据压缩" class="md-nav__link">
+    <a href="../../../algorithm/algo_sort/" title="数据压缩" class="md-nav__link">
       数据压缩
     </a>
   </li>
@@ -1453,7 +1352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/algo_sort/" title="内存管理" class="md-nav__link">
+    <a href="../../../algorithm/algo_sort/" title="内存管理" class="md-nav__link">
       内存管理
     </a>
   </li>
@@ -1465,7 +1364,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithm/algo_sort/" title="动态规划" class="md-nav__link">
+    <a href="../../../algorithm/algo_sort/" title="动态规划" class="md-nav__link">
       动态规划
     </a>
   </li>
@@ -1520,7 +1419,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../os/linux/linux_command/" title="Linux常用命令" class="md-nav__link">
+    <a href="../../../os/linux/linux_command/" title="Linux常用命令" class="md-nav__link">
       Linux常用命令
     </a>
   </li>
@@ -1532,7 +1431,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../os/linux/linux_program/" title="Linux编程基础" class="md-nav__link">
+    <a href="../../../os/linux/linux_program/" title="Linux编程基础" class="md-nav__link">
       Linux编程基础
     </a>
   </li>
@@ -1568,7 +1467,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../os/csapp/plan/" title="规划" class="md-nav__link">
+    <a href="../../../os/csapp/plan/" title="规划" class="md-nav__link">
       规划
     </a>
   </li>
@@ -1580,7 +1479,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../os/csapp/chapter1/" title="计算机系统漫游" class="md-nav__link">
+    <a href="../../../os/csapp/chapter1/" title="计算机系统漫游" class="md-nav__link">
       计算机系统漫游
     </a>
   </li>
@@ -1621,7 +1520,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../network/plan/" title="规划" class="md-nav__link">
+    <a href="../../../network/plan/" title="规划" class="md-nav__link">
       规划
     </a>
   </li>
@@ -1657,7 +1556,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../database/plan/" title="规划" class="md-nav__link">
+    <a href="../../../database/plan/" title="规划" class="md-nav__link">
       规划
     </a>
   </li>
@@ -1712,7 +1611,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/nginx/nginx_base/" title="Nginx安装与基本配置" class="md-nav__link">
+    <a href="../../../source/nginx/nginx_base/" title="Nginx安装与基本配置" class="md-nav__link">
       Nginx安装与基本配置
     </a>
   </li>
@@ -1724,7 +1623,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/nginx/nginx_web/" title="Web服务搭建与模块化配置" class="md-nav__link">
+    <a href="../../../source/nginx/nginx_web/" title="Web服务搭建与模块化配置" class="md-nav__link">
       Web服务搭建与模块化配置
     </a>
   </li>
@@ -1736,7 +1635,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/nginx/nginx_balence/" title="负载均衡与缓存" class="md-nav__link">
+    <a href="../../../source/nginx/nginx_balence/" title="负载均衡与缓存" class="md-nav__link">
       负载均衡与缓存
     </a>
   </li>
@@ -1748,7 +1647,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/nginx/nginx_high/" title="高可用负载均衡集群" class="md-nav__link">
+    <a href="../../../source/nginx/nginx_high/" title="高可用负载均衡集群" class="md-nav__link">
       高可用负载均衡集群
     </a>
   </li>
@@ -1784,7 +1683,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/redis/redis_base/" title="Redis基础" class="md-nav__link">
+    <a href="../../../source/redis/redis_base/" title="Redis基础" class="md-nav__link">
       Redis基础
     </a>
   </li>
@@ -1801,7 +1700,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../source/tinyhttpd/" title="TinyHttpd" class="md-nav__link">
+    <a href="../../../source/tinyhttpd/" title="TinyHttpd" class="md-nav__link">
       TinyHttpd
     </a>
   </li>
@@ -1837,7 +1736,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../math/math_graph/" title="图形学相关数学" class="md-nav__link">
+    <a href="../../../math/math_graph/" title="图形学相关数学" class="md-nav__link">
       图形学相关数学
     </a>
   </li>
@@ -1873,7 +1772,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../unity/List/" title="规划" class="md-nav__link">
+    <a href="../../../unity/List/" title="规划" class="md-nav__link">
       规划
     </a>
   </li>
@@ -1885,7 +1784,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../unity/unity_base/" title="Unity基础" class="md-nav__link">
+    <a href="../../../unity/unity_base/" title="Unity基础" class="md-nav__link">
       Unity基础
     </a>
   </li>
@@ -1897,7 +1796,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../unity/unity_shader/" title="Shader" class="md-nav__link">
+    <a href="../../../unity/unity_shader/" title="Shader" class="md-nav__link">
       Shader
     </a>
   </li>
@@ -1933,7 +1832,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../leetcode/1.two-sum/" title="两数之和" class="md-nav__link">
+    <a href="../../../leetcode/1.two-sum/" title="两数之和" class="md-nav__link">
       两数之和
     </a>
   </li>
@@ -1969,7 +1868,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kit/paper/" title="临时草稿纸📃" class="md-nav__link">
+    <a href="../../../kit/paper/" title="临时草稿纸📃" class="md-nav__link">
       临时草稿纸📃
     </a>
   </li>
@@ -1981,7 +1880,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kit/code_style/" title="编程规范" class="md-nav__link">
+    <a href="../../../kit/code_style/" title="编程规范" class="md-nav__link">
       编程规范
     </a>
   </li>
@@ -1993,7 +1892,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kit/Note/" title="计划" class="md-nav__link">
+    <a href="../../../kit/Note/" title="计划" class="md-nav__link">
       计划
     </a>
   </li>
@@ -2005,7 +1904,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kit/mkdocs/" title="基于mkdocs的blog搭建" class="md-nav__link">
+    <a href="../../../kit/mkdocs/" title="基于mkdocs的blog搭建" class="md-nav__link">
       基于mkdocs的blog搭建
     </a>
   </li>
@@ -2017,7 +1916,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kit/book/" title="书籍📚推荐" class="md-nav__link">
+    <a href="../../../kit/book/" title="书籍📚推荐" class="md-nav__link">
       书籍📚推荐
     </a>
   </li>
@@ -2029,7 +1928,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kit/vim/" title="VIM常用技巧" class="md-nav__link">
+    <a href="../../../kit/vim/" title="VIM常用技巧" class="md-nav__link">
       VIM常用技巧
     </a>
   </li>
@@ -2041,7 +1940,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kit/gdb/" title="GDB调试的基本使用" class="md-nav__link">
+    <a href="../../../kit/gdb/" title="GDB调试的基本使用" class="md-nav__link">
       GDB调试的基本使用
     </a>
   </li>
@@ -2053,7 +1952,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../kit/tmux/" title="tmux基本技巧" class="md-nav__link">
+    <a href="../../../kit/tmux/" title="tmux基本技巧" class="md-nav__link">
       tmux基本技巧
     </a>
   </li>
@@ -2084,110 +1983,7 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    类(结构体)
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    实例化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    方法
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    继承
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setfinalizer" class="md-nav__link">
-    垃圾回收和SetFinalizer
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    接口
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    垃圾回收处理
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    异常处理
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    包管理
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    并发
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    协程
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    断言和反射
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    文件处理
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    网络编程
+    职责链模式
   </a>
   
 </li>
@@ -2214,113 +2010,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/goprogram/go_oop.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/cprogram/c_design/c_chain.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Go语言面向对象相关</h1>
+                  <h1>责任链模式</h1>
                 
-                <h2 id="_1">类(结构体)<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>结构体的定义格式如下：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">type</span> <span class="nx">类型名</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">字段1</span> <span class="nx">字段1类型</span>
-    <span class="nx">字段2</span> <span class="nx">字段2类型</span>
-    <span class="err">…</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></p>
-<h3 id="_2">实例化<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">ins</span> <span class="nx">T</span>
-<span class="nx">ins</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">T</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-对结构体进行&amp;取地址操作时，视为对该类型进行一次 new 的实例化操作，取地址格式如下：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">ins</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">T</span><span class="p">{}</span> <span class="c1">//ins 为结构体的实例，类型为 *T，是指针类型。</span>
-</pre></div>
-</td></tr></table>
-初始化结构体
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">ins</span> <span class="o">:=</span> <span class="nx">结构体类型名</span><span class="p">{</span>
-    <span class="nx">字段1</span><span class="p">:</span> <span class="nx">字段1的值</span><span class="p">,</span>
-    <span class="nx">字段2</span><span class="p">:</span> <span class="nx">字段2的值</span><span class="p">,</span>
-    <span class="err">…</span>
-<span class="p">}</span>
-
-<span class="nx">ins</span> <span class="o">:=</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">字段1</span> <span class="nx">字段类型1</span>
-    <span class="nx">字段2</span> <span class="nx">字段类型2</span>
-    <span class="err">…</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></p>
-<h3 id="_3">方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>接收器格式
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="p">(</span><span class="nx">接收器变量</span> <span class="nx">接收器类型</span><span class="p">)</span> <span class="nx">方法名</span><span class="p">(</span><span class="nx">参数列表</span><span class="p">)</span> <span class="p">(</span><span class="nx">返回参数</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">函数体</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-当方法作用于非指针类型接收器，Go语言会在代码运行时将接收器的值复制一份，在非指针接收器的方法中可以获取接收器的成员值，但修改后无效。</p>
-<p><strong>为基本类型添加方法</strong>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
-<span class="kn">import</span> <span class="p">(</span>
-    <span class="s">&quot;fmt&quot;</span>
-<span class="p">)</span>
-<span class="c1">// 将int定义为MyInt类型</span>
-<span class="kd">type</span> <span class="nx">MyInt</span> <span class="kt">int</span>
-<span class="c1">// 为MyInt添加IsZero()方法</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="nx">MyInt</span><span class="p">)</span> <span class="nx">IsZero</span><span class="p">()</span> <span class="kt">bool</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">m</span> <span class="o">==</span> <span class="mi">0</span>
-<span class="p">}</span>
-<span class="c1">// 为MyInt添加Add()方法</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="nx">MyInt</span><span class="p">)</span> <span class="nx">Add</span><span class="p">(</span><span class="nx">other</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">other</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="nx">m</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">b</span> <span class="nx">MyInt</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">IsZero</span><span class="p">())</span>
-    <span class="nx">b</span> <span class="p">=</span> <span class="mi">1</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></p>
-<h3 id="_4">继承<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>在一个结构体中对于每一种数据类型(包括结构体类型)只能有一个匿名字段。</p>
-<p>Go语言中使用结构体内嵌模拟类的继承。
+                <h2 id="_1">职责链模式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -2352,70 +2047,216 @@
 29
 30
 31
-32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
-<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
-<span class="c1">// 可飞行的</span>
-<span class="kd">type</span> <span class="nx">Flying</span> <span class="kd">struct</span><span class="p">{}</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">Flying</span><span class="p">)</span> <span class="nx">Fly</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;can fly&quot;</span><span class="p">)</span>
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#ifndef _STACK_H_</span>
+<span class="cp">#define _STACK_H_</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stddef.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#ifdef __cplusplus</span>
+<span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="p">{</span>
+<span class="cp">#endif</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">Validator</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="p">(</span><span class="o">*</span> <span class="k">const</span> <span class="n">validate</span><span class="p">)(</span><span class="k">struct</span> <span class="n">Validator</span> <span class="o">*</span><span class="n">pThis</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+<span class="p">}</span> <span class="n">Validator</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="n">Validator</span> <span class="n">base</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">min</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">max</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">RangeValidator</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="n">Validator</span> <span class="n">base</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">previousValue</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">PreviousValueValidator</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">ChainedValidator</span> <span class="p">{</span>
+    <span class="n">Validator</span> <span class="n">base</span><span class="p">;</span>
+    <span class="n">Validator</span> <span class="o">*</span><span class="n">pWrapped</span><span class="p">;</span>
+    <span class="n">Validator</span> <span class="o">*</span><span class="n">pNext</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">ChainedValidator</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">top</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span> <span class="k">const</span> <span class="n">pBuf</span><span class="p">;</span>
+    <span class="n">Validator</span> <span class="o">*</span> <span class="k">const</span> <span class="n">pValidator</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">Stack</span><span class="p">;</span>
+
+<span class="kt">bool</span> <span class="nf">validateRange</span><span class="p">(</span><span class="n">Validator</span> <span class="o">*</span><span class="n">pThis</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">validatePrevious</span><span class="p">(</span><span class="n">Validator</span> <span class="o">*</span><span class="n">pThis</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">validateChain</span><span class="p">(</span><span class="n">Validator</span> <span class="o">*</span><span class="n">pThis</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+
+<span class="cp">#define newRangeValidator(min, max) \</span>
+<span class="cp">    {{validateRange}, (min), (max)}</span>
+
+<span class="cp">#define newPreviousValueValidator \</span>
+<span class="cp">    {{validatePrevious}, 0}</span>
+
+<span class="cp">#define newChainedValidator(wrapped, next)       \</span>
+<span class="cp">    {{validateChain}, (wrapped), (next)}</span>
+
+<span class="kt">bool</span> <span class="nf">push</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">pop</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">pRet</span><span class="p">);</span>
+
+<span class="cp">#define newStack(buf) {                  \</span>
+<span class="cp">    0, sizeof(buf) / sizeof(int), (buf), \</span>
+<span class="cp">    NULL                                 \</span>
+<span class="cp">} </span>
+
+<span class="cp">#define newStackWithValidator(buf, pValidator) { \</span>
+<span class="cp">    0, sizeof(buf) / sizeof(int), (buf),         \</span>
+<span class="cp">    pValidator                                   \</span>
+<span class="cp">}</span>
+
+<span class="cp">#ifdef __cplusplus</span>
 <span class="p">}</span>
-<span class="c1">// 可行走的</span>
-<span class="kd">type</span> <span class="nx">Walkable</span> <span class="kd">struct</span><span class="p">{}</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">f</span> <span class="o">*</span><span class="nx">Walkable</span><span class="p">)</span> <span class="nx">Walk</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;can calk&quot;</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// 人类</span>
-<span class="kd">type</span> <span class="nx">Human</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">Walkable</span> <span class="c1">// 人类能行走</span>
-<span class="p">}</span>
-<span class="c1">// 鸟类</span>
-<span class="kd">type</span> <span class="nx">Bird</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">Walkable</span> <span class="c1">// 鸟类能行走</span>
-    <span class="nx">Flying</span>   <span class="c1">// 鸟类能飞行</span>
-<span class="p">}</span>
-<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// 实例化鸟类</span>
-    <span class="nx">b</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">Bird</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Bird: &quot;</span><span class="p">)</span>
-    <span class="nx">b</span><span class="p">.</span><span class="nx">Fly</span><span class="p">()</span>
-    <span class="nx">b</span><span class="p">.</span><span class="nx">Walk</span><span class="p">()</span>
-    <span class="c1">// 实例化人类</span>
-    <span class="nx">h</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">(</span><span class="nx">Human</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Human: &quot;</span><span class="p">)</span>
-    <span class="nx">h</span><span class="p">.</span><span class="nx">Walk</span><span class="p">()</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></p>
-<h3 id="setfinalizer">垃圾回收和SetFinalizer<a class="headerlink" href="#setfinalizer" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">runtime</span><span class="p">.</span><span class="nx">GC</span><span class="p">()</span>
-<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%d\n&quot;</span><span class="p">,</span> <span class="nx">runtime</span><span class="p">.</span><span class="nx">MemStats</span><span class="p">.</span><span class="nx">Alloc</span><span class="o">/</span><span class="mi">1024</span><span class="p">)</span>
-<span class="nx">runtime</span><span class="p">.</span><span class="nx">SetFinalizer</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="kd">func</span><span class="p">(</span><span class="nx">obj</span> <span class="o">*</span><span class="nx">typeObj</span><span class="p">))</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#endif</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="_5">接口<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">type</span> <span class="nx">接口类型名</span> <span class="kd">interface</span><span class="p">{</span>
-    <span class="nx">方法名1</span><span class="p">(</span> <span class="nx">参数列表1</span> <span class="p">)</span> <span class="nx">返回值列表1</span>
-    <span class="nx">方法名2</span><span class="p">(</span> <span class="nx">参数列表2</span> <span class="p">)</span> <span class="nx">返回值列表2</span>
-    <span class="err">…</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;stack.h&quot;</span><span class="cp"></span>
+
+<span class="k">static</span> <span class="kt">bool</span> <span class="nf">isStackFull</span><span class="p">(</span><span class="k">const</span> <span class="n">Stack</span> <span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">==</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">bool</span> <span class="nf">isStackEmpty</span><span class="p">(</span><span class="k">const</span> <span class="n">Stack</span> <span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">top</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">validateRange</span><span class="p">(</span><span class="n">Validator</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">RangeValidator</span> <span class="o">*</span><span class="n">pThis</span> <span class="o">=</span> <span class="p">(</span><span class="n">RangeValidator</span> <span class="o">*</span><span class="p">)</span><span class="n">p</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">pThis</span><span class="o">-&gt;</span><span class="n">min</span> <span class="o">&lt;=</span> <span class="n">val</span> <span class="o">&amp;&amp;</span> <span class="n">val</span> <span class="o">&lt;=</span> <span class="n">pThis</span><span class="o">-&gt;</span><span class="n">max</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">validatePrevious</span><span class="p">(</span><span class="n">Validator</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">PreviousValueValidator</span> <span class="o">*</span><span class="n">pThis</span> <span class="o">=</span> <span class="p">(</span><span class="n">PreviousValueValidator</span> <span class="o">*</span><span class="p">)</span><span class="n">p</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">val</span> <span class="o">&lt;</span> <span class="n">pThis</span><span class="o">-&gt;</span><span class="n">previousValue</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="n">pThis</span><span class="o">-&gt;</span><span class="n">previousValue</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">validate</span><span class="p">(</span><span class="n">Validator</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="n">p</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">validate</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// true: 成功, false: 失敗</span>
+<span class="kt">bool</span> <span class="nf">push</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="n">validate</span><span class="p">(</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">pValidator</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="o">||</span> <span class="n">isStackFull</span><span class="p">(</span><span class="n">p</span><span class="p">))</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="n">p</span><span class="o">-&gt;</span><span class="n">pBuf</span><span class="p">[</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">top</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// true: 成功, false: 失敗</span>
+<span class="kt">bool</span> <span class="nf">pop</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">pRet</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">isStackEmpty</span><span class="p">(</span><span class="n">p</span><span class="p">))</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">pRet</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">pBuf</span><span class="p">[</span><span class="o">--</span><span class="n">p</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">];</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="nf">validateChain</span><span class="p">(</span><span class="n">Validator</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ChainedValidator</span> <span class="o">*</span><span class="n">pThis</span> <span class="o">=</span> <span class="p">(</span><span class="n">ChainedValidator</span> <span class="o">*</span><span class="p">)</span><span class="n">p</span><span class="p">;</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="n">pThis</span><span class="o">-&gt;</span><span class="n">pWrapped</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">validate</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">val</span><span class="p">))</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="n">pThis</span><span class="o">-&gt;</span><span class="n">pNext</span><span class="p">;</span>
+    <span class="k">return</span> <span class="o">!</span><span class="n">p</span> <span class="o">||</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">validate</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
-
-<h2 id="_6">垃圾回收处理<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h2 id="_7">异常处理<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<h2 id="_8">包管理<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<h2 id="_9">并发<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
-<h3 id="_10">协程<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<h2 id="_11">断言和反射<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<h2 id="_12">文件处理<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
-<h2 id="_13">网络编程<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
                 
                   
                 
@@ -2458,7 +2299,7 @@ gitalk.render('gitalk-container')
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../go_base/" title="Go语言基础" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../c_observer/" title="观察者模式" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2467,19 +2308,19 @@ gitalk.render('gitalk-container')
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                Go语言基础
+                观察者模式
               </span>
             </div>
           </a>
         
         
-          <a href="../plan/" title="规划" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../c_visitor/" title="访问者模式" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                规划
+                访问者模式
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2506,7 +2347,7 @@ gitalk.render('gitalk-container')
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
     
       <a href="mailto:opfanswyx@outlook.com" class="md-footer-social__link fa fa-envelope"></a>
     
@@ -2524,12 +2365,12 @@ gitalk.render('gitalk-container')
       
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../../assets/javascripts/application.ac79c3b0.js"></script>
       
         
         
           
-          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
               
@@ -2539,11 +2380,11 @@ gitalk.render('gitalk-container')
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
-        <script src="../../_static/js/extra.js?v=15"></script>
+        <script src="../../../_static/js/extra.js?v=15"></script>
       
-        <script src="../../_static/js/baidu-tongji.js"></script>
+        <script src="../../../_static/js/baidu-tongji.js"></script>
       
         <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
