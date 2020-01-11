@@ -72,53 +72,77 @@ p = &i;       //p引用了一个指针，给p赋值&i就是令a指向i
 ```
 
 #### const限定符
-const对象必须初始化。const对象仅在文件内有效。
+const对象必须初始化。const对象仅在文件内有效。为了让const对象在对文件内有效，可以在const变量不管声明还是定义都添加extern关键字。
+```c
+extern const int bufSize = fcn();   //file.cc
+extern const int bufSize;   //file.h
+```
 
-const引用(常引用)
-
-在初始化常量引用时允许用任意表达式作为初始值，只要该表达式的结果能转换成引用的类型即可。允许一个常量引用绑定非常量的对象，字面值，甚至是一般表达式。
+在初始化**常量引用**(const引用)时允许用任意表达式作为初始值，只要该表达式的结果能转换成引用的类型即可。允许一个常量引用绑定非常量的对象，字面值，甚至是一般表达式。
 
 允许一个常量的指针指向一个非常量对象。
 
-```指向常量的指针```(不能改变其所指对象的值)：const位于*之前。
+**指向常量的指针(pointer to const)**(不能改变其所指对象的值)：const位于*之前。指向常量的指针也没有要求所指的对象必须是一个常量。仅仅要求不能通过该指针改变对象的值，也没有规定那个对象的值不能通过其它途径改变
 
-```常量指针```(不变的是指针本身而非指向的那个值)：const关键字位于* 和var之间。
+**常量指针(const pointer)**(不变的是指针本身而非指向的那个值)：const关键字位于* 和var之间。const指针必须初始化，且初始化后它的值(存放指针的那个地址)不能在改变。
 
-```顶层const```指针本身是个常量。
+**顶层const**(top-level const)指针本身是个常量。顶层const可以表示任意的对象是常量(如算术类型，类，指针等)。
 
-```底层const```指针指向的对象是一个常量。
+**底层const**(low-level const)指针指向的对象是一个常量。与指针和引用等复合类型有关。
 
+```c
+int i = 0;
+int *const p1 = &i;       //不能改变P1的值，这是一个顶层const
+const int ci = 42;        //不能改变ci的值，这是一个顶层const
+const int *p2 = &ci;      //允许改变p2的值，这是一个底层const
+const int *const p3 = p2; //靠右的const是顶层const，靠左的是底层const
+const int &r = ci;        //用于声明引用的const都是底层const
+```
+执行对象的拷贝操作时，顶层const和底层const常量的区别明显。其中，顶层const不受影响，拷入拷出必须具有相同的底层const资格或者两个对象的数据类型必须能够转换(非常量可以转换成常量，反之则不行)。
+```c
+i = ci;   //正确:拷贝ci的值，ci是一个顶层const，对此操作无影响。
+p2 = p3;  //正确:p2和p3指向的对象类型相同，p3顶层const的部分不影响。
 
-```常量表达式```指不会改变并且在编译过程就能得到计算结果的表达式。一个对象是不是常量表达式由它的数据类型和初始值共同决定。
+int *p = p3;  //错误:p3包含底层const的定义。
+p2 = p3;      //正确:p2和p3都是底层const。
+p2 = &i;      //正确:int*能转换成const int *。
+int &r = ci;  //错误:普通的int &不能绑定到int常量上。
+const int &r2 = i;  //正确:const int&可以绑定到一个普通int上。
+```
 
-```constexpr变量```c++11允许将变量声明为constexpr类型以便由编译器来验证变量的值是否是一个常量表达式。
+```常量表达式```指值不会改变并且在编译过程就能得到计算结果的表达式。一个对象是不是常量表达式由它的数据类型和初始值共同决定。
 
+**constexpr变量**c++11允许将变量声明为constexpr类型以便由编译器来验证变量的值是否是一个常量表达式。声明为constexpr的变量一定是一个常量，而且必须用常量表达式初始化。
+
+constexpr声明一个指针，限定符constexpr仅对指针有效，与指针所指的对象无关。constexpr把它所定义的对象置为顶层const，constexpr指针既可以指向常量也可以指向一个非常量。
 ```c++
-const int *p = nullptr;     //
-constexpr int *q = nullptr; //constexpr把它所定义的对象置为顶层const，constexpr指针既可以指向常量也可以指向一个非常量。
+const int *p = nullptr;     //p是一个指向整型常量的指针
+constexpr int *q = nullptr; //q是一个指向整数的常量指针
 ```
 
 类型别名```typedef```和```using```
 ```c++
 typedef double wages;
-typedef wages base, *p;
+typedef wages base, *p;   //base是double的同义词，p是double *的同义词
 
 using SI = Sales_item;
 ```
 
+const是对给定类型的修饰。pstring实际上指向char的指针，因此，const pstring就是指向char的常量指针，而非指向常量字符的指针。
 ```c++
 typedef char *pstring;
 const pstring cstr = 0;
 const pstring *ps;
 ```
-上述示例中，const是对给定类型的修饰。pstring实际上指向char的指针，因此，const pstring就是指向char的常量指针，而非指向常量字符的指针。
 
-当引用被用作初始值时，真正参与初始化的其实是引用对象的值。编译器以引用对象的类型作为auto的类型。
+#### auto类型说明符
+
+当引用被用作初始值时，真正参与初始化的其实是引用对象的值。编译器以**引用对象的类型作为auto的类型**。
 ```c++
 int i = 0, &r = i;
 auto a = r; //a是一个整数(r是i的别名，而i是一个整数)
 ```
-auto一般会忽略掉顶层const，同时底层const则会保留。
+auto一般会**忽略掉顶层const**，同时底层const则会保留。
 ```c++
 const int ci = i, &cr = ci;
 auto b = ci;        //b是一个整数(ci的顶层const特性被忽略掉了)
