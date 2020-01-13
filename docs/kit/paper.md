@@ -161,7 +161,7 @@ decltype选择并返回操作数的数据类型。编译器分析表达式的类
 ```c++
 decltype(fun()) sum = x;  //sum的类型就是函数fun()的返回类型
 ```
-decltype返回该变量的类型(包括顶层const和引用在内)
+decltype处理顶层const和引用的方式与auto有些许不同(**引用对象的类型作为auto的类型**)。如果decltype使用的表达式是一个变量,则**decltype返回该变量的类型(包括顶层const和引用在内)**。引用从来都作为其所指对象的同义词出现，只有在decltype处是一个例外。
 ```c++
 const int ci = 0, &cj = ci;
 decltype(ci) x = 0;       //x的类型时const int
@@ -169,7 +169,7 @@ decltype(cj) y = x;       //y的类型时const int&, y绑定到变量x
 decltype(cj) z;           //错误:z是一个引用，必须初始化
 ```
 ##### decltype和引用
-decltype使用的表达式不是一个变量，则decltype返回表达式结果对应的类型。
+decltype使用的表达式不是一个变量，则decltype返回**表达式结果**对应的类型。
 ```c++
 int i = 42, *p = &i, &r = i;
 decltype(r + 0) b;    //加法的结果是int，因此b是一个(未初始化的)int
