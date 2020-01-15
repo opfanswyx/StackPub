@@ -175,21 +175,36 @@ int i = 42, *p = &i, &r = i;
 decltype(r + 0) b;    //加法的结果是int，因此b是一个(未初始化的)int
 decltype(*p) c;       //c是int&,必须初始化
 ```
-如果表达式的内容是解引用操作，则decltype将得到引用类型。
+如果表达式的内容是解引用操作(*)p，则decltype将得到引用类型。
 
-```decltype((variable))```的结果永远是引用，而```decltype(cariable)```结果只有当variable本身就是一个引用时才是引用。
+decltype和auto的另一个重要区别是，如果decltype使用的是一个不加括号的变量，则得到的结果就是该变量的类型；如果给变量加一层或多层括号，编译器会把它当成一个表达式，decltype就会得到引用的类型。**decltype((variable))**的结果永远是引用，而**decltype(cariable)**结果只有当variable本身就是一个引用时才是引用。
 
 ### 字符串，向量和数组
-头文件不应包含using声明
-#### string
+头文件不应包含using声明。
+#### string(可变长的字符序列)
 ```c++
 #include<string>
 using std::string;
 ```
 
-string类及其他大多数标准库类型都定义了几种配套的类型。这些配套类型体现了标准库类型与机器无关的特性。c++11新标准允许编译器通过auto或者decltype来推断变量的类型```auto len = line.size();```。注意string::size_type是无符号类型，小心与负值的比较。
+如果使用等号(=)初始化一个变量，实际执行的是**拷贝初始化**(copy initialization)，编译器把等号右侧的初始值拷贝到新创建的对象中去。如果不使用等号，则执行的是**直接初始化**(direct initialization)。
+```c++
+string s1;
+string s2(s1);
+string s2 = s1;
+string s3 = "hello";  //拷贝初始化
+string s3("value");   //直接初始化
+string s4(n, 'c');    //直接初始化
+```
 
-字符串字面值与string是不同的类型，当把string对象和字符字面值及字符串字面值混在一条语句中使用时，必须确保每个加法运算符(+)的两侧的运算对象至少有一个是string。
+string类及其他大多数标准库类型都定义了几种配套的类型。这些配套类型体现了**标准库类型与机器无关的特性**。c++11新标准允许编译器通过auto或者decltype来推断变量的类型```auto len = line.size();```。注意string::size_type是无符号类型，小心与负值的比较。
+
+string**相等性(==和!=)验证规则**：
+
+1. 如果两个string对象的长度不同，而且较短string对象的每个字符都与较长string对象对应为止上的字符串相同，就说较短string对象小于较长string对象。
+2. 如果两个string对象在某些对应的位置上不一致，则string对象比较的结果其实是string对象中第一对相异字符比较的结果。
+
+**字符串字面值**与string是不同的类型，当把string对象和字符字面值及字符串字面值混在一条语句中使用时，必须确保每个加法运算符(+)的两侧的运算对象至少有一个是string。
 
 ```c++
 for(auto c : s)
@@ -201,31 +216,42 @@ for(decltype(s.size())index = 0;
     s[index] = toupper(s[index]);
 ```
 
-#### vector
+#### vector(对象的集合)
+vector表示对象的集合，其中所有对象的类型都相同。集合中的每个对象都有一个与之对应的索引，索引用于访问对象。引用不是对象，所以不存在包含引用的vector。
 
-vector表示对象的集合，其中所有对象的类型都相同。引用不是对象，所以不存在包含引用的vector。
 ```c++
 #include<vector>
 using std::vector;
 
 vector<vector<string>> file;
-
 vector<int>::size_type;
 ```
 
-```vector```不能用下标形式添加元素，只能对确定已存在的元素执行下标操作。
+```c++
+vector<T> v1;               //v1是一个空vector
+vector<T> v2(v1);           //v2中包含有v1所有元素的副本
+vector<T> v2 = v1;          //等价于v2(v1)
+vector<T> v3(n, val);       //v3包含了n个重复的元素
+vector<T> v4(n);            //v4包含了n个重复执行了值初始化的对象
+vector<T> v5{a,b,c...};     //v5包含了初始值个数的元素,列表初始化
+vector<T> v5 = {a,b,c...};  //等价于v5{a,b,c...}
+```
+
+**vector**不能用下标形式添加元素，只能对确定已存在的元素执行下标操作。
 
 ##### vector迭代器
-```begin```成员负责返回指向第一个元素的迭代器，```end```成员负责返回指向容器“尾元素的下一个位置”的迭代器，该迭代器指示的是容器的一个本不存在的“尾后”元素。特殊情况下如果容器为空，则begin和end返回的是同一个迭代器。
+**begin**成员负责返回指向第一个元素的迭代器，**end**成员负责返回指向容器**尾元素的下一个位置**的迭代器，该迭代器指示的是容器的一个本不存在的**尾后元素**(off-the-end iterator)。特殊情况下如果容器为空，则begin和end返回的是同一个迭代器，都是尾后迭代器。试图解引用一个非法迭代器或者尾后迭代器都是未定义行为。
 ```c++
 for(auto it = s.begin(); it != s.end() && !isspace(*it); ++it)
   *it = toupper(*it);
 ```
 ###### 迭代器类型
+如果vector对象或string对象是一个常量，只能使用const_iterator；如果vector对象或string对象不是常量，则既能使用iterator也能使用const_iterator。
 ```c++
 vector<int>::iterator it;
 vector<int>::const_iterator it2;  //读取但不能修改
 ```
+如果对象是常量，begin和end返回const_iterator；如果对象不是常量，返回iterator。
 ```c++
 vector<int> v;
 const vector<int> cv;
@@ -234,15 +260,15 @@ auto it2 = cv.begin();  //vector<int>::const_iterator
 ```
 为了便于专门(不论vector对象本身是否是常量)得到const_iterator类型的返回值，c++11引入了两个新函数，分别是cbegin和cend。
 
-使用了迭代器的循环体，都不要向迭代器所属的容器添加元素。
+**使用了迭代器的循环体，都不要向迭代器所属的容器添加元素**。
 
 ##### 数组
-
+不能将数组的内容拷贝给其它数组作为初始值，也不能用数组为其他数组赋值。
 ```c++
 int *ptrs[10];              //含有10个指针的数组
 int &refs[10] = ?;          //错误
-int (*parray)[10] = &arr;
-int (&parrRef)[10] = arr;
+int (*parray)[10] = &arr;   //parray指向一个含有10个整数的数组
+int (&parrRef)[10] = arr;   //parrRef引用一个含有10个整数的数组
 int *(&array)[10] = ptrs;   //array是数组的引用，该数组含有10个指针
 ```
 ```c++
@@ -257,6 +283,11 @@ for(auto &row : ia)
 ```
 
 ### 表达式
+当一个对象被用作**右值**的时候，用的是对象的值(内容)；当对象被用作**左值**的时候，用的是对象的身份(在内存中的位置)。在需要右值的地方可以用左值来替代，但是不能把右值当成左值使用。
+
+**左移运算符**在右侧插入值为0的二进制位。
+
+**右移运算符**：1.如果该运算对象是无符号类型，在左侧插入值为0的二进制位；2.如果该运算对象是带符号类型，在左侧插入符号位的副本或值为0的二进制位。
 
 ### 语句
 
