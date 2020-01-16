@@ -2460,19 +2460,31 @@ make install
 
 <h3 id="_1">注释<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>单行注释
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>--
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">--</span>
 </pre></div>
 </td></tr></table>
 多行注释
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>--[[
-多行注释
-多行注释
-]]--
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">--[[</span>
+<span class="cm">多行注释</span>
+<span class="cm">多行注释</span>
+<span class="cm">]]</span><span class="c1">--</span>
 </pre></div>
 </td></tr></table></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">lua</span> <span class="n">hello</span><span class="p">.</span><span class="n">lua</span>
+
+<span class="n">lua</span> <span class="o">-</span><span class="n">i</span> <span class="n">prog</span>    <span class="c1">--使用-i参数后让lua语言解释器在执行完prog程序后进行交互模式。</span>
+
+<span class="nb">dofile</span><span class="p">(</span><span class="s2">&quot;hello.lua&quot;</span><span class="p">)</span>      <span class="c1">--该函数会执行一个文件。</span>
+</pre></div>
+</td></tr></table>
+
 <p>在默认情况下，变量总是认为是全局的。</p>
 <p>全局变量不需要声明，给一个变量赋值后即创建了这个全局变量，访问一个没有初始化的全局变量也不会出错，只不过得到的结果是：nil。</p>
 <h2 id="lua_1">Lua数据类型<a class="headerlink" href="#lua_1" title="Permanent link">&para;</a></h2>
@@ -2560,6 +2572,7 @@ b. 变量个数 &lt; 值的个数             多余的值会被忽略
 <li>双引号间的一串字符。</li>
 <li>[[和]]间的一串字符。</li>
 </ul>
+<p>使用双引号和单引号声明字符串是等价的。它们两者唯一的区别在于，使用双引号声明的字符串中出现单引号时，单引号可以不用转义；使用单引号声明的字符串中出现双引号时，双引号可以不用转义。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
