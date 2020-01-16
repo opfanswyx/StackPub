@@ -458,7 +458,62 @@ constexpr函数被隐式的指定为内联函数。constexpr函数体中可以�
 
 内联函数和constexpr函数通常定义在头文件中。
 
+assert是一种预处理宏。首先对expr求值，如果表达式为假(即0)，assert输出信息并且终止程序的执行。如果表达式为真(非0)，assert什么也不做。
+```cpp
+assert (expr);
+```
+
+除了assert外，也可以使用NDEBUG编写自己的条件调试代码。如果NDEBUG未定义，将执行#ifndef和#endif之间的代码；如果定义了NDEBUG，这些代码将忽略掉：
+```cpp
+void print(const int ia[], size_t size)
+{
+#ifndef NDEBUG
+    cerr << __FUNC__ << ": array size is " << size << endl;
+#endif
+  ...
+}
+```
+
+#### 函数指针
+```cpp
+bool lengthCompare(const string &, const string &);
+bool (*pf) (const string &, const string &);
+```
+重载函数指针类型必须与重载函数中的某一个精确匹配。
+```cpp
+void ff(int *);
+void ff(unsigned int);
+
+void (*pf1)(unsigned int) = ff;
+```
+函数指针形参，我们可以直接把函数作为实参使用，它会自动转换成指针。
+```cpp
+//第三个参数是函数类型，它会自动的转换成指向函数的指针
+void useBigger(const string &s1, const string &s2,
+          bool pf(const string &, const string &));
+//显示的将形参定义成指向函数的指针
+void useBigger(const string &s1, const string &s2,
+          bool (*pf)(const string &, const string &));
+//自动将函数转换成函数指针
+useBigger(s1, s2, lengthCompare);
+```
+返回指向函数的指针
+```cpp
+using F = int(int *, int);      //F是函数类型，不是指针
+using PF = int(*)(int *, int);  //PF是指针类型
+
+PF f1(int);     //f1返回指向函数的指针
+F f1(int);      //错误
+F *f1(int);     //显示地指定返回类型是指向函数的指针
+
+int (*f1(int))(int *, int);
+//尾置返回类型
+auto f1(int) -> int (*)(int *, int); 
+```
+decltype作用于某个函数时，它返回函数类型而非指针类型，应该显示地加上```*```以表明我们需要返回指针。
+
 ### 类
+#### 构造函数(constructor)
 
 ### IO库
 
