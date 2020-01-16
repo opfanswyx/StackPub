@@ -358,6 +358,105 @@ for(auto &r : v){
 3. 异常类(exception class)，用于在throw表达式和相关的catch子句之间传递异常的具体信息。
 
 ### 函数
+当形参是引用类型时，它对应的实参被**引用传递**(passed by reference)，和其他引用一样，引用形参也是它绑定的对象的别名，使用引用避免拷贝。
+
+当实参的值拷贝给形参时，形参和实参是两个相互独立的对象。对应的实参被**值传递**(passed by value)。
+
+当形参是const时，使用实参初始化形参时会忽略掉顶层const(顶层const作用于对象本身)。当形参有顶层const时，传给它常量对象或者非常量对象都是可以的。
+
+可以使用非常量初始化一个底层const对象，但是反过来不行。普通的引用必须用同类型的对象初始化。
+
+由于不能把const对象，字面值或者需要类型转换的对象传递给普通的引用形参，尽量使用常量引用。
+
+```cpp
+void print(int (&arr)[10]){   //数组引用形参
+  ...
+}
+```
+
+**initializer_lister**类型的形参用于实参数量未知但是全部实参的类型相同的情况。
+
+调用一个返回引用的函数得到左值，其它返回类型得到右值。可以为返回类型是非常量引用的函数的结果赋值。
+```cpp
+char &get_val(string &str, string::size_type ix){
+  return str[ix];
+}
+
+int main(){
+  string s("a value");
+  cour << s << endl;
+  get_val(s,0) = 'A';
+  cout << s << endl;
+  return 0;
+}
+```
+c++11规定，函数可以返回**花括号包围的值的列表**。类似于其他返回结果，此处的列表也用来对表示函数返回的临时量进行初始化。
+```cpp
+vector<string> process(){
+  if(expected.empty())
+    return {};
+  else if(expected == actual)
+    return {"functionX", "okay"};
+  else
+    return {"functionX", expected, actual};
+}
+```
+
+返回数组指针的函数声明```int (*func(int i))[10];```该声明可以使用类型别名简化。
+```cpp
+typedef int arrT[10];
+using arrT = int[10];
+
+arrT* func(int i);
+```
+c++11还有一种简化上述func声明的方法，即**尾置返回类型**(treiling return type)。任何函数的定义都能使用尾置返回。尾置返回类型跟在形参列表后面并以一个```->```符号开头。为了表示函数真正的返回类型跟在形参列表之后，在本应该出现返回类型的地方放置一个auto：
+```cpp
+//func接受一个int类型的实参，返回一个指针，该指针指向含有10个整数的数组
+auto func(int i) -> int(*)[10];
+```
+
+如果知道函数返回的指针将指向哪个数组，就可以使用decltype关键字声明返回类型。
+```cpp
+int odd[] = {1,3,5,7,9};
+int even[] = {0,2,4,6,8};
+decltype(odd) *arrPtr(int i){
+  //返回一个指向数组的指针
+  return (i % 2) ? &add : &even;
+}
+```
+decltype并不负责把数组类型转换成对应的指针，所以decltype的结果是个数组，想表示arrPtr返回指针还必须在函数声明时加一个*符号。
+
+#### 重载
+顶层const不影响传入函数的对象。一个拥有顶层const和不拥有顶层const无法区分。
+
+某种类型的指针或引用指向的是否是常量可以实现重载，此时的const的底层const。
+```cpp
+Record lookup(Phone);
+Record lookup(const Phone);
+
+Record lookup(Phone *);
+Record lookup(Phone *const);
+//以下都是构成重载
+Record lookup(Account&);
+Record lookup(const Account&);
+
+Record lookup(Account*);
+Record lookup(const Account*);
+```
+
+在给定的作用域中一个形参只能被赋予一次默认实参。通常在函数声明中指定默认实参，并将该声明放在合适的头文件中。
+
+#### 内联函数和constexpr函数
+内联函数(inline)机制用于优化规模较小，流程直接，频繁调用的函数。
+
+**constexpr函数**是指能用于常量表达式的函数。函数的返回类型及所有形参的类型都是字面值类型，而且函数体中必须有且只有一条return语句。
+```cpp
+constexpr int new_sz() { return 42; }
+constexpr int foo = new_sz();
+```
+constexpr函数被隐式的指定为内联函数。constexpr函数体中可以有其他语句，只要这些语句不被运行时执行就行。
+
+内联函数和constexpr函数通常定义在头文件中。
 
 ### 类
 
