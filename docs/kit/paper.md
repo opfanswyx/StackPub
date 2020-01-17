@@ -514,8 +514,40 @@ decltype作用于某个函数时，它返回函数类型而非指针类型，应
 
 ### 类
 #### 构造函数(constructor)
+在C++11新标准中，如果需要默认行为，可以通过在参数列表后面写上**= default**来要求编译器生产构造函数，=default既可以和声明一起出现在内部(内联的)，也可以作为定义出现在类的外部。
+
+**委托构造函数**使用它所属类的其他构造函数执行它自己的初始化过程，或者说把它自己的一些(或者全部)职责委托给了其他构造函数。
+```cpp
+class Sales_data{
+public:
+  //非委托构造函数
+  Sales_data(std:string s, unsigned cnt, double price):
+      bookNo(s), units_sold(cnt), revenue(cnt * price) {}
+  //其余构造函数委托另一个构造函数
+  Sales_data() : Sales_data("", 0, 0) {}
+  Sales_data(std::string s) : Sales_data(s, 0, 0) {}
+  Sales_data(std::istream &is) : Sales_data() { read(is, *this);}
+}
+```
+
+**转换构造函数**接受一个实参，从构造函数的参数类型向类类型隐式转换的机制。可以通过**explicit**来抑制隐式转换。explicit只对一个实参的构造函数有效。多个实参的构造函数不能用于执行隐式转换。只能在类内声明构造函数时使用explicit关键字。explicit构造函数只能用于直接初始化。
+
+
+聚合类：所有成员都是public的。没有定义任何构造函数。没有类初始值。没有基类，也没有virtual函数。
 
 ### IO库
+
+|头文件|类型|
+|:-:|:-|
+|iostream|istream,wistream从流读取数据|
+||ostream,wostream从流写入数据|
+||iostream,wiostream读写流|
+|fstream|ifstream,wifstream从文件读取数据|
+||ofstream,wofstream向文件写入数据|
+||fstream,wfstream读写文件|
+|sstream|i|
+|||
+|||
 
 ### 顺序容器
 
@@ -524,6 +556,7 @@ decltype作用于某个函数时，它返回函数类型而非指针类型，应
 ### 关联容器
 
 ### 动态内存
+
 
 ### 拷贝控制
 
