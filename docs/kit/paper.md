@@ -545,7 +545,7 @@ public:
 |fstream|ifstream,wifstream从文件读取数据|
 ||ofstream,wofstream向文件写入数据|
 ||fstream,wfstream读写文件|
-|sstream|i|
+|sstream|istringstream,wistring|
 |||
 |||
 
