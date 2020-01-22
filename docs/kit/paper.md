@@ -722,7 +722,57 @@ allocator帮助我们将内存分配和对象构造分离开来。是一种类�
 
 拷贝构造函数第一个参数是自身类类型的引用，且任何额外参数都有默认值。虽然可以定义一个接受非const引用的拷贝构造函数，但此参数几乎总是一个const引用。拷贝构造函数常被隐式地使用，通常不应该是explicit的。
 
+#### 对象移动
+标准库容器，string和shared_ptr类既支持移动也支持拷贝。IO类和unique_ptr类可以移动但不能拷贝。
 
+**右值引用**必须绑定到右值的引用。只能绑定到一个将要销毁的对象。
+```cpp
+int i = 42;     
+int &r = i;   
+int &&rr = i;           //不能将一个右值引用绑定到一个左值上
+int &r2 = i * 42;       //i * 42是一个右值
+const int &r3 = i * 42; //可以将一个const的引用绑定到一个右值上
+int &&rr2 = i *42;
+```
+变量是左值，不能将一个右值引用直接绑定到一个变量上，即使这个变量是右值引用类型也不行。
+```cpp
+int &&rr1 = 42;
+int &&rr2 = rr1;  //错误：表达式rr1是左值。
+```
+
+新标准库中**move**函数可以获取绑定到左值上的右值引用。
+```cpp
+int &&rr3 = std::move(rr1);
+```
+
+类似拷贝构造函数，移动构造函数第一个参数是该类型的一个引用。该引用是一个右值引用。移动构造函数必须确保移后源对象处于这样一个状态--销毁后是无害的。一旦资源完成移动，源对象必须不再指向被移动的资源--这些资源的所有权已经归属新创建的对象。
+```cpp
+StrVec::StrVec(StrVec &&s) noexcept //移动操作不应抛出任何异常
+//成员初始化器接管s中的资源
+  : elements(s.elements), first_free(s.first_free), 
+  cap(s.cap)
+{
+  s.elements = s.first_free = s.cap = nullptr;
+}
+```
+不抛出异常的移动构造函数和移动赋值运算符必须标记为noexcept。
+```cpp
+StrVec &StrVec::operator=(StrVec &&rhs) noexcept
+{
+  if(this != &rhs)
+  {
+    free();
+    elements    = rhs.elements;
+    first_free  = rhs.first_free;
+    cap          = rhs.cap;
+    rhs.elements = rhs.first_free = rhs.cap = nullptr;
+  }
+  return *this;
+}
+```
+如果一个类既有移动构造函数，也有拷贝构造函数则**移动右值，拷贝左值**，如果没有移动构造函数，右值也被拷贝。
+
+可以通过标准库的**make_move_iterator**函数将一个普通迭代器转换为一个**移动迭代器**。
 ### 操作重载与类型转换
 
 ### 面向对象设计
