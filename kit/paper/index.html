@@ -3782,6 +3782,9 @@ release成员返回unique_ptr当前保存的指针并将其置为空。p2被初�
 </tbody>
 </table>
 <h3 id="_24">拷贝控制<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p><strong>拷贝构造函数</strong>和<strong>移动构造函数</strong>定义类当用同类型的另一个对象<strong>初始化</strong>本对象时做什么。</p>
+<p><strong>拷贝赋值运算符</strong>和<strong>移动赋值运算符</strong>定义类一个对象<strong>赋予</strong>同类型的另一个对象时做什么。</p>
+<p>拷贝构造函数第一个参数是自身类类型的引用，且任何额外参数都有默认值。虽然可以定义一个接受非const引用的拷贝构造函数，但此参数几乎总是一个const引用。拷贝构造函数常被隐式地使用，通常不应该是explicit的。</p>
 <h3 id="_25">操作重载与类型转换<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
 <h3 id="_26">面向对象设计<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
 <h3 id="_27">模板与泛型编程<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
