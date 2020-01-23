@@ -31,7 +31,8 @@ nav:
         - 访问者模式: cprogram/c_design/c_visitor.md
     - 正则表达式: source/regexp.md
     - Shell编程: source/shell.md
-    - C Plus Plus: 
+    - C Plus Plus:
+      - C++ Primer总结: cplus/c++_primer.md 
       - C++基础: cplus/cpp_1base.md
       - 类和对象: cplus/cpp_2object.md
       - 引用: cplus/cpp_3quote.md
