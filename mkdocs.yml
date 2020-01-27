@@ -117,7 +117,7 @@ nav:
   - 经验总结🔧: 
     - 临时草稿纸📃: kit/paper.md
     - 编程规范: kit/code_style.md
-    - 计划: kit/Note.md
+    - 版本号管理说明: kit/version.md
     - 基于mkdocs的blog搭建: kit/mkdocs.md
     - 书籍📚推荐: kit/book.md
     - VIM常用技巧: kit/vim.md
