@@ -261,7 +261,58 @@ C 语言代码最终成为机器可执行的程序，会像流水线上的产品
 * 汇编器：汇编代码(da.s, wang.s)经过汇编器的处理(```gcc``` 或```as```)成为对象程序(da.o, wang.o)
 * 链接器：对象程序(da.o, wang.o)以及所需静态库(lib.a)经过链接器的处理(```gcc```或```ld```)最终成为计算机可执行的程序
 * 加载器：将可执行程序加载到内存并进行执行，```loader```和```ld-linux.so```
-## 异常控制流
+### 链接基本知识
+
+1. 符号解析 Symbol resolution
+2. 重定位 Relocation
+
+对象文件(Object File)实际上是一个统称，具体来说有以下三种形式：
+
+* 可重定位目标文件 Relocatable object file (.o file)每个 .o 文件都是由对应的 .c 文件通过编译器和汇编器生成，包含代码和数据，可以与其他可重定位目标文件合并创建一个可执行或共享的目标文件
+* 可执行目标文件 Executable object file (a.out file)由链接器生成，可以直接通过加载器加载到内存中充当进程执行的文件，包含代码和数据
+* 共享目标文件 Shared object file (.so file)在 windows 中被称为 Dynamic Link Libraries(DLLs)，是类特殊的可重定位目标文件，可以在链接(静态共享库)时加入目标文件或加载时或运行时(动态共享库)被动态的加载到内存并执行
+
+上面提到的三种对象文件有统一的格式，即 Executable and Linkable Format(ELF)，因为，我们把它们统称为 ELF binaries，具体的文件格式如下
+
+* ELF header包含 word size, byte ordering, file type (.o, exec, .so), machine type, etc
+* Segment header table包含 page size, virtual addresses memory segments(sections), segment sizes
+* .text section代码部分
+* .rodata section
+只读数据部分，例如跳转表
+* .data section
+初始化的全局变量
+* .bss section未初始化的全局变量
+* .symtab section包含 symbol table, procudure 和 static variable names 以及 section names 和 location
+* .rel.txt section .text section 的重定位信息
+* .rel.data section .data section 的重定位信息
+* .debug section包含 symbolic debugging (gcc -g) 的信息
+* Section header table每个 section 的大小和偏移量
+
+链接器实际上会处理三种不同的符号，对应于代码中不同写法的部分：
+
+* 全局符号 Global symbols,在当前模块中定义，且可以被其他代码引用的符号，例如非静态 C 函数和非静态全局变量
+* 外部符号 External symbols,同样是全局符号，但是是在其他模块（也就是其他的源代码）中定义的，但是可以在当前模块中引用
+* 本地符号 Local symbols,在当前模块中定义，只能被当前模块引用的符号，例如静态函数和静态全局变量,注意，Local linker symbol 并不是 local program variables
+
+链接器只知道非静态的全局变量/函数，而对于局部变量一无所知。局部非静态变量会保存在栈中，局部静态变量会保存在 .bss 或 .data 中。
+
+两个函数中定义了同名的静态变量，编译器会在 .data 部分为每一个静态变量进行定义，如果遇到同名，就会在本地的符号表中自动给出唯一的编号，例如变量 x，可能在符号表中是 x.1 和 x.2。
+
+不同的符号是有强弱之分的，强符号：函数和初始化的全局变量，弱符号：未初始化的全局变量。
+
+链接器在处理强弱符号的时候遵守以下规则：
+
+1. 不能出现多个同名的强符号，不然就会出现链接错误
+2. 如果有同名的强符号和弱符号，选择强符号，也就意味着弱符号是『无效』d而
+3. 如果有多个弱符号，随便选择一个
+
+**尽量避免使用全局变量**，如果一定要用的话，注意下面几点：
+
+1. 使用静态变量
+2. 定义全局变量的时候初始化
+3. 注意使用 extern 关键字
+
+## 异常控制流与信号
 
 ## 系统级I/O
 
