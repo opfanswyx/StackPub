@@ -19,9 +19,9 @@ copyright:
 nav:
   - 简介: 
     - Hello Wolrd: index.md
-    - 传送门🚪: index/blogroll.md
-    - 书籍📚推荐: index/book.md
-    - 博客主题修改: index/theme.md
+    - 学习资源: index/blogroll.md
+    - 书籍推荐📚: index/book.md
+    - 主题修改: index/theme.md
     - F.A.Q: index/version.md
 
   - 编程语言:
@@ -131,7 +131,7 @@ theme:
   name: 'material'
   language: 'zh'
   palette:
-    primary: 'Cyan'
+    primary: 'Teal'
     accent: 'Pink'
   include_search_page: false
   search_index_only: true
