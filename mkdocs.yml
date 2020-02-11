@@ -120,7 +120,6 @@ nav:
   - LeetCode: 
     - 两数之和: leetcode/1.two-sum.md
   - 经验总结🔧: 
-    - 临时草稿纸📃: kit/paper.md
     - 编程规范: kit/code_style.md
     - 基于mkdocs的blog搭建: kit/mkdocs.md
     - VIM常用技巧: kit/vim.md
@@ -164,8 +163,8 @@ extra_javascript:
   - '_static/js/baidu-tongji.js'
   - 'https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
 
-extra_css:
-  - '_static/css/extra.css?v=12'
+#extra_css:
+#  - '_static/css/extra.css?v=12'
 
 
 markdown_extensions:
