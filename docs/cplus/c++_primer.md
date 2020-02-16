@@ -1,7 +1,8 @@
 ## C++基础
 ### 命名空间
-```::```域解析操作符。
-using声明
+```::```域解析操作符:编译器从操作符左侧名字所示的作用域中寻找右侧那个名字。
+
+using声明形式```using namespace::name```。头文件中不应包含using声明。
 ### 变量与基本类型
 计算机以**比特序列(bit,b)**存储数据，每个比特非0即1。 
 
@@ -84,23 +85,21 @@ r = &i;         //r引用了一个指针，因此给r赋值&i就是令p指向i
 ```
 
 #### const限定符
-const对象必须初始化。const对象仅在文件内有效。为了让const对象在对文件内有效，可以在const变量不管声明还是定义都添加extern关键字。
+const对象**必须初始化**。默认情况下，const对象仅在当前文件内有效。为了让const对象在多个文件内有效，const变量不管声明还是定义都添加extern关键字。
 ```c
 extern const int bufSize = fcn();   //file.cc
 extern const int bufSize;   //file.h
 ```
 
-在初始化**常量引用**(const引用)时允许用任意表达式作为初始值，只要该表达式的结果能转换成引用的类型即可。允许一个常量引用绑定非常量的对象，字面值，甚至是一般表达式。
+初始化**常量引用(const引用)**时允许用任意表达式作为初始值，只要该表达式的结果能转换成引用的类型即可。允许一个常量引用绑定非常量的对象，字面值，甚至是一般表达式。
 
-允许一个常量的指针指向一个非常量对象。
+**指向常量的指针(pointer to const)**(不能改变其所指对象的值)：**const位于*之前**。指向常量的指针也没有要求所指的对象必须是一个常量。仅仅要求不能通过该指针改变对象的值，也没有规定那个对象的值不能通过其它途径改变
 
-**指向常量的指针(pointer to const)**(不能改变其所指对象的值)：const位于*之前。指向常量的指针也没有要求所指的对象必须是一个常量。仅仅要求不能通过该指针改变对象的值，也没有规定那个对象的值不能通过其它途径改变
+**常量指针(const pointer)**(不变的是指针本身而非指向的那个值)：**const关键字位于*和var之间**。const指针必须初始化，且初始化后它的值(存放指针的那个地址)不能在改变。
 
-**常量指针(const pointer)**(不变的是指针本身而非指向的那个值)：const关键字位于* 和var之间。const指针必须初始化，且初始化后它的值(存放指针的那个地址)不能在改变。
+**顶层const**(top-level const)指针本身是个常量。顶层const可以表示**任意的对象是常量**(如算术类型，类，指针等)。
 
-**顶层const**(top-level const)指针本身是个常量。顶层const可以表示任意的对象是常量(如算术类型，类，指针等)。
-
-**底层const**(low-level const)指针指向的对象是一个常量。与指针和引用等复合类型有关。
+**底层const**(low-level const)指针指向的对象是一个常量。与**指针和引用等复合类型**有关。用于声明引用的const都是底层const。
 
 ```c
 int i = 0;
@@ -122,9 +121,11 @@ int &r = ci;  //错误:普通的int &不能绑定到int常量上。
 const int &r2 = i;  //正确:const int&可以绑定到一个普通int上。
 ```
 
-```常量表达式```指值不会改变并且在编译过程就能得到计算结果的表达式。一个对象是不是常量表达式由它的数据类型和初始值共同决定。
+**常量表达式**(const expression)指值不会改变并且在编译过程就能得到计算结果的表达式。一个对象是不是常量表达式由它的数据类型和初始值共同决定。
 
 **constexpr变量**c++11允许将变量声明为constexpr类型以便由编译器来验证变量的值是否是一个常量表达式。声明为constexpr的变量一定是一个常量，而且必须用常量表达式初始化。
+
+指针和引用都能定义成constexpr，但它们初始值有严格限制，constexpr指针的初始值必须是nullptr,0或者存储于某个固定地址(全局变量或者函数内部的静态变量)中的对象。
 
 constexpr声明一个指针，限定符constexpr仅对指针有效，与指针所指的对象无关。constexpr把它所定义的对象置为顶层const，constexpr指针既可以指向常量也可以指向一个非常量。
 ```c++
@@ -132,20 +133,69 @@ const int *p = nullptr;     //p是一个指向整型常量的指针
 constexpr int *q = nullptr; //q是一个指向整数的常量指针
 ```
 
-类型别名```typedef```和```using```
+类型别名(type alias)```typedef```和```using```
 ```c++
 typedef double wages;
 typedef wages base, *p;   //base是double的同义词，p是double *的同义词
 
 using SI = Sales_item;
 ```
-
-const是对给定类型的修饰。pstring实际上指向char的指针，因此，const pstring就是指向char的常量指针，而非指向常量字符的指针。
+类型别名指代复合类型或常量，const是对给定类型的修饰。pstring实际上指向char的指针，因此，const pstring就是指向char的常量指针，而非指向常量字符的指针。
 ```c++
 typedef char *pstring;
 const pstring cstr = 0;
 const pstring *ps;
 ```
+#### auto类型说明符
+c++11新标准引入了auto类型说明符，它让编译器通过初始值来推算变量的类型，所以auto定义的变量必须要有初始值。
+
+当引用被用作初始值时，真正参与初始化的其实是引用对象的值。所以编译器以**引用对象的类型作为auto的类型**。
+
+```c++
+int i = 0, &r = i;
+auto a = r; //a是一个整数(r是i的别名，而i是一个整数)
+```
+auto一般会**忽略掉顶层const**，同时底层const则会保留。
+```c++
+const int ci = i, &cr = ci;
+auto b = ci;        //b是一个整数(ci的顶层const特性被忽略掉了)
+auto c = cr;        //c是一个整数(cr是ci的别名，ci本身是一个顶层const)
+auto d = &i;        //d是一个整型指针(整数的地址就是指向整数的指针)
+auto e = &ci;       //e是一个指向整数常量的指针(对常量对象取地址是一种底层const)
+
+const auto f = ci;  //ci的推演类型是int，f是const int
+```
+设置一个类型为auto的引用时，初始值中的顶层常量属性仍然保留。如果给初始值绑定一个引用，则此时的常量就不是顶层常量来。
+```
+auto &g = ci;       //g是一个整型常量引用，绑定到ci
+auto &h = 42;       //错误，不能为非常量引用绑定字面值
+const auto &j = 42; //正确，可以为常量引用绑定字面值
+```
+#### decltype类型指示符
+**decltype**可以从表达式的类型推断出要定义的变量的类型，且不需用该表达式的值初始化变量。选择并返回操作数的数据类型。
+```c++
+decltype(fun()) sum = x;  //sum的类型就是函数fun()的返回类型
+```
+decltype处理顶层const和引用的方式与auto有些许不同(**引用对象的类型作为auto的类型**)。如果decltype使用的表达式是一个变量,则**decltype返回该变量的类型(包括顶层const和引用在内)**。引用从来都作为其所指对象的同义词出现，只有在decltype处是一个例外。
+```c++
+const int ci = 0, &cj = ci;
+decltype(ci) x = 0;       //x的类型是const int
+decltype(cj) y = x;       //y的类型时const int&, y绑定到变量x
+decltype(cj) z;           //错误:z是一个引用，必须初始化
+```
+##### decltype和引用
+如果decltype使用的表达式不是一个变量，则decltype返回**表达式结果**对应的类型。
+```c++
+int i = 42, *p = &i, &r = i;
+decltype(r + 0) b;    //正确，加法的结果是int，因此b是一个(未初始化的)int
+decltype(*p) c;       //错误，c是int&,必须初始化
+```
+如果表达式的内容是解引用操作(*)p，则decltype将得到引用类型。```decltype(*p)```的结果类型是```int&```，而非```int```。
+
+```decltype((variable))```的结果永远是引用，而```decltype(cariable)```结果只有当variable本身就是一个引用时才是引用。
+
+decltype和auto的另一个重要区别是，如果decltype使用的是一个不加括号的变量，则得到的结果就是该变量的类型；如果给变量加一层或多层括号，编译器会把它当成一个表达式，decltype就会得到引用的类型。**decltype((variable))**的结果永远是引用，而**decltype(cariable)**结果只有当variable本身就是一个引用时才是引用。
+
 ### 字符串，向量和数组
 #### string(可变长字符序列)
 ```c++
@@ -163,7 +213,9 @@ string s3("value");   //直接初始化
 string s4(n, 'c');    //直接初始化
 ```
 
-string类及其他大多数标准库类型都定义了几种配套的类型。这些配套类型体现了**标准库类型与机器无关的特性**。c++11新标准允许编译器通过auto或者decltype来推断变量的类型```auto len = line.size();```。注意string::size_type是无符号类型，小心与负值的比较。
+string类及其他大多数标准库类型都定义了几种配套的类型。这些配套类型体现了**标准库类型与机器无关的特性**。```string::size_type```即是其中的一种。c++11新标准允许编译器通过auto或者decltype来推断变量的类型```auto len = line.size();```。
+
+注意string::size_type是无符号类型，小心与负值的比较。如果一条表达式中已经有了siez()函数就不要再使用int了，这样可以避免混用int和unsigned可能带来的问题。
 
 string**相等性(==和!=)验证规则**：
 
@@ -171,6 +223,11 @@ string**相等性(==和!=)验证规则**：
 2. 如果两个string对象在某些对应的位置上不一致，则string对象比较的结果其实是string对象中第一对相异字符比较的结果。
 
 **字符串字面值**与string是不同的类型，当把string对象和字符字面值及字符串字面值混在一条语句中使用时，必须确保每个加法运算符(+)的两侧的运算对象至少有一个是string。
+```c++
+string s1 = "hello" + ",";      //错误
+string s2 = "hello" + "," + s1; //错误
+```
+**字符串字面值与string是不同的类型**。
 
 ```c++
 for(auto c : s)
@@ -182,7 +239,7 @@ for(decltype(s.size())index = 0;
     s[index] = toupper(s[index]);
 ```
 #### vector(对象集合)
-vector表示对象的集合，其中所有对象的类型都相同。集合中的每个对象都有一个与之对应的索引，索引用于访问对象。引用不是对象，所以不存在包含引用的vector。
+vector表示对象的集合，其中所有对象的类型都相同。集合中的每个对象都有一个与之对应的索引，索引用于访问对象。引用不是对象，所以不存在包含引用的vector。vector是模版而非类型。由于引用不是对象，所以不存在包含引用的vector。
 
 ```c++
 #include<vector>
@@ -247,7 +304,7 @@ for(auto &row : ia)
     std::cout << col << endl;  
 ```
 ##### 多维数组
-
+严格来说，c++没有多维数组，其实是数组的数组。
 ### 表达式
 当一个对象被用作**右值**的时候，用的是对象的值(内容)；当对象被用作**左值**的时候，用的是对象的身份(在内存中的位置)。在需要右值的地方可以用左值来替代，但是不能把右值当成左值使用。
 
