@@ -11,3 +11,5 @@ qisqus:
 路上春色正好,少年拍马欲行。
 
 感谢🙏您花时间阅读我的博客。
+
+bitcon地址:```1L6mFa2BMPghfn8dPWyNAmxY8iHejM5xgm```
