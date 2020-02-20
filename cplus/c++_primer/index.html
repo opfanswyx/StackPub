@@ -3615,6 +3615,13 @@ decltype处理顶层const和引用的方式与auto有些许不同(<strong>引用
 <p>严格来说，c++没有多维数组，其实是数组的数组。</p>
 <h3 id="_11">表达式<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>当一个对象被用作<strong>右值</strong>的时候，用的是对象的值(内容)；当对象被用作<strong>左值</strong>的时候，用的是对象的身份(在内存中的位置)。在需要右值的地方可以用左值来替代，但是不能把右值当成左值使用。</p>
+<p>几种用到左值的运算符:</p>
+<ol>
+<li>赋值运算符需要一个(非常量)左值作为其左侧运算对象，得到的结果也是一个左值。</li>
+<li>取地址符作用于一个左值对象，返回一个指向该运算对象的指针，这个指针是一个右值。</li>
+<li>内置解引用运算符，下标运算符，迭代器解引用运算符，string和vector的下标运算符的求值结果都是左值。</li>
+<li>内置类型和迭代器的递增递减运算符作用于左值运算对象，其前置版本所得的结果也是左值。</li>
+</ol>
 <h4 id="_12">位运算<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p><strong>左移运算</strong>：m&lt;&lt;n表示把m左移n位，最左边的n位被丢弃，右边补上n个0。00001010&lt;&lt;2=00101000</p>
 <p><strong>右移运算</strong>：m&gt;&gt;n表示把m右移n位，最右边的n位被丢弃，左边的情况分两种：</p>
@@ -3632,11 +3639,11 @@ decltype处理顶层const和引用的方式与auto有些许不同(<strong>引用
 <p>sizeof运算符的结果部分地依赖于其作用的类型：</p>
 <ol>
 <li>对char或者类型为char的表达式执行sizeof运算，结果为1。</li>
-<li>对引用类型执行sizeof运算得到被引用对象所占空间的大小。</li>
-<li>对指针执行sizeof运算得到指针本身所占空间的大小。</li>
-<li>对解引用指针执行sizeof运算得到指针指向的对象所占空间的大小，指针不需要有效。</li>
-<li>对数组执行sizeof运算得到整个数组所占空间大小，等价于对数组中所有的元素各执行一次sizeof运算并将所得结果求和。</li>
-<li>对string对象或vector对象执行sizeof运算只返回该类型固定部分的大小，不会计算对象中的元素占用了多少空间。</li>
+<li>对引用类型执行sizeof运算得到<strong>被引用对象</strong>所占空间的大小。</li>
+<li>对指针执行sizeof运算得到<strong>指针本身</strong>所占空间的大小。</li>
+<li>对解引用指针执行sizeof运算得到<strong>指针指向的对象</strong>所占空间的大小，指针不需要有效。</li>
+<li>对数组执行sizeof运算得到<strong>整个数组</strong>所占空间大小，等价于对数组中所有的元素各执行一次sizeof运算并将所得结果求和。</li>
+<li>对string对象或vector对象执行sizeof运算只返回<strong>该类型固定部分</strong>的大小，不会计算对象中的元素占用了多少空间。</li>
 </ol>
 <p>因为sizeof运算能得到整个数组的大小，所以可以用数组的大小除以单个元素的大小得到数组中元素的个数:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
