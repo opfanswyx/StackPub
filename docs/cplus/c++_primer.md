@@ -376,25 +376,37 @@ chat *pc = reinterpret_cast<char *>(ip);
 ### 语句
 
 ### 函数
-当形参是引用类型时，它对应的实参被**引用传递**(passed by reference)，和其他引用一样，引用形参也是它绑定的对象的别名，使用引用避免拷贝。
+当形参是引用类型时，它对应的实参被**引用传递**(passed by reference)或者函数被传引用调用，和其他引用一样，引用形参也是它绑定的对象的别名，使用引用避免拷贝。
 
-当实参的值拷贝给形参时，形参和实参是两个相互独立的对象。对应的实参被**值传递**(passed by value)。
+当**实参的值拷贝给形参**时，形参和实参是两个相互独立的对象。对应的实参被**值传递**(passed by value)。
 
-当形参是const时，使用实参初始化形参时会忽略掉顶层const(顶层const作用于对象本身)。当形参有顶层const时，传给它常量对象或者非常量对象都是可以的。
+指针的行为和其他非引用类型一样。当执行指针拷贝操作时，拷贝的是指针的值，拷贝之后，两个指针是不同的指针。因为指针使我们可以间接地访问它所指的对象，所有通过指针可以修改它所指对象的值。
 
+拷贝大的类类型对象或者容器对象比较低效，甚至有的类类型(包括IO类型在内)根本就不支持拷贝操作。当某种类型不支持拷贝操作时，函数只能通过引用形参访问该类型的对象。  
+#### const形参和实参
+当形参是const时，使用实参初始化形参时会忽略掉顶层const(顶层const作用于对象本身)。当形参有顶层const时，传给它常量对象或者非常量对象都可以。
+```c++
+void func(const int i) {}
+void func(int i) {} //重复定义
+```
+#### 指针或引用形参与const
 可以使用非常量初始化一个底层const对象，但是反过来不行。普通的引用必须用同类型的对象初始化。
 
-由于不能把const对象，字面值或者需要类型转换的对象传递给普通的引用形参，尽量使用常量引用。
-
+由于不能把const对象，字面值或者需要类型转换的对象传递给普通的引用形参，尽量使用常量引用(C++允许用字面值初始化常量引用)。
+#### 数组形参
+数组形参两个特殊性质：不允许拷贝数组以及使用数组时会将其转换成指针。函数传递数组时，实际传递的是指向数组首元素的指针。
 ```cpp
 void print(int (&arr)[10]){   //数组引用形参
   ...
 }
+
+int main(int argc, char *argv[]) { }  //argv[0]是程序名
 ```
 
 **initializer_lister**类型的形参用于实参数量未知但是全部实参的类型相同的情况。
+#### 返回类型
+调用一个**返回引用**的函数得到左值，其它返回类型得到右值。可以为返回类型是非常量引用的函数的结果赋值。如果返回类型是常量引用，我们不能给调用的结果赋值。
 
-调用一个返回引用的函数得到左值，其它返回类型得到右值。可以为返回类型是非常量引用的函数的结果赋值。
 ```cpp
 char &get_val(string &str, string::size_type ix){
   return str[ix];
@@ -419,13 +431,22 @@ vector<string> process(){
     return {"functionX", expected, actual};
 }
 ```
-
+#### 返回数组指针
 返回数组指针的函数声明```int (*func(int i))[10];```该声明可以使用类型别名简化。
 ```cpp
-typedef int arrT[10];
-using arrT = int[10];
+typedef int arrT[10];     //arrT是一个类型别名，它表示的类型是含有10个整数的数组
+using arrT = int[10];     //上一个声明的等价声明
 
-arrT* func(int i);
+arrT* func(int i);        //func返回一个指向含有10个整数的数组的指针
+```
+```c++
+int arr[10];
+int *p1[10];
+int (*p2)[10] = &arr;
+
+int (*func(int i))[10];
+Type (*function(parameter_list))[dimension]
+
 ```
 c++11还有一种简化上述func声明的方法，即**尾置返回类型**(treiling return type)。任何函数的定义都能使用尾置返回。尾置返回类型跟在形参列表后面并以一个```->```符号开头。为了表示函数真正的返回类型跟在形参列表之后，在本应该出现返回类型的地方放置一个auto：
 ```cpp
@@ -443,9 +464,69 @@ decltype(odd) *arrPtr(int i){
 }
 ```
 decltype并不负责把数组类型转换成对应的指针，所以decltype的结果是个数组，想表示arrPtr返回指针还必须在函数声明时加一个*符号。
-#### 参数
-#### 函数匹配
+
+#### 函数重载
+顶层const不影响传入函数的对象。一个拥有顶层const和不拥有顶层const无法区分。
+
+某种类型的指针或引用指向的是否是常量可以实现重载，此时的const的底层const。
+```cpp
+Record lookup(Phone);
+Record lookup(const Phone);
+
+Record lookup(Phone *);
+Record lookup(Phone *const);
+//以下都是构成重载
+Record lookup(Account&);
+Record lookup(const Account&);
+
+Record lookup(Account*);
+Record lookup(const Account*);
+```
+```cpp
+const string &shorterString(const string &s1, const string &s2)
+{
+  return s1.size() <= s2.size() ? s1 : s2;
+}
+
+string &shorterString(string &s1, string &s2)
+{
+  auto &r = shorterString(const_cast<const string&>(s1), \
+          const_cast<const string&>(s2));
+  return const_cast<string&>(r);
+}
+```
+
+在给定的作用域中一个形参只能被赋予一次默认实参。通常在函数声明中指定默认实参，并将该声明放在合适的头文件中。
+
+#### 内联函数和constexpr函数
+内联函数(inline)机制用于优化规模较小，流程直接，频繁调用的函数。内联函数避免函数调用的开销。内联说明只是向编译器发出的一个请求，编译器可以选择忽略这个请求。
+
+**constexpr函数**是指能用于常量表达式的函数。函数的返回类型及所有形参的类型都是字面值类型，而且函数体中必须有且只有一条return语句。
+```cpp
+constexpr int new_sz() { return 42; }
+constexpr int foo = new_sz();
+```
+constexpr函数被隐式的指定为内联函数。constexpr函数体中可以有其他语句，只要这些语句不被运行时执行就行。
+
+内联函数和constexpr函数通常定义在头文件中。
+
+assert是一种预处理宏。首先对expr求值，如果表达式为假(即0)，assert输出信息并且终止程序的执行。如果表达式为真(非0)，assert什么也不做。
+```cpp
+assert (expr);
+```
+
+除了assert外，也可以使用NDEBUG编写自己的条件调试代码。如果NDEBUG未定义，将执行#ifndef和#endif之间的代码；如果定义了NDEBUG，这些代码将忽略掉：
+```cpp
+void print(const int ia[], size_t size)
+{
+#ifndef NDEBUG
+    cerr << __FUNC__ << ": array size is " << size << endl;
+#endif
+  ...
+}
+```
 #### 函数指针
+函数指针指向的是函数而非对象。函数的类型由它的返回类型和形参类型共同决定。
 ```cpp
 bool lengthCompare(const string &, const string &);
 bool (*pf) (const string &, const string &);
@@ -482,54 +563,13 @@ int (*f1(int))(int *, int);
 auto f1(int) -> int (*)(int *, int); 
 ```
 decltype作用于某个函数时，它返回函数类型而非指针类型，应该显示地加上```*```以表明我们需要返回指针。
-
-#### 函数重载
-顶层const不影响传入函数的对象。一个拥有顶层const和不拥有顶层const无法区分。
-
-某种类型的指针或引用指向的是否是常量可以实现重载，此时的const的底层const。
 ```cpp
-Record lookup(Phone);
-Record lookup(const Phone);
+string::size_type sumLength(const string&, const string&);
+string::size_type largerLength(const string&, const string&);
 
-Record lookup(Phone *);
-Record lookup(Phone *const);
-//以下都是构成重载
-Record lookup(Account&);
-Record lookup(const Account&);
-
-Record lookup(Account*);
-Record lookup(const Account*);
+decltype(sumLength) *getFcn(const string&);
 ```
 
-在给定的作用域中一个形参只能被赋予一次默认实参。通常在函数声明中指定默认实参，并将该声明放在合适的头文件中。
-
-#### 内联函数和constexpr函数
-内联函数(inline)机制用于优化规模较小，流程直接，频繁调用的函数。
-
-**constexpr函数**是指能用于常量表达式的函数。函数的返回类型及所有形参的类型都是字面值类型，而且函数体中必须有且只有一条return语句。
-```cpp
-constexpr int new_sz() { return 42; }
-constexpr int foo = new_sz();
-```
-constexpr函数被隐式的指定为内联函数。constexpr函数体中可以有其他语句，只要这些语句不被运行时执行就行。
-
-内联函数和constexpr函数通常定义在头文件中。
-
-assert是一种预处理宏。首先对expr求值，如果表达式为假(即0)，assert输出信息并且终止程序的执行。如果表达式为真(非0)，assert什么也不做。
-```cpp
-assert (expr);
-```
-
-除了assert外，也可以使用NDEBUG编写自己的条件调试代码。如果NDEBUG未定义，将执行#ifndef和#endif之间的代码；如果定义了NDEBUG，这些代码将忽略掉：
-```cpp
-void print(const int ia[], size_t size)
-{
-#ifndef NDEBUG
-    cerr << __FUNC__ << ": array size is " << size << endl;
-#endif
-  ...
-}
-```
 
 ### IO与文件操作
 |头文件|类型|说明|
