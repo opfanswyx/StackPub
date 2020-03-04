@@ -66,9 +66,8 @@ nav:
       - 文件操作: cplus/cpp_10file.md
       - 高级主题: cplus/cpp_11high.md
     - Go语言:
-      - Go语言基础: goprogram/go_base.md
-      - Go语言面向对象相关: goprogram/go_oop.md
-      - 规划: goprogram/plan.md
+      - Go语言基础: goprogram/go_study.md
+      - Go语言源码解析: goprogram/go_source.md
     - PHP: 
       - PHP基础: source/php/php_base.md
       - PHP面向对象: source/php/php_object.md
