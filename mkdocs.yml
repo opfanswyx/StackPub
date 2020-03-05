@@ -25,6 +25,7 @@ nav:
     - F.A.Q: index/version.md
 
   - 编程语言:
+    - C++ Primer总结: cplus/c++_primer.md
     - C语言: 
       - C语言基础: cprogram/c_base.md
       - C语言与面向对象: cprogram/c_object.md
@@ -35,36 +36,7 @@ nav:
         - 责任链模式: cprogram/c_design/c_chain.md
         - 访问者模式: cprogram/c_design/c_visitor.md
     - 正则表达式: source/regexp.md
-    - Shell编程: source/shell.md
-    - C Plus Plus:
-      - C++ Primer总结: cplus/c++_primer.md 
-      - C++基础: cplus/cpp_1base.md
-      - 类和对象: cplus/cpp_2object.md
-      - 引用: cplus/cpp_3quote.md
-      - 继承与派生: cplus/cpp_4inher.md
-      - 多态与虚函数: cplus/cpp_5polym.md
-      - 运算符重载: cplus/cpp_6ysfcz.md
-      - 模板: cplus/cpp_7template.md
-      - 异常: cplus/cpp_8catch.md
-      - STL: 
-        - STL基础: cplus/stl/cpp_stl.md
-        - vector: cplus/stl/cpp_stl_vector.md
-        - list: cplus/stl/cpp_stl_list.md
-        - deque: cplus/stl/cpp_stl_deque.md
-        - 函数对象: cplus/stl/cpp_stl_funcobject.md
-        - 关联容器与pair类模板: cplus/stl/cpp_stl_pair.md
-        - multiset: cplus/stl/cpp_stl_multiset.md
-        - set: cplus/stl/cpp_stl_set.md
-        - multimap: cplus/stl/cpp_stl_multimap.md
-        - map: cplus/stl/cpp_stl_map.md
-        - stack: cplus/stl/cpp_stl_stack.md
-        - queue和priority_queue: cplus/stl/cpp_stl_queue.md
-        - STL算法分类: cplus/stl/cpp_stl_algo.md
-        - string类: cplus/stl/cpp_stl_string.md
-        - bitset类: cplus/stl/cpp_stl_bitset.md
-      - 输入输出流: cplus/cpp_9io.md
-      - 文件操作: cplus/cpp_10file.md
-      - 高级主题: cplus/cpp_11high.md
+    - Shell编程: source/shell.md 
     - Go语言:
       - Go语言基础: goprogram/go_study.md
       - Go语言源码解析: goprogram/go_source.md
