@@ -25,7 +25,10 @@ nav:
     - F.A.Q: index/version.md
 
   - 编程语言:
-    - C++ Primer总结: cplus/c++_primer.md
+    - C++ Primer总结: 
+      - C++ 基础: cplus/c++_base.md
+      - C++ 标准库: cplus/c++_stu.md
+      - C++ 类: cplus/c++_oop.md
     - C语言: 
       - C语言基础: cprogram/c_base.md
       - C语言与面向对象: cprogram/c_object.md
