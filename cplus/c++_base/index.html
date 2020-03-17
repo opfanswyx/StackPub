@@ -13,7 +13,7 @@
         <meta name="description" content="Atticus's Docs">
       
       
-        <link rel="canonical" href="https://atticuslab.com/cplus/c++_primer/">
+        <link rel="canonical" href="https://atticuslab.com/cplus/c++_base/">
       
       
         <meta name="author" content="Atticus">
@@ -42,7 +42,7 @@
     
     
       
-        <title>C++ Primer总结 - Stack Pub</title>
+        <title>C++ 基础 - Stack Pub</title>
       
     
     
@@ -119,7 +119,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                C++ Primer总结
+                C++ 基础
               
             </span>
           
@@ -209,6 +209,10 @@
         
   
   
+    
+    
+  
+  
     <li class="md-tabs__item">
       
         <a href="./" class="md-tabs__link md-tabs__link--active">
@@ -216,6 +220,8 @@
         </a>
       
     </li>
+  
+
   
 
       
@@ -503,17 +509,38 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      C++ Primer总结
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        C++ Primer总结
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        C++ Primer总结
+        C++ 基础
       </label>
     
-    <a href="./" title="C++ Primer总结" class="md-nav__link md-nav__link--active">
-      C++ Primer总结
+    <a href="./" title="C++ 基础" class="md-nav__link md-nav__link--active">
+      C++ 基础
     </a>
     
       
@@ -810,411 +837,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#io" class="md-nav__link">
-    IO与文件操作
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#io_1" class="md-nav__link">
-    IO类
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
-    文件输入输出
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#string_1" class="md-nav__link">
-    string流
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
-    动态内存
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#shared_ptr" class="md-nav__link">
-    shared_ptr类
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unique_ptr" class="md-nav__link">
-    unique_ptr
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#weak_ptr" class="md-nav__link">
-    weak_ptr
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#allocator" class="md-nav__link">
-    allocator类
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#oop" class="md-nav__link">
-    OOP面向对象
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
-    类与对象
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_25" class="md-nav__link">
-    构造函数
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_26" class="md-nav__link">
-    友元
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_27" class="md-nav__link">
-    类的其他特性
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_28" class="md-nav__link">
-    使成员函数作为内联函数
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_29" class="md-nav__link">
-    重载成员函数
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_30" class="md-nav__link">
-    可变数据成员
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_31" class="md-nav__link">
-    类类型
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_32" class="md-nav__link">
-    委托构造函数
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_33" class="md-nav__link">
-    拷贝控制
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_34" class="md-nav__link">
-    对象移动
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_35" class="md-nav__link">
-    聚合类
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_36" class="md-nav__link">
-    字面值常量类
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_37" class="md-nav__link">
-    静态成员
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_38" class="md-nav__link">
-    继承与派生
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_39" class="md-nav__link">
-    多态与虚函数
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stl" class="md-nav__link">
-    STL(标准模板库)
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_40" class="md-nav__link">
-    容器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_41" class="md-nav__link">
-    顺序容器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_42" class="md-nav__link">
-    关联容器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_43" class="md-nav__link">
-    容器适配器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_44" class="md-nav__link">
-    迭代器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_45" class="md-nav__link">
-    算法
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lambda" class="md-nav__link">
-    lambda表达式
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_46" class="md-nav__link">
-    运算符重载
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_47" class="md-nav__link">
-    输入输出运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_48" class="md-nav__link">
-    算术与关系运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_49" class="md-nav__link">
-    赋值运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_50" class="md-nav__link">
-    下标运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_51" class="md-nav__link">
-    递增递减运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_52" class="md-nav__link">
-    成员访问运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_53" class="md-nav__link">
-    函数调用运算符
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_54" class="md-nav__link">
-    模板与泛型编程
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_55" class="md-nav__link">
-    模板实参推断
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_56" class="md-nav__link">
-    重载与模板
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_57" class="md-nav__link">
-    可变参数模板
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_58" class="md-nav__link">
-    模板特例化
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
-    C++异常
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_59" class="md-nav__link">
-    其他
-  </a>
   
 </li>
       
@@ -1232,6 +856,35 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../c++_stu/" title="C++ 标准库" class="md-nav__link">
+      C++ 标准库
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../c++_oop/" title="C++ 类" class="md-nav__link">
+      C++ 类
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -2600,411 +2253,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#io" class="md-nav__link">
-    IO与文件操作
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#io_1" class="md-nav__link">
-    IO类
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
-    文件输入输出
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#string_1" class="md-nav__link">
-    string流
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
-    动态内存
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#shared_ptr" class="md-nav__link">
-    shared_ptr类
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unique_ptr" class="md-nav__link">
-    unique_ptr
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#weak_ptr" class="md-nav__link">
-    weak_ptr
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#allocator" class="md-nav__link">
-    allocator类
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#oop" class="md-nav__link">
-    OOP面向对象
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
-    类与对象
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_25" class="md-nav__link">
-    构造函数
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_26" class="md-nav__link">
-    友元
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_27" class="md-nav__link">
-    类的其他特性
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_28" class="md-nav__link">
-    使成员函数作为内联函数
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_29" class="md-nav__link">
-    重载成员函数
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_30" class="md-nav__link">
-    可变数据成员
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_31" class="md-nav__link">
-    类类型
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_32" class="md-nav__link">
-    委托构造函数
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_33" class="md-nav__link">
-    拷贝控制
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_34" class="md-nav__link">
-    对象移动
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_35" class="md-nav__link">
-    聚合类
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_36" class="md-nav__link">
-    字面值常量类
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_37" class="md-nav__link">
-    静态成员
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_38" class="md-nav__link">
-    继承与派生
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_39" class="md-nav__link">
-    多态与虚函数
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stl" class="md-nav__link">
-    STL(标准模板库)
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_40" class="md-nav__link">
-    容器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_41" class="md-nav__link">
-    顺序容器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_42" class="md-nav__link">
-    关联容器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_43" class="md-nav__link">
-    容器适配器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_44" class="md-nav__link">
-    迭代器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_45" class="md-nav__link">
-    算法
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lambda" class="md-nav__link">
-    lambda表达式
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_46" class="md-nav__link">
-    运算符重载
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_47" class="md-nav__link">
-    输入输出运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_48" class="md-nav__link">
-    算术与关系运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_49" class="md-nav__link">
-    赋值运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_50" class="md-nav__link">
-    下标运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_51" class="md-nav__link">
-    递增递减运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_52" class="md-nav__link">
-    成员访问运算符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_53" class="md-nav__link">
-    函数调用运算符
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_54" class="md-nav__link">
-    模板与泛型编程
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_55" class="md-nav__link">
-    模板实参推断
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_56" class="md-nav__link">
-    重载与模板
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_57" class="md-nav__link">
-    可变参数模板
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_58" class="md-nav__link">
-    模板特例化
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
-    C++异常
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_59" class="md-nav__link">
-    其他
-  </a>
   
 </li>
       
@@ -3030,10 +2280,10 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/cplus/c++_primer.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/cplus/c++_base.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>C++ Primer总结</h1>
+                  <h1>C++ 基础</h1>
                 
                 <h2 id="c">C++基础<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
 <h3 id="_1">命名空间<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
@@ -3719,505 +2969,6 @@ decltype作用于某个函数时，它返回函数类型而非指针类型，应
 <span class="k">decltype</span><span class="p">(</span><span class="n">sumLength</span><span class="p">)</span> <span class="o">*</span><span class="n">getFcn</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></p>
-<h3 id="io">IO与文件操作<a class="headerlink" href="#io" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="center">头文件</th>
-<th align="left">类型</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">iostream</td>
-<td align="left">istream,wistream</td>
-<td align="left">从流读取数据</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left">ostream,wostream</td>
-<td align="left">从流写入数据</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left">iostream,wiostream</td>
-<td align="left">读写流</td>
-</tr>
-<tr>
-<td align="center">fstream</td>
-<td align="left">ifstream,wifstream</td>
-<td align="left">从文件读取数据</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left">ofstream,wofstream</td>
-<td align="left">向文件写入数据</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left">fstream,wfstream</td>
-<td align="left">读写文件</td>
-</tr>
-<tr>
-<td align="center">sstream</td>
-<td align="left">istringstream,wistringstream</td>
-<td align="left">从string读取数据</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left">ostringstream,wostringstream</td>
-<td align="left">向string写入数据</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="left">stringstream,wstringstream</td>
-<td align="left">读写string</td>
-</tr>
-</tbody>
-</table>
-<p><strong>IO对象不能拷贝和赋值</strong>，所以不能将形参或返回类型设置为流类型。进行IO操作的函数通常以引用方式传递和返回流。读写IO对象会改变其状态，所以传递和返回引用不能是const的。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">ofstream</span> <span class="n">out1</span><span class="p">,</span> <span class="n">out2</span><span class="p">;</span>
-<span class="n">out1</span> <span class="o">=</span> <span class="n">out2</span><span class="p">;</span>              <span class="c1">//错误：不能对流对象赋值</span>
-<span class="n">ofstream</span> <span class="nf">print</span><span class="p">(</span><span class="n">ofstream</span><span class="p">);</span> <span class="c1">//错误：不能初始化ofstream参数</span>
-<span class="n">out2</span> <span class="o">=</span> <span class="n">print</span><span class="p">(</span><span class="n">out2</span><span class="p">);</span>       <span class="c1">//错误：不能拷贝流对象</span>
-</pre></div>
-</td></tr></table>
-
-<h4 id="io_1">IO类<a class="headerlink" href="#io_1" title="Permanent link">&para;</a></h4>
-<h4 id="_22">文件输入输出<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
-<h4 id="string_1">string流<a class="headerlink" href="#string_1" title="Permanent link">&para;</a></h4>
-<h3 id="_23">动态内存<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
-<p>shared_ptr,unique_ptr,weak_ptr.</p>
-<h4 id="shared_ptr">shared_ptr类<a class="headerlink" href="#shared_ptr" title="Permanent link">&para;</a></h4>
-<p><strong>make_shared</strong>函数在动态内存中分配一个对象并初始化它，返回指向此对象的shared_ptr。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">p3</span> <span class="o">=</span> <span class="n">make_shared</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
-<span class="k">auto</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">make_shared</span><span class="o">&lt;</span><span class="n">vecotr</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;</span><span class="p">();</span>  <span class="c1">//指向一个动态分配的空vector&lt;string&gt;</span>
-
-<span class="n">shared_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">p</span><span class="p">(</span><span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="mi">1024</span><span class="p">));</span>
-</pre></div>
-</td></tr></table>
-当进行拷贝或赋值操作时，每个shared_ptr都会记录有多少个其他shared_ptr指向相同的对象。每个shared_ptr都有一个关联的计数器，称其为<strong>引用计数</strong>。当一个shared_ptr的计数器变为0，它就会释放自己所管理的对象。</p>
-<h4 id="unique_ptr">unique_ptr<a class="headerlink" href="#unique_ptr" title="Permanent link">&para;</a></h4>
-<p>某个时刻只有一个unique_ptr指向一个给定的对象。不支持普通的拷贝或赋值操作。可以通过release或reset将指针的所有权从一个(非const)unique_ptr转移给另一个unique。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">p2</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">release</span><span class="p">());</span> 
-<span class="n">p2</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="n">p3</span><span class="p">.</span><span class="n">release</span><span class="p">());</span>
-</pre></div>
-</td></tr></table>
-release成员返回unique_ptr当前保存的指针并将其置为空。p2被初始化为p1原来保存的指针，而p1被置为空。</p>
-<p>reset成员接受一个可选的指针参数，令unique_ptr重新指向给定的指针。</p>
-<p>可以拷贝或赋值一个将要被销毁的unique_ptr。</p>
-<h4 id="weak_ptr">weak_ptr<a class="headerlink" href="#weak_ptr" title="Permanent link">&para;</a></h4>
-<p>weak_ptr是一种不控制所指向对象生存期的智能指针，他指向由一个shared_ptr管理的对象。将一个weak_ptr绑定到一个shared_ptr不会改变shared_ptr的引用计数。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">auto</span> <span class="n">p</span> <span class="o">=</span> <span class="n">make_shared</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
-<span class="n">weak_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">wp</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></p>
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="left"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">w.reset()</td>
-<td align="left">将w置为空</td>
-</tr>
-<tr>
-<td align="left">w.use_count()</td>
-<td align="left">与w共享对象的shared_ptr的数量</td>
-</tr>
-<tr>
-<td align="left">w.expired()</td>
-<td align="left">当w.use_count()为0，返回true，否则返回false</td>
-</tr>
-<tr>
-<td align="left">w.lock()</td>
-<td align="left">当expired为true，返回一个空shared_ptr,否则返回一个指向w的对象的shared_ptr</td>
-</tr>
-</tbody>
-</table>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">np</span> <span class="o">=</span> <span class="n">wp</span><span class="p">.</span><span class="n">lock</span><span class="p">()){</span>
-  <span class="c1">//...</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<h4 id="allocator">allocator类<a class="headerlink" href="#allocator" title="Permanent link">&para;</a></h4>
-<p>new将内存分配和对象构造组合在一起，delete将对象析构和内存释放组合在一起。</p>
-<p>allocator帮助我们将内存分配和对象构造分离开来。是一种类型感知的内存分配方法，它分配的内存是原始的，未构造的。</p>
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="left"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">allocator<T> a</td>
-<td align="left">定义一个名为a的allocator对象，可以为类型为T的对象分配内存</td>
-</tr>
-<tr>
-<td align="left">a.allocate(n)</td>
-<td align="left">分配一段原始的，未构造的内存，保存n个类型为T的对象</td>
-</tr>
-<tr>
-<td align="left">a.deallocate(p,n)</td>
-<td align="left">释放从T*指针p中地址开始的内存，这块内存保存类n个类型为T的对象，p必须是一个先前由allocate返回的指针，且n必须是p创建时所要求的大小。在调用 deallocate之前，用户必须对每个在这块内存中创建的对象调用destroy</td>
-</tr>
-<tr>
-<td align="left">a.construct(p, args)</td>
-<td align="left">p必须是一个类型为T*的指针，指向一块原始内存；arg被传递给类型为T的构造函数，用来在p指向的内存中构造一个对象</td>
-</tr>
-<tr>
-<td align="left">a.destroy(p)</td>
-<td align="left">p为T*类型的指针，此算法对p指向的对象执行析构函数</td>
-</tr>
-</tbody>
-</table>
-<h2 id="oop">OOP面向对象<a class="headerlink" href="#oop" title="Permanent link">&para;</a></h2>
-<h3 id="_24">类与对象<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
-<p>类的基本思想是数据<strong>抽象</strong>和<strong>封装</strong>。</p>
-<p>默认情况下，this的类型是指向类类型非常量版本的常量指针。c++允许把const关键字放在成员函数的参数列表之后，表示this是一个指向常量的指针。这样使用const的成员函数称为常量成员函数。常量对象，以及常量对象的引用或指针都只能调用常量成员函数。</p>
-<p>struct与class定义类的唯一区别是默认的访问权限不一样。使用struct关键字，则定义在第一个访问说明符之前的成员是public的，相反，使用class关键字，则这些成员是private。</p>
-<h4 id="_25">构造函数<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
-<p>构造函数的任务是初始化类对象的数据成员，无论何时只要类对象被创建，就会执行构造函数。</p>
-<p>构造函数不能声明为const的，当创建一个const对象时，直到构造函数完成初始化过程，对象才能真正取得“常量”属性。</p>
-<p>如果类没有显示地定义一个构造函数，则编译器会隐式的定义一个默认构造函数，默认构造函数无须任何实参。</p>
-<p>在c++11标准中，如果我们需要默认行为，那么可以通过在参数列表后面加上<strong>= default</strong>来要求编译器生成构造函数，其中= default既可以和声明一起出现在类内部，也可以出现在类外部。如果=default在类的内部，则默认构造函数是内联的，如果在内的外部，则默认是不内联的。</p>
-<p>如果类成员是const，引用或者属于某种未提供默认构造函数的类类型，必须通过构造函数初始值列表为这些成员提供初值。</p>
-<h4 id="_26">友元<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
-<p>类可以允许其他类或者函数访问它的非公有成员，方式是令其他类或者函数成为它的友元(friend)。一般来说最好在类开始或者结束前的位置集中声明友元。</p>
-<p>友元的声明仅仅指定了访问的权限，而非一个通常意义上的函数声明。通常把友元的声明与类本身放置在同一个头文件中。</p>
-<p>如果一个类指定类友元类，则友元类的成员函数可以访问此类包含非公有成员在内的所有成员。</p>
-<p>如果一个类想把一组重载函数声明成它的友元，它需要对这组函数中的每一个分别声明。</p>
-<h4 id="_27">类的其他特性<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
-<p><strong>类型成员，类的成员的类内初始值，可变数据成员，内联成员函数，从成员函数返回*this</strong>。</p>
-<p>除了定义数据和函数成员之外，类还可以自定义某种类型在类中的别名。由类定义的类型名字和其他成员一样存在访问限制。类型成员通常在类开始的地方。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Screen</span><span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">size_type</span> <span class="n">pos</span><span class="p">;</span>
-<span class="k">private</span><span class="o">:</span>
-    <span class="n">pos</span> <span class="n">cursor</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">pos</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">contents</span><span class="p">;</span>
-<span class="p">};</span>
-</pre></div>
-</td></tr></table>
-
-<h5 id="_28">使成员函数作为内联函数<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h5>
-<p>定义在类内部的成员函数是自动inline的。我们可以在类的内部把inline作为声明的一部分显示地声明成函数，也能在类的外部用inline关键字修饰函数的定义。inline成员函数也应该与相应的类定义在同一个头文件中。</p>
-<h5 id="_29">重载成员函数<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h5>
-<p>成员函数也可以被重载。</p>
-<h5 id="_30">可变数据成员<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h5>
-<p>可以通过在变量声明为mutable关键字，修改某个数据成员，即使是在一个const成员函数内。一个可变数据成员永远不会是const，即使它是const对象的成员。因此，一个const成员函数可以改变一个可变成员的值。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Screen</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-  <span class="kt">void</span> <span class="n">some_member</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
-<span class="k">private</span><span class="o">:</span>
-  <span class="k">mutable</span> <span class="kt">size_t</span> <span class="n">access_ctr</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="n">Screen</span><span class="o">::</span><span class="n">some_member</span><span class="p">()</span> <span class="k">const</span>
-<span class="p">{</span>
-  <span class="o">++</span><span class="n">access_ctr</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></p>
-<h4 id="_31">类类型<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
-<p>每个类定义唯一的类型。即使两个类的成员列表完全一致，它们也是不同的类型。</p>
-<p>就像可以把函数的声明和定义分离开，也能仅声明类而暂时不定义它，这种声明被称为前向声明(forward declaration)，对于这种类型来说，在它声明之后定义之前是一个不完全类型。</p>
-<p>不完全类型使用场景有限，可以定义指向这种类型的指针或引用，也可以声明以不完全类型作为参数或者返回类型的函数。</p>
-<p>/<strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong>*</strong>/</p>
-<h4 id="_32">委托构造函数<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
-<p><strong>委托构造函数</strong>使用所属类的其他构造函数执行它自己的初始化过程，或者把它自己的一些(或全部)职责委托给其他构造函数。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Sales_data</span><span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-  <span class="c1">//非委托构造函数</span>
-  <span class="n">Sales_data</span><span class="p">(</span><span class="nl">std</span><span class="p">:</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="n">cnt</span><span class="p">,</span> <span class="kt">double</span> <span class="n">price</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">bookNo</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">units_sold</span><span class="p">(</span><span class="n">cnt</span><span class="p">),</span> <span class="n">revenue</span><span class="p">(</span><span class="n">cnt</span> <span class="o">*</span> <span class="n">price</span><span class="p">)</span> <span class="p">{}</span>
-  <span class="c1">//其余构造函数委托另一个构造函数</span>
-  <span class="n">Sales_data</span><span class="p">()</span> <span class="o">:</span> <span class="n">Sales_data</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{}</span>
-  <span class="n">Sales_data</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="o">:</span> <span class="n">Sales_data</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{}</span>
-  <span class="n">Sales_data</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span> <span class="o">&amp;</span><span class="n">is</span><span class="p">)</span> <span class="o">:</span> <span class="n">Sales_data</span><span class="p">()</span> <span class="p">{</span> <span class="n">read</span><span class="p">(</span><span class="n">is</span><span class="p">,</span> <span class="o">*</span><span class="k">this</span><span class="p">);}</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-<strong>转换构造函数</strong>只接受一个实参，则它实际上定义了转换为此类类型的隐式转换机制。</p>
-<p>将构造函数加以<strong>explicit</strong>声明，可以抑制构造函数隐式转换。</p>
-<h3 id="_33">拷贝控制<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
-<p><strong>拷贝构造函数</strong>和<strong>移动构造函数</strong>定义类当用同类型的另一个对象<strong>初始化</strong>本对象时做什么。</p>
-<p><strong>拷贝赋值运算符</strong>和<strong>移动赋值运算符</strong>定义类一个对象<strong>赋予</strong>同类型的另一个对象时做什么。</p>
-<p>拷贝构造函数第一个参数是自身类类型的引用，且任何额外参数都有默认值。虽然可以定义一个接受非const引用的拷贝构造函数，但此参数几乎总是一个const引用。拷贝构造函数常被隐式地使用，通常不应该是explicit的。</p>
-<h4 id="_34">对象移动<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
-<p>标准库容器，string和shared_ptr类既支持移动也支持拷贝。IO类和unique_ptr类可以移动但不能拷贝。</p>
-<p><strong>右值引用</strong>必须绑定到右值的引用。只能绑定到一个将要销毁的对象。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>     
-<span class="kt">int</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>   
-<span class="kt">int</span> <span class="o">&amp;&amp;</span><span class="n">rr</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>           <span class="c1">//不能将一个右值引用绑定到一个左值上</span>
-<span class="kt">int</span> <span class="o">&amp;</span><span class="n">r2</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">42</span><span class="p">;</span>       <span class="c1">//i * 42是一个右值</span>
-<span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">r3</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">42</span><span class="p">;</span> <span class="c1">//可以将一个const的引用绑定到一个右值上</span>
-<span class="kt">int</span> <span class="o">&amp;&amp;</span><span class="n">rr2</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span><span class="mi">42</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-变量是左值，不能将一个右值引用直接绑定到一个变量上，即使这个变量是右值引用类型也不行。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="o">&amp;&amp;</span><span class="n">rr1</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
-<span class="kt">int</span> <span class="o">&amp;&amp;</span><span class="n">rr2</span> <span class="o">=</span> <span class="n">rr1</span><span class="p">;</span>  <span class="c1">//错误：表达式rr1是左值。</span>
-</pre></div>
-</td></tr></table></p>
-<p>新标准库中<strong>move</strong>函数可以获取绑定到左值上的右值引用。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="o">&amp;&amp;</span><span class="n">rr3</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">rr1</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></p>
-<p>类似拷贝构造函数，移动构造函数第一个参数是该类型的一个引用。该引用是一个右值引用。移动构造函数必须确保移后源对象处于这样一个状态--销毁后是无害的。一旦资源完成移动，源对象必须不再指向被移动的资源--这些资源的所有权已经归属新创建的对象。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">StrVec</span><span class="o">::</span><span class="n">StrVec</span><span class="p">(</span><span class="n">StrVec</span> <span class="o">&amp;&amp;</span><span class="n">s</span><span class="p">)</span> <span class="k">noexcept</span> <span class="c1">//移动操作不应抛出任何异常</span>
-<span class="c1">//成员初始化器接管s中的资源</span>
-  <span class="o">:</span> <span class="n">elements</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">elements</span><span class="p">),</span> <span class="n">first_free</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">first_free</span><span class="p">),</span> 
-  <span class="n">cap</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">cap</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">s</span><span class="p">.</span><span class="n">elements</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">first_free</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">cap</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-不抛出异常的移动构造函数和移动赋值运算符必须标记为noexcept。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">StrVec</span> <span class="o">&amp;</span><span class="n">StrVec</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">StrVec</span> <span class="o">&amp;&amp;</span><span class="n">rhs</span><span class="p">)</span> <span class="k">noexcept</span>
-<span class="p">{</span>
-  <span class="k">if</span><span class="p">(</span><span class="k">this</span> <span class="o">!=</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="n">free</span><span class="p">();</span>
-    <span class="n">elements</span>    <span class="o">=</span> <span class="n">rhs</span><span class="p">.</span><span class="n">elements</span><span class="p">;</span>
-    <span class="n">first_free</span>  <span class="o">=</span> <span class="n">rhs</span><span class="p">.</span><span class="n">first_free</span><span class="p">;</span>
-    <span class="n">cap</span>          <span class="o">=</span> <span class="n">rhs</span><span class="p">.</span><span class="n">cap</span><span class="p">;</span>
-    <span class="n">rhs</span><span class="p">.</span><span class="n">elements</span> <span class="o">=</span> <span class="n">rhs</span><span class="p">.</span><span class="n">first_free</span> <span class="o">=</span> <span class="n">rhs</span><span class="p">.</span><span class="n">cap</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-如果一个类既有移动构造函数，也有拷贝构造函数则<strong>移动右值，拷贝左值</strong>，如果没有移动构造函数，右值也被拷贝。</p>
-<p>可以通过标准库的<strong>make_move_iterator</strong>函数将一个普通迭代器转换为一个<strong>移动迭代器</strong>。</p>
-<h4 id="_35">聚合类<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
-<p>聚合类：所有成员都是public的。没有定义任何构造函数。没有类初始值。没有基类，也没有virtual函数。</p>
-<h4 id="_36">字面值常量类<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h4>
-<h4 id="_37">静态成员<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
-<h3 id="_38">继承与派生<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
-<h3 id="_39">多态与虚函数<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
-<h2 id="stl">STL(标准模板库)<a class="headerlink" href="#stl" title="Permanent link">&para;</a></h2>
-<h3 id="_40">容器<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
-<h3 id="_41">顺序容器<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="left"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">vector</td>
-<td align="left">可变大小数组。支持快速随机访问。在尾部之外的位置插入或删除元素可能很慢。</td>
-</tr>
-<tr>
-<td align="left">deque</td>
-<td align="left">双端队列。支持快速随机访问。在头尾位置插入/删除速度很快。</td>
-</tr>
-<tr>
-<td align="left">list</td>
-<td align="left">双向链表。只支持双向顺序访问。在list中任何位置进行插入/删除操作速度都很快。</td>
-</tr>
-<tr>
-<td align="left">forward_list</td>
-<td align="left">单向链表。只支持单向顺序访问。在链表任何位置进行插入/删除操作速度很快。</td>
-</tr>
-<tr>
-<td align="left">array</td>
-<td align="left">固定大小数组，支持快速随机访问。不能添加或删除元素。</td>
-</tr>
-<tr>
-<td align="left">string</td>
-<td align="left">与vector相似的容器，但专门用于保存字符，随机访问快，在尾部插入/删除速度块。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_42">关联容器<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">按关键字有序保存元素</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">map</td>
-<td align="left">关联数组：保存关键字-值对</td>
-</tr>
-<tr>
-<td align="left">set</td>
-<td align="left">关键字即值，只保存关键字的容器</td>
-</tr>
-<tr>
-<td align="left">multimap</td>
-<td align="left">关键字可重复出现的map</td>
-</tr>
-<tr>
-<td align="left">multiset</td>
-<td align="left">关键字可重复出现的set</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th align="left">无序集合</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">unordered_map</td>
-<td align="left">用哈希函数组织的map</td>
-</tr>
-<tr>
-<td align="left">unordered_set</td>
-<td align="left">用哈希函数组织的set</td>
-</tr>
-<tr>
-<td align="left">unordered_multimap</td>
-<td align="left">哈希组织的map，关键字可以重复出现</td>
-</tr>
-<tr>
-<td align="left">unordered_multiset</td>
-<td align="left">哈希组织的set，关键字可以重复出现</td>
-</tr>
-<tr>
-<td align="left">#### pair类型</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-<h3 id="_43">容器适配器<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
-<p>适配器(adaptor)接受一种已有的容器类型，使其行为看起来像一种不同的容器。</p>
-<p>顺序容器的适配器：stack，queue和priority_queue。</p>
-<h3 id="_44">迭代器<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
-<h3 id="_45">算法<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h3>
-<p><strong>谓词</strong>是一个可调用的表达式，其返回结果是一个能用作条件的值。标准库算法使用的谓词分为两类：<strong>一元谓词</strong>只接受单一参数，<strong>二元谓词</strong>有两个参数。</p>
-<p>可调用对象：函数，函数指针，lambda表达式，重载了函数调用运算符的类。</p>
-<h4 id="lambda">lambda表达式<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h4>
-<p>一个lambda表达式表示一个可调用的代码单元(一个未命名的内联函数)。lambda可能定义在函数内部。</p>
-<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">capture</span> <span class="n">list</span><span class="p">](</span><span class="n">parameter</span> <span class="n">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">return</span> <span class="n">type</span> <span class="p">{</span> <span class="n">function</span> <span class="n">body</span> <span class="p">}</span>
-</pre></div>
-</td></tr></table>
-capture list(捕获列表)是一个lambda所在函数中定义的局部变量的列表(通常为空)。</p>
-<p>捕获列表只能用于局部非static变量，lambda可以直接使用局部static变量和在它所在函数之外声明的名字。</p>
-<p>当以引用方式捕获一个变量时，必须保证在lambda执行时变量是存在的。</p>
-<p>除了显示捕获所在函数的变量之外，还可以让编译器根据lambda中的代码推断要使用的变量。捕获列表中使用<strong>&amp;</strong>或<strong>=</strong>。&amp;告诉编译器采用捕获引用的方式，=则表示采用值捕获的方式。</p>
-<p>一部分需要值捕获，一部分需要引用捕获，可以混合使用隐式捕获与显示捕获。混合使用隐式捕获和显示捕获时，捕获列表中的第一个元素必须是一个&amp;或=，指定了默认捕获方式为引用或值。</p>
-<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">biggies</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">words</span>      
-    <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;::</span><span class="n">size_type</span> <span class="n">sz</span><span class="p">,</span>
-    <span class="n">ostream</span> <span class="o">&amp;</span><span class="n">os</span> <span class="o">=</span> <span class="n">cout</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="err">&#39;&#39;</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">for_each</span><span class="p">(</span><span class="n">words</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">words</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
-        <span class="p">[</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">c</span><span class="p">](</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span><span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span><span class="n">c</span><span class="p">;});</span>
-
-    <span class="n">for_each</span><span class="p">(</span><span class="n">words</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">words</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
-        <span class="p">[</span><span class="o">=</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">](</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span><span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;});</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-如果需要改变一个被捕获的变量的值，就必须在参数列表首加上关键字mutable。</p>
-<p>可以忽略参数列表和返回类型，但必须包含捕获列表和函数体。</p>
-<h2 id="_46">运算符重载<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h2>
-<h3 id="_47">输入输出运算符<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h3>
-<h3 id="_48">算术与关系运算符<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h3>
-<h3 id="_49">赋值运算符<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h3>
-<h3 id="_50">下标运算符<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h3>
-<h3 id="_51">递增递减运算符<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h3>
-<h3 id="_52">成员访问运算符<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h3>
-<h3 id="_53">函数调用运算符<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h3>
-<h2 id="_54">模板与泛型编程<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h2>
-<h3 id="_55">模板实参推断<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h3>
-<h3 id="_56">重载与模板<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h3>
-<h3 id="_57">可变参数模板<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h3>
-<h3 id="_58">模板特例化<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h3>
-<h2 id="c_1">C++异常<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h2>
-<ol>
-<li>throw表达式(throw expression)异常检测部分使用throw表达式来表示它遇到来无法处理的问题。一般说throw引发(raise)了异常。</li>
-<li>try语句块(try block)异常处理部分。try语句块与多个catch子句组成。try语句块中代码抛出的异常通常会被某个catch子句结束。</li>
-<li>异常类(exception class)，用于在throw表达式和相关的catch子句之间传递异常的具体信息。</li>
-</ol>
-<h2 id="_59">其他<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h2>
                 
                   
                 
@@ -4275,13 +3026,13 @@ gitalk.render('gitalk-container')
           </a>
         
         
-          <a href="../../cprogram/c_base/" title="C语言基础" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../c++_stu/" title="C++ 标准库" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                C语言基础
+                C++ 标准库
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

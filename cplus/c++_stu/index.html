@@ -13,7 +13,7 @@
         <meta name="description" content="Atticus's Docs">
       
       
-        <link rel="canonical" href="https://atticuslab.com/source/regexp/">
+        <link rel="canonical" href="https://atticuslab.com/cplus/c++_stu/">
       
       
         <meta name="author" content="Atticus">
@@ -42,7 +42,7 @@
     
     
       
-        <title>正则表达式 - Stack Pub</title>
+        <title>C++ 标准库 - Stack Pub</title>
       
     
     
@@ -93,7 +93,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#regular-expressionregexp" tabindex="1" class="md-skip">
+      <a href="#io" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -119,7 +119,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                正则表达式
+                C++ 标准库
               
             </span>
           
@@ -215,7 +215,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../cplus/c++_base/" class="md-tabs__link">
+        <a href="../c++_base/" class="md-tabs__link md-tabs__link--active">
           编程语言
         </a>
       
@@ -292,7 +292,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../nginx/nginx_base/" class="md-tabs__link">
+        <a href="../../source/nginx/nginx_base/" class="md-tabs__link">
           开源项目
         </a>
       
@@ -506,10 +506,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       C++ Primer总结
@@ -527,7 +529,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/c++_base/" title="C++ 基础" class="md-nav__link">
+    <a href="../c++_base/" title="C++ 基础" class="md-nav__link">
       C++ 基础
     </a>
   </li>
@@ -537,11 +539,220 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../cplus/c++_stu/" title="C++ 标准库" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        C++ 标准库
+      </label>
+    
+    <a href="./" title="C++ 标准库" class="md-nav__link md-nav__link--active">
       C++ 标准库
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#io" class="md-nav__link">
+    IO与文件操作
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#io_1" class="md-nav__link">
+    IO类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    文件输入输出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    string流
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stl" class="md-nav__link">
+    STL(标准模板库)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    容器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    顺序容器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    关联容器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    容器适配器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    迭代器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    算法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lambda" class="md-nav__link">
+    lambda表达式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    动态内存
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    智能指针
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared_ptr" class="md-nav__link">
+    shared_ptr类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unique_ptr" class="md-nav__link">
+    unique_ptr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weak_ptr" class="md-nav__link">
+    weak_ptr
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    动态数组
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    new和数组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocator" class="md-nav__link">
+    allocator类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" class="md-nav__link md-nav__link--active">
+            评论
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -551,7 +762,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cplus/c++_oop/" title="C++ 类" class="md-nav__link">
+    <a href="../c++_oop/" title="C++ 类" class="md-nav__link">
       C++ 类
     </a>
   </li>
@@ -698,106 +909,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        正则表达式
-      </label>
-    
-    <a href="./" title="正则表达式" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../source/regexp/" title="正则表达式" class="md-nav__link">
       正则表达式
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#regular-expressionregexp" class="md-nav__link">
-    正则表达式(Regular Expression,regexp)
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    定位符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    选折符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    字符范围
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    点字符和限定符
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    小括号
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    反斜杠
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    示例
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
-            评论
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -807,7 +923,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../shell/" title="Shell编程" class="md-nav__link">
+    <a href="../../source/shell/" title="Shell编程" class="md-nav__link">
       Shell编程
     </a>
   </li>
@@ -886,7 +1002,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../php/php_base/" title="PHP基础" class="md-nav__link">
+    <a href="../../source/php/php_base/" title="PHP基础" class="md-nav__link">
       PHP基础
     </a>
   </li>
@@ -898,7 +1014,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../php/php_object/" title="PHP面向对象" class="md-nav__link">
+    <a href="../../source/php/php_object/" title="PHP面向对象" class="md-nav__link">
       PHP面向对象
     </a>
   </li>
@@ -910,7 +1026,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../php/php_web/" title="PHP WEB相关" class="md-nav__link">
+    <a href="../../source/php/php_web/" title="PHP WEB相关" class="md-nav__link">
       PHP WEB相关
     </a>
   </li>
@@ -927,7 +1043,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lua/lua_summary/" title="Lua总结" class="md-nav__link">
+    <a href="../../source/lua/lua_summary/" title="Lua总结" class="md-nav__link">
       Lua总结
     </a>
   </li>
@@ -1402,7 +1518,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../nginx/nginx_base/" title="Nginx安装与基本配置" class="md-nav__link">
+    <a href="../../source/nginx/nginx_base/" title="Nginx安装与基本配置" class="md-nav__link">
       Nginx安装与基本配置
     </a>
   </li>
@@ -1414,7 +1530,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../nginx/nginx_web/" title="Web服务搭建与模块化配置" class="md-nav__link">
+    <a href="../../source/nginx/nginx_web/" title="Web服务搭建与模块化配置" class="md-nav__link">
       Web服务搭建与模块化配置
     </a>
   </li>
@@ -1426,7 +1542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../nginx/nginx_balence/" title="负载均衡与缓存" class="md-nav__link">
+    <a href="../../source/nginx/nginx_balence/" title="负载均衡与缓存" class="md-nav__link">
       负载均衡与缓存
     </a>
   </li>
@@ -1438,7 +1554,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../nginx/nginx_high/" title="高可用负载均衡集群" class="md-nav__link">
+    <a href="../../source/nginx/nginx_high/" title="高可用负载均衡集群" class="md-nav__link">
       高可用负载均衡集群
     </a>
   </li>
@@ -1474,7 +1590,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../redis/redis_base/" title="Redis基础" class="md-nav__link">
+    <a href="../../source/redis/redis_base/" title="Redis基础" class="md-nav__link">
       Redis基础
     </a>
   </li>
@@ -1491,7 +1607,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tinyhttpd/" title="TinyHttpd" class="md-nav__link">
+    <a href="../../source/tinyhttpd/" title="TinyHttpd" class="md-nav__link">
       TinyHttpd
     </a>
   </li>
@@ -1737,59 +1853,173 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#regular-expressionregexp" class="md-nav__link">
-    正则表达式(Regular Expression,regexp)
+  <a href="#io" class="md-nav__link">
+    IO与文件操作
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    定位符
+  <a href="#io_1" class="md-nav__link">
+    IO类
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    文件输入输出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    string流
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stl" class="md-nav__link">
+    STL(标准模板库)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    选折符
+    容器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    字符范围
+    顺序容器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    点字符和限定符
+    关联容器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    小括号
+    容器适配器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    反斜杠
+    迭代器
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    示例
+    算法
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lambda" class="md-nav__link">
+    lambda表达式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    动态内存
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    智能指针
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared_ptr" class="md-nav__link">
+    shared_ptr类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unique_ptr" class="md-nav__link">
+    unique_ptr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weak_ptr" class="md-nav__link">
+    weak_ptr
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    动态数组
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new" class="md-nav__link">
+    new和数组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocator" class="md-nav__link">
+    allocator类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1820,245 +2050,316 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/source/regexp.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opfanswyx/StackPub/edit/master/docs/cplus/c++_stu.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>正则表达式</h1>
+                  <h1>C++ 标准库</h1>
                 
-                <h2 id="regular-expressionregexp">正则表达式(Regular Expression,regexp)<a class="headerlink" href="#regular-expressionregexp" title="Permanent link">&para;</a></h2>
-<p>pcre/grep/</p>
-<h3 id="_1">定位符<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h2 id="io">IO与文件操作<a class="headerlink" href="#io" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th align="center">定位符</th>
-<th align="center">说明</th>
+<th align="center">头文件</th>
+<th align="left">类型</th>
+<th align="left">说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">^</td>
-<td align="center">匹配字符串的开始</td>
+<td align="center">iostream</td>
+<td align="left">istream,wistream</td>
+<td align="left">从流读取数据</td>
 </tr>
 <tr>
-<td align="center">$</td>
-<td align="center">匹配字符串结尾的位置</td>
+<td align="center"></td>
+<td align="left">ostream,wostream</td>
+<td align="left">从流写入数据</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">iostream,wiostream</td>
+<td align="left">读写流</td>
+</tr>
+<tr>
+<td align="center">fstream</td>
+<td align="left">ifstream,wifstream</td>
+<td align="left">从文件读取数据</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">ofstream,wofstream</td>
+<td align="left">向文件写入数据</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">fstream,wfstream</td>
+<td align="left">读写文件</td>
+</tr>
+<tr>
+<td align="center">sstream</td>
+<td align="left">istringstream,wistringstream</td>
+<td align="left">从string读取数据</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">ostringstream,wostringstream</td>
+<td align="left">向string写入数据</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">stringstream,wstringstream</td>
+<td align="left">读写string</td>
 </tr>
 </tbody>
 </table>
-<h3 id="_2">选折符<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>当要查找的条件有多个，只要其中一个满足即成立时，使用选择符"|"。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>grep -p --color &#39;Linux|UNIX&#39;
+<p><strong>IO对象不能拷贝和赋值</strong>，所以不能将形参或返回类型设置为流类型。进行IO操作的函数通常以引用方式传递和返回流。读写IO对象会改变其状态，所以传递和返回引用不能是const的。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">ofstream</span> <span class="n">out1</span><span class="p">,</span> <span class="n">out2</span><span class="p">;</span>
+<span class="n">out1</span> <span class="o">=</span> <span class="n">out2</span><span class="p">;</span>              <span class="c1">//错误：不能对流对象赋值</span>
+<span class="n">ofstream</span> <span class="nf">print</span><span class="p">(</span><span class="n">ofstream</span><span class="p">);</span> <span class="c1">//错误：不能初始化ofstream参数</span>
+<span class="n">out2</span> <span class="o">=</span> <span class="n">print</span><span class="p">(</span><span class="n">out2</span><span class="p">);</span>       <span class="c1">//错误：不能拷贝流对象</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="io_1">IO类<a class="headerlink" href="#io_1" title="Permanent link">&para;</a></h3>
+<h3 id="_1">文件输入输出<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="string">string流<a class="headerlink" href="#string" title="Permanent link">&para;</a></h3>
+<h2 id="stl">STL(标准模板库)<a class="headerlink" href="#stl" title="Permanent link">&para;</a></h2>
+<h3 id="_2">容器<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_3">顺序容器<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">vector</td>
+<td align="left">可变大小数组。支持快速随机访问。在尾部之外的位置插入或删除元素可能很慢。</td>
+</tr>
+<tr>
+<td align="left">deque</td>
+<td align="left">双端队列。支持快速随机访问。在头尾位置插入/删除速度很快。</td>
+</tr>
+<tr>
+<td align="left">list</td>
+<td align="left">双向链表。只支持双向顺序访问。在list中任何位置进行插入/删除操作速度都很快。</td>
+</tr>
+<tr>
+<td align="left">forward_list</td>
+<td align="left">单向链表。只支持单向顺序访问。在链表任何位置进行插入/删除操作速度很快。</td>
+</tr>
+<tr>
+<td align="left">array</td>
+<td align="left">固定大小数组，支持快速随机访问。不能添加或删除元素。</td>
+</tr>
+<tr>
+<td align="left">string</td>
+<td align="left">与vector相似的容器，但专门用于保存字符，随机访问快，在尾部插入/删除速度块。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">关联容器<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">按关键字有序保存元素</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">map</td>
+<td align="left">关联数组：保存关键字-值对</td>
+</tr>
+<tr>
+<td align="left">set</td>
+<td align="left">关键字即值，只保存关键字的容器</td>
+</tr>
+<tr>
+<td align="left">multimap</td>
+<td align="left">关键字可重复出现的map</td>
+</tr>
+<tr>
+<td align="left">multiset</td>
+<td align="left">关键字可重复出现的set</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">无序集合</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">unordered_map</td>
+<td align="left">用哈希函数组织的map</td>
+</tr>
+<tr>
+<td align="left">unordered_set</td>
+<td align="left">用哈希函数组织的set</td>
+</tr>
+<tr>
+<td align="left">unordered_multimap</td>
+<td align="left">哈希组织的map，关键字可以重复出现</td>
+</tr>
+<tr>
+<td align="left">unordered_multiset</td>
+<td align="left">哈希组织的set，关键字可以重复出现</td>
+</tr>
+<tr>
+<td align="left">#### pair类型</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">容器适配器<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>适配器(adaptor)接受一种已有的容器类型，使其行为看起来像一种不同的容器。</p>
+<p>顺序容器的适配器：stack，queue和priority_queue。</p>
+<h3 id="_6">迭代器<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_7">算法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><strong>谓词</strong>是一个可调用的表达式，其返回结果是一个能用作条件的值。标准库算法使用的谓词分为两类：<strong>一元谓词</strong>只接受单一参数，<strong>二元谓词</strong>有两个参数。</p>
+<p>可调用对象：函数，函数指针，lambda表达式，重载了函数调用运算符的类。</p>
+<h4 id="lambda">lambda表达式<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h4>
+<p>一个lambda表达式表示一个可调用的代码单元(一个未命名的内联函数)。lambda可能定义在函数内部。</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">capture</span> <span class="n">list</span><span class="p">](</span><span class="n">parameter</span> <span class="n">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">return</span> <span class="n">type</span> <span class="p">{</span> <span class="n">function</span> <span class="n">body</span> <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+capture list(捕获列表)是一个lambda所在函数中定义的局部变量的列表(通常为空)。</p>
+<p>捕获列表只能用于局部非static变量，lambda可以直接使用局部static变量和在它所在函数之外声明的名字。</p>
+<p>当以引用方式捕获一个变量时，必须保证在lambda执行时变量是存在的。</p>
+<p>除了显示捕获所在函数的变量之外，还可以让编译器根据lambda中的代码推断要使用的变量。捕获列表中使用<strong>&amp;</strong>或<strong>=</strong>。&amp;告诉编译器采用捕获引用的方式，=则表示采用值捕获的方式。</p>
+<p>一部分需要值捕获，一部分需要引用捕获，可以混合使用隐式捕获与显示捕获。混合使用隐式捕获和显示捕获时，捕获列表中的第一个元素必须是一个&amp;或=，指定了默认捕获方式为引用或值。</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">biggies</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">words</span>      
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;::</span><span class="n">size_type</span> <span class="n">sz</span><span class="p">,</span>
+    <span class="n">ostream</span> <span class="o">&amp;</span><span class="n">os</span> <span class="o">=</span> <span class="n">cout</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="err">&#39;&#39;</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">for_each</span><span class="p">(</span><span class="n">words</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">words</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+        <span class="p">[</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">c</span><span class="p">](</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span><span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span><span class="n">c</span><span class="p">;});</span>
+
+    <span class="n">for_each</span><span class="p">(</span><span class="n">words</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">words</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+        <span class="p">[</span><span class="o">=</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">](</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span><span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;});</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+如果需要改变一个被捕获的变量的值，就必须在参数列表首加上关键字mutable。</p>
+<p>可以忽略参数列表和返回类型，但必须包含捕获列表和函数体。</p>
+<h2 id="_8">动态内存<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_9">智能指针<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h4 id="shared_ptr">shared_ptr类<a class="headerlink" href="#shared_ptr" title="Permanent link">&para;</a></h4>
+<p><strong>make_shared</strong>函数在动态内存中分配一个对象并初始化它，返回指向此对象的shared_ptr。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">p3</span> <span class="o">=</span> <span class="n">make_shared</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="k">auto</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">make_shared</span><span class="o">&lt;</span><span class="n">vecotr</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;&gt;</span><span class="p">();</span>  <span class="c1">//指向一个动态分配的空vector&lt;string&gt;</span>
+
+<span class="n">shared_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">p</span><span class="p">(</span><span class="k">new</span> <span class="kt">int</span><span class="p">(</span><span class="mi">1024</span><span class="p">));</span>
+</pre></div>
+</td></tr></table>
+当进行拷贝或赋值操作时，每个shared_ptr都会记录有多少个其他shared_ptr指向相同的对象。每个shared_ptr都有一个关联的计数器，称其为<strong>引用计数</strong>。当一个shared_ptr的计数器变为0，它就会释放自己所管理的对象。</p>
+<h4 id="unique_ptr">unique_ptr<a class="headerlink" href="#unique_ptr" title="Permanent link">&para;</a></h4>
+<p>某个时刻只有一个unique_ptr指向一个给定的对象。不支持普通的拷贝或赋值操作。可以通过release或reset将指针的所有权从一个(非const)unique_ptr转移给另一个unique。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">p2</span><span class="p">(</span><span class="n">p1</span><span class="p">.</span><span class="n">release</span><span class="p">());</span> 
+<span class="n">p2</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="n">p3</span><span class="p">.</span><span class="n">release</span><span class="p">());</span>
+</pre></div>
+</td></tr></table>
+release成员返回unique_ptr当前保存的指针并将其置为空。p2被初始化为p1原来保存的指针，而p1被置为空。</p>
+<p>reset成员接受一个可选的指针参数，令unique_ptr重新指向给定的指针。</p>
+<p>可以拷贝或赋值一个将要被销毁的unique_ptr。</p>
+<h4 id="weak_ptr">weak_ptr<a class="headerlink" href="#weak_ptr" title="Permanent link">&para;</a></h4>
+<p>weak_ptr是一种不控制所指向对象生存期的智能指针，他指向由一个shared_ptr管理的对象。将一个weak_ptr绑定到一个shared_ptr不会改变shared_ptr的引用计数。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">auto</span> <span class="n">p</span> <span class="o">=</span> <span class="n">make_shared</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+<span class="n">weak_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">wp</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></p>
-<h3 id="_3">字符范围<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th align="center">示例</th>
-<th align="center">说明</th>
+<th align="left"></th>
+<th align="left"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">[abc]</td>
-<td align="center">匹配字符a,b,c</td>
+<td align="left">w.reset()</td>
+<td align="left">将w置为空</td>
 </tr>
 <tr>
-<td align="center">[^abc]</td>
-<td align="center">匹配除a,b,c以外的字符</td>
+<td align="left">w.use_count()</td>
+<td align="left">与w共享对象的shared_ptr的数量</td>
 </tr>
 <tr>
-<td align="center">[a-z]</td>
-<td align="center">匹配字母a-z范围内的字符</td>
+<td align="left">w.expired()</td>
+<td align="left">当w.use_count()为0，返回true，否则返回false</td>
+</tr>
+<tr>
+<td align="left">w.lock()</td>
+<td align="left">当expired为true，返回一个空shared_ptr,否则返回一个指向w的对象的shared_ptr</td>
 </tr>
 </tbody>
 </table>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>[^a-z]
-[a-zA-Z0-9]
-</pre></div>
-</td></tr></table>
-
-<h3 id="_4">点字符和限定符<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>点字符"."用来匹配任意一个字符。</p>
-<p>限定符(?,+,*,{})用于匹配某个字符出现的次数。</p>
-<table>
-<thead>
-<tr>
-<th align="center">字符</th>
-<th align="center">说明</th>
-<th align="center">示例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">.</td>
-<td align="center">匹配一个任意字符</td>
-<td align="center">s.t&rarr;sat,set,sit</td>
-</tr>
-<tr>
-<td align="center">?</td>
-<td align="center">匹配前面的字符零次或者一次</td>
-<td align="center">colou?r&rarr;color,colour</td>
-</tr>
-<tr>
-<td align="center">+</td>
-<td align="center">匹配前面的字符一次或者多次</td>
-<td align="center">go+gle&rarr;goole,gooooole</td>
-</tr>
-<tr>
-<td align="center">*</td>
-<td align="center">匹配前面的字符零次或者多次</td>
-<td align="center">go*gle&rarr;gogle,goooogle</td>
-</tr>
-<tr>
-<td align="center">{n}</td>
-<td align="center">匹配前面的字符n次</td>
-<td align="center">go{2}gle&rarr;google</td>
-</tr>
-<tr>
-<td align="center">{n,}</td>
-<td align="center">匹配前面的字符至少n次</td>
-<td align="center">go{3,}gle&rarr;gooogle,gooooooogle</td>
-</tr>
-<tr>
-<td align="center">{n,m}</td>
-<td align="center">匹配前面的字符至少n次，最多m次</td>
-<td align="center">employe{0,2}&rarr;employ,employe,employee</td>
-</tr>
-</tbody>
-</table>
-<p>当点字符和限定符连用时，可以实现匹配指定数量的<strong>任意字符</strong>。</p>
-<p>正则表达式支持贪婪匹配和惰性匹配两种，默认情况下是贪婪匹配。当要实现惰性匹配 ，在上一个限定符后面加上"?"符号。</p>
-<table>
-<thead>
-<tr>
-<th align="center">匹配方式</th>
-<th align="center">示例</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">贪婪</td>
-<td align="center">a.*b</td>
-<td align="center">最先出现的a到最后出现的b&rarr;<strong>a00b00bab</strong>c</td>
-</tr>
-<tr>
-<td align="center">惰性</td>
-<td align="center">a.*?b</td>
-<td align="center">最先出现的a到最先出现的b&rarr;<strong>a00b</strong>00b<strong>ab</strong>c</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_5">小括号<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>小括号的两个作用，一是改变作用范围，二是分组。</p>
-<table>
-<thead>
-<tr>
-<th align="center">示例</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">thir|fourth</td>
-<td align="center"><strong>thir</strong>th<strong>fourth</strong></td>
-</tr>
-<tr>
-<td align="center">(thir|four)th</td>
-<td align="center"><strong>thirth fourth</strong></td>
-</tr>
-<tr>
-<td align="center">app{2}</td>
-<td align="center"><strong>appp</strong>pappapp</td>
-</tr>
-<tr>
-<td align="center">(app){2}</td>
-<td align="center">apppp<strong>appapp</strong>(分组后表示匹配2个app)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_6">反斜杠<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>反斜杠"\"有两个作用，一是作为转义字符，二是表示一些不可打印的字符，指定预定义字符集等。</p>
-<table>
-<thead>
-<tr>
-<th align="center">字符</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">\d</td>
-<td align="center">任意一个十进制数字，相当于[0-9]</td>
-</tr>
-<tr>
-<td align="center">\D</td>
-<td align="center">任意一个非十进制的数字</td>
-</tr>
-<tr>
-<td align="center">\w</td>
-<td align="center">任意一个单词字符，相当于[a-zA-z0-9]</td>
-</tr>
-<tr>
-<td align="center">\W</td>
-<td align="center">任意一个非单词字符</td>
-</tr>
-<tr>
-<td align="center">\s</td>
-<td align="center">任意一个空白字符(空格，水平制表符)</td>
-</tr>
-<tr>
-<td align="center">\S</td>
-<td align="center">任意一个非空白字符</td>
-</tr>
-<tr>
-<td align="center">\b</td>
-<td align="center">单词分界符，\bapple &rarr; test <strong>apple</strong></td>
-</tr>
-<tr>
-<td align="center">\B</td>
-<td align="center">非单词分界符，\Bple &rarr; test ap<strong>ple</strong></td>
-</tr>
-<tr>
-<td align="center">\xhh</td>
-<td align="center">表示hh(十六进制2位数字)对应的ASCII字符，如\x61是a</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_7">示例<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>只允许访问html,css,jpg扩展名</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>^.*?\.(html|css|jpg)$
-</pre></div>
-</td></tr></table>
-
-<p>验证ip地址</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>0~99:    [1-9]?\d
-100~199: 1\d{2}
-200~255: 2([0-4]\d|5[0-5])
-0~255:   [1-9]?\d|1\d{2}|2([0-4]\d|5[0-5]) 
-0.0.0.0: ^(0\.){3}0$  --&gt;  ^(()\.){3}()$
-ip地址:   ^(([1-9]?\d|1\d{2}|2([0-4]\d|5[0-5]))\.){3}([1-9]?\d|1\d{2}|2([0-4]\d|5[0-5]))$
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">np</span> <span class="o">=</span> <span class="n">wp</span><span class="p">.</span><span class="n">lock</span><span class="p">()){</span>
+  <span class="c1">//...</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
-<p>验证日期格式</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>验证年份:  [1-9]\d{3}
-验证月份:  [1-9]|1[0-2]
-验证天数:  [1-9]|[1-2]\d|3[01]
-完整正则表达式: ^[1-9]\d{3}-([1-9]|1[0-2])-([1-9]|[1-2]\d|3[01])$
-</pre></div>
-</td></tr></table>
+<h3 id="_10">动态数组<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h4 id="new">new和数组<a class="headerlink" href="#new" title="Permanent link">&para;</a></h4>
+<h4 id="allocator">allocator类<a class="headerlink" href="#allocator" title="Permanent link">&para;</a></h4>
+<p>new将内存分配和对象构造组合在一起，delete将对象析构和内存释放组合在一起。</p>
+<p>allocator帮助我们将内存分配和对象构造分离开来。是一种类型感知的内存分配方法，它分配的内存是原始的，未构造的。</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">allocator<T> a</td>
+<td align="left">定义一个名为a的allocator对象，可以为类型为T的对象分配内存</td>
+</tr>
+<tr>
+<td align="left">a.allocate(n)</td>
+<td align="left">分配一段原始的，未构造的内存，保存n个类型为T的对象</td>
+</tr>
+<tr>
+<td align="left">a.deallocate(p,n)</td>
+<td align="left">释放从T*指针p中地址开始的内存，这块内存保存类n个类型为T的对象，p必须是一个先前由allocate返回的指针，且n必须是p创建时所要求的大小。在调用 deallocate之前，用户必须对每个在这块内存中创建的对象调用destroy</td>
+</tr>
+<tr>
+<td align="left">a.construct(p, args)</td>
+<td align="left">p必须是一个类型为T*的指针，指向一块原始内存；arg被传递给类型为T的构造函数，用来在p指向的内存中构造一个对象</td>
+</tr>
+<tr>
+<td align="left">a.destroy(p)</td>
+<td align="left">p为T*类型的指针，此算法对p指向的对象执行析构函数</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -2101,7 +2402,7 @@ gitalk.render('gitalk-container')
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../cprogram/c_design/c_visitor/" title="访问者模式" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../c++_base/" title="C++ 基础" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2110,19 +2411,19 @@ gitalk.render('gitalk-container')
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                访问者模式
+                C++ 基础
               </span>
             </div>
           </a>
         
         
-          <a href="../shell/" title="Shell编程" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../c++_oop/" title="C++ 类" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                Shell编程
+                C++ 类
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
